@@ -1,7 +1,7 @@
 ---
 layout: article
-title: VerilogHDL 2장
-tags: Blog TeXt
+title: Verilog HDL 2장
+tags: Hardware Verilog
 mode: immersive
 header:
   theme: dark

@@ -20,7 +20,7 @@ text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate",
 highlight_theme: "tomorrow-night-bright" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : "https://parkdongho.github.io"
 baseurl : # does not include hostname
-title   : "Dongho's AI-Chip Design Lab" # 사이트 이름
+title   : "AI-Chip Dev Blog" # 사이트 이름
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
 
