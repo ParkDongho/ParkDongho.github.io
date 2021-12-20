@@ -1,0 +1,18 @@
+I"¶<!--more-->
+
+<h1 id="download">Download</h1>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/kitian616/jekyll-TeXt-theme.git
+</code></pre></div></div>
+
+<h1 id="environment">Environment</h1>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="nt">--path</span> vendor/bundle
+</code></pre></div></div>
+
+<h1 id="local-preview">Local Preview</h1>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+:ET
