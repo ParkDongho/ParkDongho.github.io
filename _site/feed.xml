@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-20T14:26:34+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s AI-Chip Design Lab</title><subtitle>Your Site Description
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-20T15:34:14+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s AI-Chip Design Lab</title><subtitle>Your Site Description
 </subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">VerilogHDL 2장</title><link href="http://localhost:4000/2021/12/19/chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="VerilogHDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
 
 &lt;!--more--&gt;
 
 &lt;p&gt;디지털 회로를 설계할때 그림1-(a)와 같이 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1_1.drawio.png&quot; alt=&quot;fig 1&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;따라서 그림1-(b) 와 같이 블럭을 여러 그림1-(c)와 같은 서브블럭들로 나누어 설계를 합니다. 이러한 각각의 블럭을 모듈이라고 합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://parkdongho.github.io/parkdongho/parkdongho.github.io/master/assets/images/2022-05-01-학부생의-좌충우돌-NPU-개발기/시스템_반도체_설계_2장-figure_1.drawio.png&quot; alt=&quot;fig 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.drawio.png&quot; alt=&quot;fig 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;figure 1&lt;/strong&gt; module instantiation의 예시&lt;/p&gt;
 
@@ -46,7 +48,7 @@
   &lt;li&gt;inout&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://parkdongho.github.io/parkdongho/parkdongho.github.io/master/assets/images/2022-05-01-학부생의-좌충우돌-NPU-개발기/시스템_반도체_설계_2장-figure_2.drawio.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.drawio.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;figure 2&lt;/strong&gt; module의 포트 연결 규칙&lt;/p&gt;
 
@@ -54,7 +56,7 @@
 
 &lt;p&gt;먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://parkdongho.github.io/parkdongho/parkdongho.github.io/master/assets/images/2022-05-01-학부생의-좌충우돌-NPU-개발기/시스템_반도체_설계_2장-figure_3.drawio.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.drawio.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;figure 3&lt;/strong&gt; module의 포트 연결 규칙 with instantiation&lt;/p&gt;
 
@@ -112,326 +114,7 @@
 
 &lt;h3 id=&quot;212-vector-form&quot;&gt;2.1.2 Vector Form&lt;/h3&gt;
 
-&lt;h2 id=&quot;22-instantiation&quot;&gt;2.2 Instantiation&lt;/h2&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Blog" /><category term="TeXt" /><summary type="html">Module &amp;amp; Instantiation</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/16/verilogHDL-2%EC%9E%A5.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-16T00:00:00+00:00</published><updated>2021-12-16T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/16/verilogHDL-2%EC%9E%A5</id><content type="html" xml:base="http://localhost:4000/2021/12/16/verilogHDL-2%EC%9E%A5.html">&lt;h1 id=&quot;module--instantization&quot;&gt;Module &amp;amp; Instantization&lt;/h1&gt;
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;21-module&quot;&gt;2.1 Module&lt;/h2&gt;
-
-&lt;p&gt;반도체 전체 회로도를 한번 생각해 보면 아래와 같이 적게는 수천개 많게는 수백억개 까지의 논리회로로 구성되어 있을 것입니다.&lt;/p&gt;
-
-&lt;p&gt;4bit adder와 4bit mux로 구성된 매우 간단한 회로를 생각해봅시다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Users/parkdongho/Documents/공부/시스템_반도체_설계_스터디/3주차/img/fig_2_4.png&quot; alt=&quot;mux&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;단순한 기능을 하는 회로임에도 매우 복잡하죠….&lt;/p&gt;
-
-&lt;p&gt;따라서 아래 그림과 같이 회로를 작은 부분부분으로 쪼개서 설계할 필요가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Users/parkdongho/Documents/공부/시스템_반도체_설계_스터디/3주차/img/fig_2_5.png&quot; alt=&quot;mux&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이렇게 회로를 분해한 기본 단위를 module 이라고 합니다.&lt;/p&gt;
-
-&lt;p&gt;verilog에서 module은 아래와 같이 기술 합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;아래는 2 to 1 mux의 module 예시 입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Users/parkdongho/Documents/공부/시스템_반도체_설계_스터디/3주차/img/fig_2_6.png&quot; alt=&quot;mux&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2 to 1 mux는 데이터 입력이 2포트(A, B), 데이터 선택 포트(S), 출력이 1포트(Z)를 가집니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.1&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex_2_01_mux_2_to_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;모듈명은 : ex_2_01_mux_2_to_1&lt;/p&gt;
-
-&lt;p&gt;입력포트는 : A, B, S&lt;/p&gt;
-
-&lt;p&gt;출력 포트는 : Z&lt;/p&gt;
-
-&lt;p&gt;입니다.&lt;/p&gt;
-
-&lt;p&gt;베릴로그에서 포트를 선언할 때 데이터 타입을 생략할 수 있습니다. 만약 데이터 타입을 생략 한다면 wire 타입을 가집니다. 하지만 설계를 명확하게 하기 위해 아래와 같이 wire 타입 임에도 타입을 선언 하는 것을 권장합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex_2_02_mux_2_to_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;아래 그림과 같이 n-bit의 입출력을 갖는 회로도 존재합니다.&lt;/p&gt;
-
-&lt;p&gt;n-bit의 포트는 아래와 같이 기술 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Users/parkdongho/Documents/공부/시스템_반도체_설계_스터디/3주차/img/fig_2_7.png&quot; alt=&quot;mux&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//nbit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//n-bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//n-bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//n-bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.3&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex_2_03_mux_2_to_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이때 bitwidth를 parameter를 통하여 [WIDTH-1:0]와 같은 형태로 flexible하게 기술하는 것을 권장합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//bitwidth가 4bit &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.4&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex_2_04_mux_2_to_1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;              &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><summary type="html">Module &amp;amp; Instantization</summary></entry><entry><title type="html">Verilog HDL 1장</title><link href="http://localhost:4000/2021/12/15/verilogHDL-1%EC%9E%A5.html" rel="alternate" type="text/html" title="Verilog HDL 1장" /><published>2021-12-15T00:00:00+00:00</published><updated>2021-12-15T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/15/verilogHDL-1%EC%9E%A5</id><content type="html" xml:base="http://localhost:4000/2021/12/15/verilogHDL-1%EC%9E%A5.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;21-module&quot;&gt;2.1 Module&lt;/h2&gt;
-
-&lt;p&gt;반도체 전체 회로도를 한번 생각해 보면 아래와 같이 적게는 수천개 많게는 수백억개 까지의 논리회로로 구성되어 있을 것입니다.&lt;/p&gt;
-
-&lt;p&gt;4bit adder와 4bit mux로 구성된 매우 간단한 회로를 생각해봅시다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Users/parkdongho/Documents/공부/시스템_반도체_설계_스터디/3주차/img/fig_2_4.png&quot; alt=&quot;mux&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;단순한 기능을 하는 회로임에도 매우 복잡하죠….&lt;/p&gt;
-
-&lt;p&gt;따라서 아래 그림과 같이 회로를 작은 부분부분으로 쪼개서 설계할 필요가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Users/parkdongho/Documents/공부/시스템_반도체_설계_스터디/3주차/img/fig_2_5.png&quot; alt=&quot;mux&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이렇게 회로를 분해한 기본 단위를 module 이라고 합니다.&lt;/p&gt;
-
-&lt;p&gt;verilog에서 module은 아래와 같이 기술 합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;아래는 2 to 1 mux의 module 예시 입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Users/parkdongho/Documents/공부/시스템_반도체_설계_스터디/3주차/img/fig_2_6.png&quot; alt=&quot;mux&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2 to 1 mux는 데이터 입력이 2포트(A, B), 데이터 선택 포트(S), 출력이 1포트(Z)를 가집니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.1&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex_2_01_mux_2_to_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;모듈명은 : ex_2_01_mux_2_to_1&lt;/p&gt;
-
-&lt;p&gt;입력포트는 : A, B, S&lt;/p&gt;
-
-&lt;p&gt;출력 포트는 : Z&lt;/p&gt;
-
-&lt;p&gt;입니다.&lt;/p&gt;
-
-&lt;p&gt;베릴로그에서 포트를 선언할 때 데이터 타입을 생략할 수 있습니다. 만약 데이터 타입을 생략 한다면 wire 타입을 가집니다. 하지만 설계를 명확하게 하기 위해 아래와 같이 wire 타입 임에도 타입을 선언 하는 것을 권장합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex_2_02_mux_2_to_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;아래 그림과 같이 n-bit의 입출력을 갖는 회로도 존재합니다.&lt;/p&gt;
-
-&lt;p&gt;n-bit의 포트는 아래와 같이 기술 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Users/parkdongho/Documents/공부/시스템_반도체_설계_스터디/3주차/img/fig_2_7.png&quot; alt=&quot;mux&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//nbit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//n-bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//n-bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//n-bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.3&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex_2_03_mux_2_to_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이때 bitwidth를 parameter를 통하여 [WIDTH-1:0]와 같은 형태로 flexible하게 기술하는 것을 권장합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//bitwidth가 4bit &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.4&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex_2_04_mux_2_to_1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt;              &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><summary type="html">Introduction</summary></entry><entry><title type="html">Jekyll 블로그 운영하기</title><link href="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Jekyll 블로그 운영하기" /><published>2021-11-28T00:00:00+00:00</published><updated>2021-11-28T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+&lt;h2 id=&quot;22-instantiation&quot;&gt;2.2 Instantiation&lt;/h2&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Blog" /><category term="TeXt" /><summary type="html">Module &amp;amp; Instantiation</summary></entry><entry><title type="html">Jekyll 블로그 운영하기</title><link href="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Jekyll 블로그 운영하기" /><published>2021-11-28T00:00:00+00:00</published><updated>2021-11-28T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;포스트-작성&quot;&gt;포스트 작성&lt;/h1&gt;
 
