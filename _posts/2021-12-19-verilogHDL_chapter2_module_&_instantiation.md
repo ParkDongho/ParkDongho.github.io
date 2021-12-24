@@ -28,21 +28,29 @@ __그림1__ 4bit Adder 예제
 
 그래서 회로를 여러 서브블럭들로 나누어 설계를 합니다. __그림2__ 는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다. 이때 4bit_adder 및 full_adder와 같은 설계 블록들을 `모듈(module)`이라고 합니다. 
 
-![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
+![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
 
 __figure 2__ module instantiation의 예시
 
 
 
-이제 full_adder라는 모듈의 구성을 살펴봅시다.
+이제 full_adder라는 모듈의 구성을 살펴봅시다. 모듈은 외부와 데이터를 주고 받을 수 있는 입출력 인터페이스를 제공합니다. 이러한 인터페이스를 `포트(port)` 라고 합니다. __그림3__ 에서 확인할 수 있듯이 full_adder 모듈은 a, b, carry_in 이라는 입력 포트, out, carry_out 이라는 출력포트로 구성되어 있습니다.
+
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
+
+__figure 3__ full adder 모듈
 
 
 
+이제 정의한 서브모듈이 어떻게 보다 큰 모듈로 합쳐질 수 있는지 알아봅시다. 이를 이해하기 위해서는`instantiation` 의 개념을 이해할 필요가 있습니다. 먼저 각각의 모듈은 객체를 만들기 위한 템플릿을 제공합니다. 이러한 템플릿을 통하여 상위 레벨의 모듈에서 객체를 불러들입니다. 이때 각각의 객체는 고유한 이름, 변수, 파라미터, 입출력 인터페이스를 가집니다. 이러한 객체를 `instance`라고 하고 모듈 템플릿으로 부터 객체를 생성하는 것을 `instantization` 이라고 합니다.
+
+이에 대한 예시로 __그림2__ 의 4bit adder 를 다시 확인해 봅시다.  먼저 full_adder 라는 모듈에서 서브모듈에 대한 템플릿을 정의 합니다. 이때 full_adder 모듈은 5개의 입출력 포트, 내부 로직에 대한 정의 등을 포함합니다. 이제 정의한 full_adder 모듈을 템플릿으로 하여 4bit_adder라는 상위 모듈에서 full_adder_0, full_adder_1, full_adder_2, full_adder_3 라는 고유한 이름의 객체 4개를 불러들입니다. 
 
 
 
+![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
 
-
+__figure 2__ module instantiation의 예시
 
 
 
@@ -60,13 +68,29 @@ module 모듈명( //모듈 시작
 endmodule //모듈 끝
 ```
 
-verilog의 module은`module`이라는 키워드로 시작하고 `endmodule`이라는 키워드로 모듈을 닫습니다.
+verilog의 모듈은`module`이라는 키워드로 시작하고 `endmodule`이라는 키워드로 모듈을 닫습니다.
 
-이때 `module`이라는 키워드 다음에 `모듈명`을 정의합니다.
+`module`이라는 키워드 다음에는 `모듈명`을 정의합니다.
+
+그리고 모듈명 다음에 나오는 괄호 `( )`에서는 포트를 정의 합니다.
 
 
 
-### 2.1.1 Port
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
+
+```verilog
+module full_adder( //module 시작
+  //port를 정의
+)
+  //내부로직을 정의
+endmodule //모듈 끝
+```
+
+다음은 full_adder에 대한 예시입니다. 본 예시에서 모듈이름이 full_adder로 정의 됨을 확인할 수 있습니다.
+
+
+
+## 2.2 Port
 
 모듈이 외부 및 다른 모듈과 신호를 주고 받으려면 입출력 단자가 필요합니다. 이러한 입출력 단자를 `포트`라고 합니다. 이러한 입력단자에서 신호를 받아 처리를 한후 출력단자로 내보냅니다. verilog에서는 총 3가지의 port가 있습니다.
 
@@ -74,15 +98,25 @@ verilog의 module은`module`이라는 키워드로 시작하고 `endmodule`이�
 * output : 모듈밖으로 데이터를 내보내는 포트
 * inout : 모듈 내로 데이터를 받을수도 있고 밖으로 데이터를 내보낼 수도 있는 양방향 포트
 
-이때 각 포트의 변수타입을 결정하는 규칙이 있습니다. 아래 그림2를 보면
+이때 각 포트는 __그림4__ 와 같이
 
-* input
-* output
-* inout
+* input 포트 : only net
+* output 포트 : reg or net
+* inout 포트 : only net
+
+와 같은 타입으로 정의 될수 있습니다.
+
+또한 각 포트에 instantiation으로 외부에서 연결되는 신호는 __그림4__ 와 같이 
+
+* input 포트 : reg or net
+* output 포트 : only net
+* inout 포트 : only net
+
+와 같은 타입으로 정의 될 수 있습니다.
 
 ![figure4](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png)
 
-__figure 2__ module의 포트 연결 규칙
+__figure 4__ module의 포트 연결 규칙
 
 
 
@@ -92,7 +126,7 @@ __figure 2__ module의 포트 연결 규칙
 
 ![figure5](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png)
 
-__figure 3__ module의 포트 연결 규칙 with instantiation
+__figure 5__ module의 포트 연결 규칙 with instantiation
 
 모듈A를 instantiation한 모듈B를 가정해 봅시다. 모듈 B의 입장에서 모듈 A의 출력포트에 연결된 신호는 모듈B의 input입니다. input은 반드시 continuous 하여야 하므로 net 타입만이 올 수 있습니다. 이와 동일하게 모듈 B의 입장에서 모듈 A의 입력 포트에 연결된 신호는 모듈B의 output입니다. 따라서 reg 혹은 net타입이 올 수 있죠.
 
@@ -125,15 +159,20 @@ endmodule
 
 
 
-예제를 통해 확인해 봅시다.
+full adder 예제를 확인 해봅시다.
+
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
+
+
 
 ```verilog
-module ex_2_01_mux_2_to_1( //module 키워드로 모듈시작
-  input A,      //1bit wire input
-  input wire B, //1bit wire input
-  input wire S, //1bit wire input
+module full_adder( //module 키워드로 모듈시작
+  input a,             //1bit wire input
+  input wire b,        //1bit wire input
+  input wire carry_in, //1bit wire input
   
-  output reg Z  //1bit reg output
+  output reg out,      //1bit reg output
+  output carry_out     //1bit wire output
 );
   
   //mux의 내부 로직
@@ -143,15 +182,16 @@ endmodule //endmodule 키워드로 모듈 종료
 
 __Example 2.1__
 
-* 모듈의 이름은 ex_2_01_mux_2_to_1입니다.
+* 포트 a, b, carry_in은 입력 포트입니다. input 키워드를 통하여 입력으로 정의해 줍니다.
+* 포트 out, carry_out은 출력 포트 입니다. output 키워드를 통하여 출력으로 정의해 줍니다.
+* 포트 a는 변수 타입을 정의하지 않았습니다. 따라서 default값 wire형으로 정의 됩니다.
+* 포트 b, carry_in은 wire 타입으로 정의해 주었습니다.
+* 포트 out은 reg 타입으로 정의하였습니다.
+* 포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.
 
-* input 포트 A는 변수 타입을 생략하였으므로 wire 타입입니다.
-* input 포트 B 및 S는 wire로 변수 타입이 선언 되었습니다.
-* output 포트 Z는 reg 타입으로 선언되었습니다.
 
 
-
-### 2.1.2 Vector Form
+### 2.2.1 Vector Form
 
 
 
