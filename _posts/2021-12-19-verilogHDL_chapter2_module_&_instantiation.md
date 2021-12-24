@@ -193,6 +193,8 @@ __Example 2.1__
 
 ### 2.2.1 Vector Form
 
+![fig 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png)
+
 
 
 
