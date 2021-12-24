@@ -1,0 +1,208 @@
+<!--more-->
+
+<h1 id="1-neovim">1. NEOVIM</h1>
+
+<ol>
+  <li>아래 명령어로 neovim 설치</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>neovim
+</code></pre></div></div>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">nvim</code>  명령어로 neovim 실행</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvim helloworld.v
+</code></pre></div></div>
+
+<h1 id="2-vim-plug-설치">2. VIM-PLUG 설치</h1>
+
+<ol>
+  <li>아래 명령어를 터미널에 입력하여 vim-plug 설치 (unix/linux 기준)</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s1">'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'</span>
+</code></pre></div></div>
+
+<p>만약 다른 OS라면 https://github.com/junegunn/vim-plug를 참고</p>
+
+<p>curl이 설치 되어 있지 않다면 curl을 설치해줍니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>curl
+</code></pre></div></div>
+
+<ol>
+  <li>vim-plug를 설치하면 <code class="language-plaintext highlighter-rouge">~/.local/share/nvim/autoload</code> 디렉토리에 <code class="language-plaintext highlighter-rouge">plug.vim</code> 파일이 생성됩니다.</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/.local/share/nvim/autoload
+<span class="nb">ls
+
+</span>plug.vim
+</code></pre></div></div>
+
+<ol>
+  <li>~/.config/nvim 디렉토리에 init.vim파일을 생성 해줍니다. init.vim 파일은 vim에서의 vimrc과 같은 역할을 수행합니다.</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/.config/nvim
+nvim init.vim
+</code></pre></div></div>
+
+<p>만약 ~/.config 디렉토리에 nvim 폴더가 존재하지 않다면 해당 폴더를 생성 해줍니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/.config
+<span class="nb">mkdir </span>nvim
+
+<span class="nb">cd</span> ~/.config/nvim
+nvim init.vim
+</code></pre></div></div>
+
+<ol>
+  <li>init.vim 파일 설정</li>
+</ol>
+
+<p>init.vim 파일을 수정해줍니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>call plug#begin<span class="o">(</span><span class="s1">'~/.vim/plugged'</span><span class="o">)</span> <span class="s2">" 플러그인 시작
+"</span>NERDTree
+Plug <span class="s1">'preservim/nerdtree'</span>
+
+<span class="s2">"JellyBeans
+Plug 'nanotech/jellybeans.vim'
+
+"</span>Airline
+Plug <span class="s1">'vim-airline/vim-airline'</span>
+
+<span class="s2">"Tagbar
+Plug 'preservim/tagbar'
+
+"</span>COC
+Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span class="s1">'branch'</span>: <span class="s1">'release'</span><span class="o">}</span>
+Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span class="s1">'branch'</span>: <span class="s1">'master'</span>, <span class="s1">'do'</span>: <span class="s1">'yarn install --frozen-lockfile'</span><span class="o">}</span>
+
+call plug#end<span class="o">()</span>
+
+
+colorscheme jellybeans
+<span class="nb">set </span><span class="nv">background</span><span class="o">=</span>dark
+~
+</code></pre></div></div>
+
+<p>init.vim 파일을 수정후 아래명령어를 nvim command mode로 입력하여 실행합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PlugInstall
+</code></pre></div></div>
+
+<h1 id="3-coc">3. CoC</h1>
+
+<p>https://github.com/neoclide/coc.nvim 를 참고함</p>
+
+<h2 id="31-coc-설치">3.1 CoC 설치</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL install-node.vercel.app/lts | bash
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">~/.config/nvim/init.vim</code> 파일에 다음을 추가</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span class="s1">'branch'</span>: <span class="s1">'release'</span><span class="o">}</span>
+Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span class="s1">'branch'</span>: <span class="s1">'master'</span>, <span class="s1">'do'</span>: <span class="s1">'yarn install --frozen-lockfile'</span><span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="32-language-server-설치">3.2 Language Server 설치</h2>
+
+<h3 id="321-cc">3.2.1 C/C++</h3>
+
+<p><strong>설치방법</strong></p>
+
+<p>아래 명령어를 nvim command mode로 실행</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CocInstall coc-clangd
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">~/.config/nvim/coc-settings.json</code> 에 다음을 추가</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+   </span><span class="nl">"clangd.semanticHighlighting"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coc.preferences.currentFunctionSymbolAutoUpdate"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"diagnostic.errorSign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"✖"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"diagnostic.warningSign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"⚠"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"diagnostic.infoSign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ℹ"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"diagnostic.hintSign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"➤"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suggest.noselect"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suggest.echodocSupport"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"codeLens.enable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"signature.enable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suggest.preferCompleteThanJumpPlaceholder"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"clangd.path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="322-system-verilog">3.2.2 System Verilog</h3>
+
+<p><strong>설치 방법</strong></p>
+
+<p>터미널에 다음을 입력</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>npm <span class="nb">install</span> <span class="nt">-g</span> @imc-trading/svlangserver
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">~/.config/nvim/coc-settings.json</code> 에 다음을 추가</p>
+
+<p>https://gilee.kr/vimeul-idero-sayonghagi-2-init-vim-seoljeonghagi-2/을 참고함</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"languageserver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"svlangserver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"svlangserver"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"filetypes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"systemverilog"</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"systemverilog.includeIndexing"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"**/*.{sv,svh}"</span><span class="p">],</span><span class="w">
+                </span><span class="nl">"systemverilog.excludeIndexing"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"test/**/*.sv*"</span><span class="p">],</span><span class="w">
+                </span><span class="nl">"systemverilog.defines"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="nl">"systemverilog.launchConfiguration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/tools/verilator -sv -Wall --lint-only"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"systemverilog.formatCommand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/tools/verible-verilog-format"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="323-python">3.2.3 Python</h3>
+
+<h3 id="324-final">3.2.4 Final</h3>
+
+<p><code class="language-plaintext highlighter-rouge">~/.config/nvim/coc-settings.json</code>  파일</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"languageserver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"svlangserver"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"svlangserver"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"filetypes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"systemverilog"</span><span class="p">],</span><span class="w">
+            </span><span class="nl">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"systemverilog.includeIndexing"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"**/*.{sv,svh}"</span><span class="p">],</span><span class="w">
+                </span><span class="nl">"systemverilog.excludeIndexing"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"test/**/*.sv*"</span><span class="p">],</span><span class="w">
+                </span><span class="nl">"systemverilog.defines"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="nl">"systemverilog.launchConfiguration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/tools/verilator -sv -Wall --lint-only"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"systemverilog.formatCommand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/tools/verible-verilog-format"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  
+    </span><span class="nl">"clangd.semanticHighlighting"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coc.preferences.currentFunctionSymbolAutoUpdate"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"diagnostic.errorSign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"✖"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"diagnostic.warningSign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"⚠"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"diagnostic.infoSign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ℹ"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"diagnostic.hintSign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"➤"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suggest.noselect"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suggest.echodocSupport"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"codeLens.enable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"signature.enable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"suggest.preferCompleteThanJumpPlaceholder"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"clangd.path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
