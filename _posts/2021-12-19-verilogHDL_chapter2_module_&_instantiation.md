@@ -20,7 +20,7 @@ article_header:
 
 디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. __그림1__의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.
 
-![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.drawio.png)
+![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png)
 
 __그림1__ 4bit Adder 예제
 
@@ -28,7 +28,7 @@ __그림1__ 4bit Adder 예제
 
 그래서 __그림2__와 같이 회로를 여러 서브블럭들로 나누어 설계를 합니다. 이러한 각각의 블럭을 모듈이라고 합니다.  그림2는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다.
 
-![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.drawio.png)
+![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
 
 __figure 2__ module instantiation의 예시
 
@@ -76,7 +76,7 @@ verilog의 module은`module`이라는 키워드로 시작하고 `endmodule`이�
 * output
 * inout
 
-![figure4](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.drawio.png)
+![figure4](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png)
 
 __figure 2__ module의 포트 연결 규칙
 
