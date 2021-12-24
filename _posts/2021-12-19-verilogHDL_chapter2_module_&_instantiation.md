@@ -18,7 +18,7 @@ article_header:
 
 <!--more-->
 
-디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. __그림1__의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.
+디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. __그림1__ 의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.
 
 ![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png)
 
@@ -26,11 +26,15 @@ __그림1__ 4bit Adder 예제
 
 
 
-그래서 __그림2__와 같이 회로를 여러 서브블럭들로 나누어 설계를 합니다. 이러한 각각의 블럭을 모듈이라고 합니다.  그림2는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다.
+그래서 회로를 여러 서브블럭들로 나누어 설계를 합니다. __그림2__ 는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다. 이때 4bit_adder 및 full_adder와 같은 설계 블록들을 `모듈(module)`이라고 합니다. 
 
 ![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
 
 __figure 2__ module instantiation의 예시
+
+
+
+이제 full_adder라는 모듈의 구성을 살펴봅시다.
 
 
 
@@ -86,7 +90,7 @@ __figure 2__ module의 포트 연결 규칙
 
 먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다. 
 
-![figure5](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.drawio.png)
+![figure5](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png)
 
 __figure 3__ module의 포트 연결 규칙 with instantiation
 
