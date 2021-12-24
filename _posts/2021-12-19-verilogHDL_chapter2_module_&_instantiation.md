@@ -76,7 +76,7 @@ verilog의 module은`module`이라는 키워드로 시작하고 `endmodule`이�
 * output
 * inout
 
-![](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.drawio.png)
+![figure4](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.drawio.png)
 
 __figure 2__ module의 포트 연결 규칙
 
@@ -86,7 +86,7 @@ __figure 2__ module의 포트 연결 규칙
 
 먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다. 
 
-![](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.drawio.png)
+![figure5](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.drawio.png)
 
 __figure 3__ module의 포트 연결 규칙 with instantiation
 
