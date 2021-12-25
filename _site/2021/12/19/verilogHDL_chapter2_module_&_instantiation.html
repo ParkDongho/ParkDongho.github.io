@@ -456,11 +456,84 @@
   <li>포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.</li>
 </ul>
 
+<p>예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 이런식으로 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">full_adder</span><span class="p">(</span> <span class="c1">//module 키워드로 모듈시작</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>        <span class="c1">//1bit wire input</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">b</span><span class="p">,</span>        <span class="c1">//1bit wire input</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in</span><span class="p">,</span> <span class="c1">//1bit wire input</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">out</span><span class="p">,</span>      <span class="c1">//1bit wire output</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span> <span class="c1">//1bit wire output</span>
+<span class="p">);</span>
+  
+  <span class="c1">//mux의 내부 로직</span>
+  
+<span class="k">endmodule</span> <span class="c1">//endmodule 키워드로 모듈 종료</span>
+</code></pre></div></div>
+
 <h3 id="221-vector-form">2.2.1 Vector Form</h3>
+
+<p>hello_world</p>
+
+<p>print hello world  DDDDDD DDDD</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in</span><span class="p">,</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span>
+<span class="p">);</span>
+  
+  <span class="c1">//instantiation of full_adder instance</span>
+  
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
+  <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="p">)(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in</span><span class="p">,</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span>
+<span class="p">);</span>
+  
+  <span class="c1">//instantiation of full_adder instance</span>
+  
+<span class="k">endmodule</span>
+</code></pre></div></div>
 
 <p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png" alt="fig 6" /></p>
 
-<h2 id="22-instantiation">2.2 Instantiation</h2>
+<p><strong>figure 6</strong> 4bit adder의 vector 형태 표현</p>
+
+<h2 id="23-instantiation">2.3 Instantiation</h2>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png" alt="fig 2" /></p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
+  <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="p">)(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in</span><span class="p">,</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span>
+<span class="p">);</span>
+  
+  <span class="n">full_adder</span> <span class="n">full_adder_0</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_in</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_1</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_2</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_3</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_out</span><span class="p">));</span>
+  
+<span class="k">endmodule</span>
+</code></pre></div></div>
 
 </div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-12-19T00:00:00+00:00"><!-- start custom article footer snippet -->
 

@@ -189,17 +189,108 @@ __Example 2.1__
 * 포트 out은 reg 타입으로 정의하였습니다.
 * 포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.
 
+예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 이런식으로 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.
+
+```verilog
+module full_adder( //module 키워드로 모듈시작
+  input wire a,        //1bit wire input
+  input wire b,        //1bit wire input
+  input wire carry_in, //1bit wire input
+  
+  output wire out,      //1bit wire output
+  output wire carry_out //1bit wire output
+);
+  
+  //mux의 내부 로직
+  
+endmodule //endmodule 키워드로 모듈 종료
+```
+
 
 
 ### 2.2.1 Vector Form
 
+hello_world
+
+print hello world  DDDDDD DDDD
+
+
+
+```verilog
+module nbit_adder(
+  input wire [3:0] a,
+  input wire [3:0] b,
+  input wire carry_in,
+  
+  output wire [3:0] out,
+  output wire carry_out
+);
+  
+  //instantiation of full_adder instance
+  
+endmodule
+```
+
+
+
+```verilog
+module nbit_adder#(
+  parameter DATA_WIDTH = 4
+)(
+  input wire [DATA_WIDTH-1:0] a,
+  input wire [DATA_WIDTH-1:0] b,
+  input wire carry_in,
+  
+  output wire [DATA_WIDTH-1:0] out,
+  output wire carry_out
+);
+  
+  //instantiation of full_adder instance
+  
+endmodule
+```
+
+
+
+
+
 ![fig 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png)
 
+__figure 6__ 4bit adder의 vector 형태 표현
 
 
 
 
-## 2.2 Instantiation
+
+## 2.3 Instantiation
+
+
+
+
+
+![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
+
+```verilog
+module nbit_adder#(
+  parameter DATA_WIDTH = 4
+)(
+  input wire [DATA_WIDTH-1:0] a,
+  input wire [DATA_WIDTH-1:0] b,
+  input wire carry_in,
+  
+  output wire [DATA_WIDTH-1:0] out,
+  output wire carry_out
+);
+  
+  full_adder full_adder_0(.a(a[0]), .b(b[0]), .carry_in(carry_in), .out(out[0]), .carry_out());
+  full_adder full_adder_1(.a(a[1]), .b(b[1]), .carry_in(), .out(out[1]), .carry_out());
+  full_adder full_adder_2(.a(a[2]), .b(b[2]), .carry_in(), .out(out[2]), .carry_out());
+  full_adder full_adder_3(.a(a[3]), .b(b[3]), .carry_in(), .out(out[3]), .carry_out(carry_out));
+  
+endmodule
+```
+
+
 
 
 
