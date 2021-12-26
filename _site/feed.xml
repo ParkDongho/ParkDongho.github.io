@@ -1,617 +1,1125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-25T16:05:50+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI-Chip Dev Blog</title><subtitle>Your Site Description
-</subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">NeoVIM 설정하기</title><link href="http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="NeoVIM 설정하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-26T09:16:37+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
+</subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">RTL/FPGA 공부 시 도움 될수도 있는 자료 목록</title><link href="http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html" rel="alternate" type="text/html" title="RTL/FPGA 공부 시 도움 될수도 있는 자료 목록" /><published>2021-12-26T00:00:00+00:00</published><updated>2021-12-26T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html">&lt;!--more--&gt;
 
-&lt;h1 id=&quot;1-neovim&quot;&gt;1. NEOVIM&lt;/h1&gt;
+# Hardware Design
 
-&lt;ol&gt;
-  &lt;li&gt;아래 명령어로 neovim 설치&lt;/li&gt;
-&lt;/ol&gt;
+## HDL
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;neovim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+### 도서
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvim&lt;/code&gt;  명령어로 neovim 실행&lt;/li&gt;
-&lt;/ol&gt;
+* Verilog HDL: A Guide to Digital Design and Synthesis
+  * 원서 : https://www.amazon.com/-/ko/dp/0130449113/ref=sr_1_1?dchild=1&amp;keywords=verilog+hdl&amp;qid=1635502028&amp;qsid=132-6454366-7382133&amp;s=books&amp;sr=1-1&amp;sres=8177589180%2C0984629246%2C0134516753%2C0134549899%2C0963013351%2C8131794741%2CB08GS5LRRG%2C9333223371%2C981108775X%2C1691475297%2C1118841093%2C1598291068%2C0367778815%2C172153038X%2C0132774208%2C0136019285&amp;srpt=ABIS_BOOK
+  * 번역서 : http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9788972835011&amp;orderClick=LEa&amp;Kc=
+* SystemVerilog for Design
+  * 원서 : https://www.amazon.com/-/ko/dp/0387333991/ref=sr_1_6?dchild=1&amp;keywords=Systemverilog&amp;qid=1635501847&amp;qsid=132-6454366-7382133&amp;s=books&amp;sr=1-6&amp;sres=1546776346%2C1523364025%2C1489995005%2C1119282667%2C1075968437%2C0387333991%2C3030713180%2C0134549899%2C1518681441%2C0387717145%2C3030247368%2CB091CRDBNN%2CB09K25MPH1%2CB083KN1J1P%2C172433509X%2C1365927148&amp;srpt=ABIS_BOOK
+  * 번역서 : http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9788972837718&amp;orderClick=LAG&amp;Kc=
+* RTL Modeling with SystemVerilog for Simulation and Synthesis: Using SystemVerilog for ASIC and FPGA Design
+  * 원서 : https://www.amazon.com/RTL-Modeling-SystemVerilog-Simulation-Synthesis/dp/1546776346/ref=pd_bxgy_img_2/132-6454366-7382133?pd_rd_w=qqJtc&amp;pf_rd_p=c64372fa-c41c-422e-990d-9e034f73989b&amp;pf_rd_r=NMVZHWJX4SFQ5ZG92JFN&amp;pd_rd_r=9619ea48-a6d0-4f13-9a41-c199498fcf88&amp;pd_rd_wg=gFv5E&amp;pd_rd_i=1546776346&amp;psc=1
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvim helloworld.v
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+### 동영상 강좌
 
-&lt;h1 id=&quot;2-vim-plug-설치&quot;&gt;2. VIM-PLUG 설치&lt;/h1&gt;
+* 충북대 IDEC Verilog HDL
+  * 1일차 오전 : https://www.youtube.com/watch?v=9SbI38MMN7Y&amp;t=1768s
+  * 1일차 오후 : https://www.youtube.com/watch?v=pWabdHdmpZk
+  * 2일차 오전 : https://www.youtube.com/watch?v=mvgjsJASoEU&amp;t=463s
+  * 2일차 오후 : https://www.youtube.com/watch?v=EYGmMTnZZks
 
-&lt;ol&gt;
-  &lt;li&gt;아래 명령어를 터미널에 입력하여 vim-plug 설치 (unix/linux 기준)&lt;/li&gt;
-&lt;/ol&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'curl -fLo &quot;${XDG_DATA_HOME:-$HOME/.local/share}&quot;/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;만약 다른 OS라면 https://github.com/junegunn/vim-plug를 참고&lt;/p&gt;
+## Digital System Design
 
-&lt;p&gt;curl이 설치 되어 있지 않다면 curl을 설치해줍니다.&lt;/p&gt;
+### 도서
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;curl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+* Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog &lt;= 이책 추천
+  * 원서(Amazon) : https://www.amazon.com/-/ko/dp/0134549899/ref=sr_1_1?dchild=1&amp;keywords=digital+design+mano&amp;qid=1635502122&amp;qsid=132-6454366-7382133&amp;s=books&amp;sr=1-1&amp;sres=0134549899%2C9353062012%2C0132774208%2C933254252X%2C0131989243%2CB01K0PVJ0E%2C8120334698%2C1292231165%2C0133760634%2C0470531088%2C0804137803%2CB00HEHG7W2%2C1948209004%2C0415790522%2C0521177235%2C0131755633&amp;srpt=ABIS_BOOK
+  * 원서(Global Edition) : http://www.kyobobook.co.kr/product/detailViewEng.laf?ejkGb=ENG&amp;mallGb=ENG&amp;barcode=9781292231167&amp;orderClick=LAG&amp;Kc=
+  * 번역서 : http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791185475554&amp;orderClick=LAG&amp;Kc=
+* FPGA Prototyping Using Verilog Examples &lt;= 원서로 추천(번역서는 중간까지만 나와있음)
+  * 원서 : https://www.amazon.com/-/ko/dp/0470185325/ref=sr_1_2?crid=1UXE7S49T5ZSI&amp;dchild=1&amp;keywords=verilog+examples&amp;qid=1635502301&amp;qsid=132-6454366-7382133&amp;s=books&amp;sprefix=verilog+%2Cstripbooks-intl-ship%2C324&amp;sr=1-2&amp;sres=0983497303%2C0470185325%2C1118011031%2C0980133793%2C1482593335%2CB01F9FW7CO%2CB00E2RKI36%2C7121257734%2C7118105678%2C7121222698%2C7115176329%2C7894360104%2C1691475297%2C125964376X%2C1728619440%2C0130449113&amp;srpt=ABIS_BOOK
+  * 번역서 : http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791156006879&amp;orderClick=LAG&amp;Kc=
 
-&lt;ol&gt;
-  &lt;li&gt;vim-plug를 설치하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.local/share/nvim/autoload&lt;/code&gt; 디렉토리에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plug.vim&lt;/code&gt; 파일이 생성됩니다.&lt;/li&gt;
-&lt;/ol&gt;
+### 동영상 강좌
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.local/share/nvim/autoload
-&lt;span class=&quot;nb&quot;&gt;ls
+* Design of Digital Circuits
+  * https://www.youtube.com/watch?v=PMJxcArLU1E&amp;list=PL5Q2soXY2Zi_QedyPWtRmFUJ2F8DdYP7l
 
-&lt;/span&gt;plug.vim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;~/.config/nvim 디렉토리에 init.vim파일을 생성 해줍니다. init.vim 파일은 vim에서의 vimrc과 같은 역할을 수행합니다.&lt;/li&gt;
-&lt;/ol&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.config/nvim
+## AXI Interface
+
+### 문서
+
+* AMBA AXI and ACE Protocol Specification
+  * http://www.gstitt.ece.ufl.edu/courses/fall15/eel4720_5721/labs/refs/AXI4_specification.pdf
+* Vivado Design Suite AXI Reference Guide
+  * https://www.xilinx.com/support/documentation/ip_documentation/axi_ref_guide/latest/ug1037-vivado-axi-reference-guide.pdf
+
+### 동영상 강좌
+
+* AMBA AXI와 AXI-Stream 설계와 검증
+  * https://www.idec.or.kr/vod/apply/view/?pay=&amp;search_val=axi&amp;no=257
+* AMBA AXI 기반 IP 설계와 검증
+  * https://www.idec.or.kr/vod/apply/view/?pay=&amp;search_val=axi&amp;no=124
+* SoC architecture 설계
+  * https://www.idec.or.kr/vod/apply/view/?pay=&amp;search_val=axi&amp;no=11
+
+
+
+## Computer Architecture
+
+### 도서
+
+* Computer Organization and Design RISC-V Edition
+
+  정말로 유명한 책, 컴퓨터 구조 분야의 바이블이라 생각함
+
+  * 원서 : https://www.amazon.com/-/ko/dp/0128122757/ref=pd_sbs_5/132-6454366-7382133?pd_rd_w=jZGyt&amp;pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&amp;pf_rd_r=0GG2M4PW6SPAMRMG3Q1Q&amp;pd_rd_r=08a23760-39a4-4074-9230-b4714ba07486&amp;pd_rd_wg=aqDDf&amp;pd_rd_i=0128122757&amp;psc=1
+  * 번역서 : http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9788964214244&amp;orderClick=LAG&amp;Kc=
+
+* Computer Architecture: A Quantitative Approach 
+
+  위의 Computer Organization and Design RISC-V Edition의 대학원 버전
+
+  * 원서 : https://www.amazon.com/-/ko/dp/0128119055/ref=sr_1_1?crid=3G2K5ZOAF7MBK&amp;dchild=1&amp;keywords=computer+architecture&amp;qid=1635501534&amp;qsid=132-6454366-7382133&amp;s=books&amp;sprefix=computer+architecture%2Cstripbooks-intl-ship%2C322&amp;sr=1-1&amp;sres=0128119055%2C1838984399%2C0123944244%2C1593276680%2C0128201096%2C0128000562%2C1119183936%2C0124077269%2C0128203315%2C1138626597%2C1284123030%2C012383872X%2C1441908765%2C0321486137%2C1681739844%2CB099WJ2TZV&amp;srpt=ABIS_BOOK
+
+### 동영상 강좌
+
+* Computer Architecture - ETH Zürich
+  * (2020) : https://www.youtube.com/playlist?list=PL5Q2soXY2Zi9xidyIgBxUz7xRPS-wisBN
+  * (2021) : https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_uej3aY39YB5pfW4SJ7LlN
+
+
+
+## VLSI 신호처리
+
+### 도서
+
+* VLSI Digital Signal Processing Systems_ Design and Implementation
+
+### 동영상 강좌
+
+* 
+
+
+
+## __Computer Arithmetic__
+
+#### __도서__
+
+* Computer Arithmetic Algorithms
+* Computer arithmetic : algorithms and hardware designs
+
+#### __동영상 강좌__
+
+* 
+
+* 
+
+
+
+
+
+## Image Processing
+
+### 도서
+
+* Digital Image Processing
+  * 원서(Amazon) : https://www.amazon.com/-/ko/dp/1292223049/ref=sr_1_1?crid=2PYPZDB94TJQ5&amp;dchild=1&amp;keywords=digital+image+processing&amp;qid=1635571627&amp;qsid=132-6454366-7382133&amp;s=books&amp;sprefix=digital+image+pro%2Cstripbooks-intl-ship%2C351&amp;sr=1-1&amp;sres=0133356728%2C9389898641%2C0982085419%2C0470844736%2C0367783339%2C1973565153%2C0262017164%2C0070702624%2C0750326050%2C013405816X%2CB01JAK54TM%2C1848829183%2C3540240357%2C0521860857%2C013168728X%2C0367778769&amp;srpt=ABIS_BOOK
+  * 원서(Global) : http://www.kyobobook.co.kr/product/detailViewEng.laf?mallGb=ENG&amp;ejkGb=ENG&amp;barcode=9781292223049
+
+### 동영상 강좌
+
+* Image Processing using Zynq
+  * https://www.youtube.com/playlist?list=PLTYvvOtCsmxzjHY70DYA8pe5D8745T_5m
+
+
+
+## NPU
+
+### 도서
+
+* Efficient Processing of Deep Neural Networks
+  * https://www.amazon.com/Efficient-Processing-Deep-Neural-Networks/dp/168173835X
+
+### 동영상 강좌
+
+* IDEC 머신러닝을 위한 하드웨어 가속
+  * https://www.youtube.com/watch?v=tDxA3VT5kzYaasdasdasdasd
+  * https://www.youtube.com/watch?v=95gxMOotYRc
+  * https://www.youtube.com/watch?v=z1gBnr6NdoQ&amp;t=5508s
+
+### 논문
+
+#### Hardware Architecture
+
+* 
+
+
+
+#### Instruction Set Architecture
+
+* 
+
+
+
+#### Model Compression
+
+* 
+
+
+
+
+
+## Processing in Memory
+
+### 동영상 강좌
+
+* The Story of RowHammer Lecture
+  * https://www.youtube.com/watch?v=sgd7PHQQ1AI&amp;list=PL5Q2soXY2Zi8D_5MGV6EnXEJHnV2YFBJl&amp;t=0s
+* Accelerating Genome Analysis Lecture
+  * https://www.youtube.com/watch?v=r7sn41lH-4A&amp;list=PL5Q2soXY2Zi8D_5MGV6EnXEJHnV2YFBJl&amp;t=0s
+* Memory-Centric Computing Systems Tutorial
+  * https://www.youtube.com/watch?v=H3sEaINPBOE&amp;list=PL5Q2soXY2Zi8D_5MGV6EnXEJHnV2YFBJl&amp;t=0s
+* Intelligent Architectures for Intelligent Machines Lecture
+  * https://www.youtube.com/watch?v=GTieZPY4Wmc&amp;list=PL5Q2soXY2Zi8D_5MGV6EnXEJHnV2YFBJl&amp;t=0s
+* Rethinking Memory System Design Lecture
+  * https://www.youtube.com/watch?v=F7xZLNMIY1E&amp;list=PL5Q2soXY2Zi8D_5MGV6EnXEJHnV2YFBJl
+
+* Processing in Memory Course - ETH Zürich
+  * https://www.youtube.com/playlist?list=PL5Q2soXY2Zi-841fUYYUK9EsXKhQKRPyX
+
+
+
+### 논문
+
+* 
+
+
+
+# Verification
+
+## System Verilog Testbench
+
+### 도서
+
+* SystemVerilog for Verification
+  * https://www.amazon.com/SystemVerilog-Verification-Learning-Testbench-Language/dp/1461407141/ref=pd_bxgy_img_1/132-6454366-7382133?pd_rd_w=4NA7V&amp;pf_rd_p=c64372fa-c41c-422e-990d-9e034f73989b&amp;pf_rd_r=K16XKNHT8WDFRS0AYRYY&amp;pd_rd_r=4391f6f0-d996-4bcf-a8f0-30cc05dc5697&amp;pd_rd_wg=tVG0s&amp;pd_rd_i=1461407141&amp;psc=1
+
+### 동영상 강좌
+
+* System Verilog Testbench
+  * https://www.youtube.com/watch?v=sfUW711b2BE&amp;list=PL8NoqZRUC7hfc5GP8ugqKWK88MP1J_yst
+
+### 문서
+
+* https://www.youtube.com/playlist?list=PL8NoqZRUC7hcUeGjTGmAzuXZCwCmgY5kI
+
+
+
+## UVM
+
+### 도서
+
+* The UVM Primer: A Step-by-Step Introduction to the Universal Verification Methodology
+  * https://www.amazon.com/UVM-Primer-Step-Step-Introduction/dp/0974164933/ref=pd_sbs_7/132-6454366-7382133?pd_rd_w=U13Mg&amp;pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&amp;pf_rd_r=HAZK54QT0RXR3CYD0RCR&amp;pd_rd_r=2af54e4b-ef1c-426b-85ac-eb2e5416f374&amp;pd_rd_wg=2KVBE&amp;pd_rd_i=0974164933&amp;psc=1
+
+### 동영상 강좌
+
+* 
+
+### 문서
+
+* 
+
+
+
+### 동영상 강좌
+
+* Easier UVM Video Tutorial
+  * https://www.youtube.com/watch?v=imH4CFmVGWE&amp;list=PLBIILfL2t1lnvzw7vF0arlvu36Wj4--D7
+* UVM Basics (Cadence)
+  * https://www.youtube.com/playlist?list=PLTYvvOtCsmxyF94q7RqvQQWye7QHTs97v
+* UVM Basics(Synopsys)
+  * https://www.youtube.com/playlist?list=PLEgCreVKPx5AP61Pu36QQE0Pkni2Vv-HD
+
+
+
+## CoSim
+
+
+
+
+
+## ISS
+
+
+
+
+
+# Algorithms
+
+## Deep Learning
+
+### 도서
+
+
+
+### 동영상 강좌
+
+
+
+### 논문
+
+#### Object Detection
+
+
+
+#### Super Resolution
+
+
+
+#### Segmentation
+
+
+
+
+
+
+
+## Image Processing
+
+
+
+
+
+# Tools
+
+## Xilinx Vivado
+
+### 동영상 강좌
+
+* 
+
+
+
+## VCS
+
+### 동영상 강좌
+
+* VCS
+  * https://www.youtube.com/watch?v=uNWSHwAHP-U&amp;list=PL8NoqZRUC7hc2IZK-OuJwVmHnRvp29rlP
+
+
+
+## Verdi
+
+### 동영상 강좌
+
+* Verdi
+  * https://www.youtube.com/watch?v=uNWSHwAHP-U&amp;list=PL8NoqZRUC7hc2IZK-OuJwVmHnRvp29rlP
+
+
+
+## Xilinx HLS
+
+### 블로그
+
+* HLS 강좌 HOKIM 블로그
+  * https://hls-goodkook.blogspot.com/2021/08/ug871-xilinx-high-level-synthesis.html
+
+
+
+# 자동화
+
+## Shell script
+
+### 동영상 강좌
+
+
+
+## Tcl
+
+### 동영상 강좌
+
+
+
+
+
+## Makefile
+
+### 동영상 강좌
+
+* IDEC
+  * https://www.youtube.com/watch?v=JhZiIHQ87QE
+
+## Ruby
+
+### 동영상 강좌
+
+
+
+## Perl
+
+### 동영상 강좌
+
+
+
+# 관련 커뮤니티
+
+### 이니프로 카페
+
+* https://cafe.naver.com/plduser
+
+
+
+### Altera Town
+
+* https://cafe.naver.com/alteratown
+
+​	
+
+### Xilinx Forum
+
+* https://support.xilinx.com/s/?language=en_US
+
+
+
+# 유튜버
+
+## 설계 독학 맛비
+
+
+
+## KK SystemVerilog
+
+
+
+## Onur Mutlu Lectures</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verification" /><summary type="html"></summary></entry><entry><title type="html">Vivado 설치하기</title><link href="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Vivado 설치하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+
+# Linux
+
+**테스트 환경**
+
+* Ubuntu : 20.04.1
+
+* VIvado : 2021.1
+
+* FPGA : Zybo Z7-20
+
+## 1. Vivado 설치
+
+
+
+## 2. Boardfile
+
+
+
+## 3. Driver
+
+
+
+
+
+# Windows
+
+**테스트 환경**
+
+* Windows : 10.xx
+
+* VIvado : 2021.1
+
+* FPGA : Zybo Z7-20
+
+## 1. Vivado 설치
+
+
+
+## 2. Boardfile
+
+
+
+## 3. Driver</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Tool" /><summary type="html"></summary></entry><entry><title type="html">NeoVIM 설정하기</title><link href="http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="NeoVIM 설정하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+
+# 1. NEOVIM
+
+1. 아래 명령어로 neovim 설치
+
+```bash
+sudo apt install neovim
+```
+
+2. `nvim`  명령어로 neovim 실행
+
+```bash
+nvim helloworld.v
+```
+
+# 2. VIM-PLUG 설치
+
+1. 아래 명령어를 터미널에 입력하여 vim-plug 설치 (unix/linux 기준)
+
+```bash
+sh -c 'curl -fLo &quot;${XDG_DATA_HOME:-$HOME/.local/share}&quot;/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+만약 다른 OS라면 https://github.com/junegunn/vim-plug를 참고
+
+curl이 설치 되어 있지 않다면 curl을 설치해줍니다.
+
+```bash
+sudo apt install curl
+```
+
+2. vim-plug를 설치하면 `~/.local/share/nvim/autoload` 디렉토리에 `plug.vim` 파일이 생성됩니다.
+
+```bash
+cd ~/.local/share/nvim/autoload
+ls
+
+plug.vim
+```
+
+3. ~/.config/nvim 디렉토리에 init.vim파일을 생성 해줍니다. init.vim 파일은 vim에서의 vimrc과 같은 역할을 수행합니다.
+
+```bash
+cd ~/.config/nvim
 nvim init.vim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```
 
-&lt;p&gt;만약 ~/.config 디렉토리에 nvim 폴더가 존재하지 않다면 해당 폴더를 생성 해줍니다.&lt;/p&gt;
+만약 ~/.config 디렉토리에 nvim 폴더가 존재하지 않다면 해당 폴더를 생성 해줍니다.
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.config
-&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;nvim
+```bash
+cd ~/.config
+mkdir nvim
 
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.config/nvim
+cd ~/.config/nvim
 nvim init.vim
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```
 
-&lt;ol&gt;
-  &lt;li&gt;init.vim 파일 설정&lt;/li&gt;
-&lt;/ol&gt;
 
-&lt;p&gt;init.vim 파일을 수정해줍니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;call plug#begin&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'~/.vim/plugged'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; 플러그인 시작
-&quot;&lt;/span&gt;NERDTree
-Plug &lt;span class=&quot;s1&quot;&gt;'preservim/nerdtree'&lt;/span&gt;
+4. init.vim 파일 설정
 
-&lt;span class=&quot;s2&quot;&gt;&quot;JellyBeans
+init.vim 파일을 수정해줍니다.
+
+```bash
+call plug#begin('~/.vim/plugged') &quot; 플러그인 시작
+&quot;NERDTree
+Plug 'preservim/nerdtree'
+
+&quot;JellyBeans
 Plug 'nanotech/jellybeans.vim'
 
-&quot;&lt;/span&gt;Airline
-Plug &lt;span class=&quot;s1&quot;&gt;'vim-airline/vim-airline'&lt;/span&gt;
+&quot;Airline
+Plug 'vim-airline/vim-airline'
 
-&lt;span class=&quot;s2&quot;&gt;&quot;Tagbar
+&quot;Tagbar
 Plug 'preservim/tagbar'
 
-&quot;&lt;/span&gt;COC
-Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'branch'&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;'release'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'branch'&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'do'&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;'yarn install --frozen-lockfile'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&quot;COC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
-call plug#end&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+call plug#end()
 
 
 colorscheme jellybeans
-&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;dark
+set background=dark
 ~
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```
 
-&lt;p&gt;init.vim 파일을 수정후 아래명령어를 nvim command mode로 입력하여 실행합니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PlugInstall
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;3-coc&quot;&gt;3. CoC&lt;/h1&gt;
+init.vim 파일을 수정후 아래명령어를 nvim command mode로 입력하여 실행합니다.
 
-&lt;p&gt;https://github.com/neoclide/coc.nvim 를 참고함&lt;/p&gt;
+```
+PlugInstall
+```
 
-&lt;h2 id=&quot;31-coc-설치&quot;&gt;3.1 CoC 설치&lt;/h2&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -sL install-node.vercel.app/lts | bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/nvim/init.vim&lt;/code&gt; 파일에 다음을 추가&lt;/p&gt;
+# 3. CoC
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'branch'&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;'release'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'branch'&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'do'&lt;/span&gt;: &lt;span class=&quot;s1&quot;&gt;'yarn install --frozen-lockfile'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+https://github.com/neoclide/coc.nvim 를 참고함
 
-&lt;h2 id=&quot;32-language-server-설치&quot;&gt;3.2 Language Server 설치&lt;/h2&gt;
 
-&lt;h3 id=&quot;321-cc&quot;&gt;3.2.1 C/C++&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;설치방법&lt;/strong&gt;&lt;/p&gt;
+## 3.1 CoC 설치
 
-&lt;p&gt;아래 명령어를 nvim command mode로 실행&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CocInstall coc-clangd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/nvim/coc-settings.json&lt;/code&gt; 에 다음을 추가&lt;/p&gt;
+```
+curl -sL install-node.vercel.app/lts | bash
+```
 
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;clangd.semanticHighlighting&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;coc.preferences.currentFunctionSymbolAutoUpdate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;diagnostic.errorSign&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;✖&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;diagnostic.warningSign&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;⚠&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;diagnostic.infoSign&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ℹ&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;diagnostic.hintSign&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;➤&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;suggest.noselect&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;suggest.echodocSupport&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;codeLens.enable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;signature.enable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;suggest.preferCompleteThanJumpPlaceholder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;clangd.path&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+`~/.config/nvim/init.vim` 파일에 다음을 추가
 
-&lt;h3 id=&quot;322-system-verilog&quot;&gt;3.2.2 System Verilog&lt;/h3&gt;
+```bash
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+```
 
-&lt;p&gt;&lt;strong&gt;설치 방법&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;터미널에 다음을 입력&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; @imc-trading/svlangserver
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+## 3.2 Language Server 설치
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/nvim/coc-settings.json&lt;/code&gt; 에 다음을 추가&lt;/p&gt;
+### 3.2.1 C/C++
 
-&lt;p&gt;https://gilee.kr/vimeul-idero-sayonghagi-2-init-vim-seoljeonghagi-2/을 참고함&lt;/p&gt;
+**설치방법**
 
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;languageserver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;svlangserver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;svlangserver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;filetypes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;systemverilog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;settings&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.includeIndexing&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;**/*.{sv,svh}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.excludeIndexing&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;test/**/*.sv*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.defines&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.launchConfiguration&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/tools/verilator -sv -Wall --lint-only&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.formatCommand&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/tools/verible-verilog-format&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+아래 명령어를 nvim command mode로 실행
 
-&lt;h3 id=&quot;323-python&quot;&gt;3.2.3 Python&lt;/h3&gt;
+```
+CocInstall coc-clangd
+```
 
-&lt;h3 id=&quot;324-final&quot;&gt;3.2.4 Final&lt;/h3&gt;
+`~/.config/nvim/coc-settings.json` 에 다음을 추가
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/nvim/coc-settings.json&lt;/code&gt;  파일&lt;/p&gt;
+```json
+{
+   &quot;clangd.semanticHighlighting&quot;: true,
+    &quot;coc.preferences.currentFunctionSymbolAutoUpdate&quot;: true,
+    &quot;diagnostic.errorSign&quot;: &quot;✖&quot;,
+    &quot;diagnostic.warningSign&quot;: &quot;⚠&quot;,
+    &quot;diagnostic.infoSign&quot;: &quot;ℹ&quot;,
+    &quot;diagnostic.hintSign&quot;: &quot;➤&quot;,
+    &quot;suggest.noselect&quot;: false,
+    &quot;suggest.echodocSupport&quot;: true,
+    &quot;codeLens.enable&quot;: true,
+    &quot;signature.enable&quot;: true,
+    &quot;suggest.preferCompleteThanJumpPlaceholder&quot;: true,
+    &quot;clangd.path&quot;: &quot;~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd&quot;
+}
+```
 
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;languageserver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;svlangserver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;svlangserver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;filetypes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;systemverilog&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;settings&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.includeIndexing&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;**/*.{sv,svh}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.excludeIndexing&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;test/**/*.sv*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.defines&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.launchConfiguration&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/tools/verilator -sv -Wall --lint-only&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;systemverilog.formatCommand&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/tools/verible-verilog-format&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+
+### 3.2.2 System Verilog
+
+**설치 방법**
+
+터미널에 다음을 입력
+
+```bash
+sudo npm install -g @imc-trading/svlangserver
+```
+
+
+
+`~/.config/nvim/coc-settings.json` 에 다음을 추가 
+
+https://gilee.kr/vimeul-idero-sayonghagi-2-init-vim-seoljeonghagi-2/을 참고함
+
+```json
+{
+    &quot;languageserver&quot;: {
+        &quot;svlangserver&quot;: {
+            &quot;command&quot;: &quot;svlangserver&quot;,
+            &quot;filetypes&quot;: [&quot;systemverilog&quot;],
+            &quot;settings&quot;: {
+                &quot;systemverilog.includeIndexing&quot;: [&quot;**/*.{sv,svh}&quot;],
+                &quot;systemverilog.excludeIndexing&quot;: [&quot;test/**/*.sv*&quot;],
+                &quot;systemverilog.defines&quot; : [],
+                &quot;systemverilog.launchConfiguration&quot;: &quot;/tools/verilator -sv -Wall --lint-only&quot;,
+                &quot;systemverilog.formatCommand&quot;: &quot;/tools/verible-verilog-format&quot;
+            }
+        }
+    }
+}
+```
+
+
+
+### 3.2.3 Python
+
+
+
+
+
+### 3.2.4 Final
+
+`~/.config/nvim/coc-settings.json`  파일
+
+```json
+{
+    &quot;languageserver&quot;: {
+        &quot;svlangserver&quot;: {
+            &quot;command&quot;: &quot;svlangserver&quot;,
+            &quot;filetypes&quot;: [&quot;systemverilog&quot;],
+            &quot;settings&quot;: {
+                &quot;systemverilog.includeIndexing&quot;: [&quot;**/*.{sv,svh}&quot;],
+                &quot;systemverilog.excludeIndexing&quot;: [&quot;test/**/*.sv*&quot;],
+                &quot;systemverilog.defines&quot; : [],
+                &quot;systemverilog.launchConfiguration&quot;: &quot;/tools/verilator -sv -Wall --lint-only&quot;,
+                &quot;systemverilog.formatCommand&quot;: &quot;/tools/verible-verilog-format&quot;
+            }
+        }
+    },
   
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;clangd.semanticHighlighting&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;coc.preferences.currentFunctionSymbolAutoUpdate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;diagnostic.errorSign&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;✖&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;diagnostic.warningSign&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;⚠&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;diagnostic.infoSign&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ℹ&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;diagnostic.hintSign&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;➤&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;suggest.noselect&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;suggest.echodocSupport&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;codeLens.enable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;signature.enable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;suggest.preferCompleteThanJumpPlaceholder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;clangd.path&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Tool" /><category term="Vim" /><summary type="html"></summary></entry><entry><title type="html">Vivado 설치하기</title><link href="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Vivado 설치하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
-
-&lt;h1 id=&quot;linux&quot;&gt;Linux&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;테스트 환경&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Ubuntu : 20.04.1&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;VIvado : 2021.1&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;FPGA : Zybo Z7-20&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1-vivado-설치&quot;&gt;1. Vivado 설치&lt;/h2&gt;
-
-&lt;h2 id=&quot;2-boardfile&quot;&gt;2. Boardfile&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-driver&quot;&gt;3. Driver&lt;/h2&gt;
-
-&lt;h1 id=&quot;windows&quot;&gt;Windows&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;테스트 환경&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Windows : 10.xx&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;VIvado : 2021.1&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;FPGA : Zybo Z7-20&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1-vivado-설치-1&quot;&gt;1. Vivado 설치&lt;/h2&gt;
-
-&lt;h2 id=&quot;2-boardfile-1&quot;&gt;2. Boardfile&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-driver-1&quot;&gt;3. Driver&lt;/h2&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Tool" /><summary type="html"></summary></entry><entry><title type="html">Verilog HDL 3장</title><link href="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html" rel="alternate" type="text/html" title="Verilog HDL 3장" /><published>2021-12-21T00:00:00+00:00</published><updated>2021-12-21T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic</id><content type="html" xml:base="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html">&lt;h1 id=&quot;combinational-logic&quot;&gt;Combinational Logic&lt;/h1&gt;
+    &quot;clangd.semanticHighlighting&quot;: true,
+    &quot;coc.preferences.currentFunctionSymbolAutoUpdate&quot;: true,
+    &quot;diagnostic.errorSign&quot;: &quot;✖&quot;,
+    &quot;diagnostic.warningSign&quot;: &quot;⚠&quot;,
+    &quot;diagnostic.infoSign&quot;: &quot;ℹ&quot;,
+    &quot;diagnostic.hintSign&quot;: &quot;➤&quot;,
+    &quot;suggest.noselect&quot;: false,
+    &quot;suggest.echodocSupport&quot;: true,
+    &quot;codeLens.enable&quot;: true,
+    &quot;signature.enable&quot;: true,
+    &quot;suggest.preferCompleteThanJumpPlaceholder&quot;: true,
+    &quot;clangd.path&quot;: &quot;~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd&quot;
+}
+```</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Tool" /><category term="Vim" /><summary type="html"></summary></entry><entry><title type="html">Verilog HDL 3장</title><link href="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html" rel="alternate" type="text/html" title="Verilog HDL 3장" /><published>2021-12-21T00:00:00+00:00</published><updated>2021-12-21T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic</id><content type="html" xml:base="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html"># Combinational Logic
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;31-gate-level-modeling&quot;&gt;3.1 Gate Level Modeling&lt;/h2&gt;
+## 3.1 Gate Level Modeling
 
-&lt;h2 id=&quot;32-dataflow-modeling&quot;&gt;3.2 Dataflow Modeling&lt;/h2&gt;
 
-&lt;h3 id=&quot;321-continuous-assignment&quot;&gt;3.2.1 Continuous Assignment&lt;/h3&gt;
 
-&lt;h3 id=&quot;322-연산자&quot;&gt;3.2.2 연산자&lt;/h3&gt;
+## 3.2 Dataflow Modeling
 
-&lt;h2 id=&quot;33-behaviaral-modeling&quot;&gt;3.3 Behaviaral Modeling&lt;/h2&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Combinational Logic</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
+### 3.2.1 Continuous Assignment
+
+
+
+### 3.2.2 연산자
+
+
+
+
+
+
+
+## 3.3 Behaviaral Modeling</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Combinational Logic</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html"># Module &amp; Instantiation
 
 &lt;!--more--&gt;
 
-&lt;p&gt;디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. &lt;strong&gt;그림1&lt;/strong&gt; 의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.&lt;/p&gt;
+디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. __그림1__ 의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png&quot; alt=&quot;fig 1&quot; /&gt;&lt;/p&gt;
+![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png)
 
-&lt;p&gt;&lt;strong&gt;그림1&lt;/strong&gt; 4bit Adder 예제&lt;/p&gt;
+__그림1__ 4bit Adder 예제
 
-&lt;p&gt;그래서 회로를 여러 서브블럭들로 나누어 설계를 합니다. &lt;strong&gt;그림2&lt;/strong&gt; 는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다. 이때 4bit_adder 및 full_adder와 같은 설계 블록들을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;모듈(module)&lt;/code&gt;이라고 합니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png&quot; alt=&quot;fig 2&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;figure 2&lt;/strong&gt; module instantiation의 예시&lt;/p&gt;
+그래서 회로를 여러 서브블럭들로 나누어 설계를 합니다. __그림2__ 는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다. 이때 4bit_adder 및 full_adder와 같은 설계 블록들을 `모듈(module)`이라고 합니다. 
 
-&lt;p&gt;이제 full_adder라는 모듈의 구성을 살펴봅시다. 모듈은 외부와 데이터를 주고 받을 수 있는 입출력 인터페이스를 제공합니다. 이러한 인터페이스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;포트(port)&lt;/code&gt; 라고 합니다. &lt;strong&gt;그림3&lt;/strong&gt; 에서 확인할 수 있듯이 full_adder 모듈은 a, b, carry_in 이라는 입력 포트, out, carry_out 이라는 출력포트로 구성되어 있습니다.&lt;/p&gt;
+![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png&quot; alt=&quot;fig 3&quot; /&gt;&lt;/p&gt;
+__figure 2__ module instantiation의 예시
 
-&lt;p&gt;&lt;strong&gt;figure 3&lt;/strong&gt; full adder 모듈&lt;/p&gt;
 
-&lt;p&gt;이제 정의한 서브모듈이 어떻게 보다 큰 모듈로 합쳐질 수 있는지 알아봅시다. 이를 이해하기 위해서는&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instantiation&lt;/code&gt; 의 개념을 이해할 필요가 있습니다. 먼저 각각의 모듈은 객체를 만들기 위한 템플릿을 제공합니다. 이러한 템플릿을 통하여 상위 레벨의 모듈에서 객체를 불러들입니다. 이때 각각의 객체는 고유한 이름, 변수, 파라미터, 입출력 인터페이스를 가집니다. 이러한 객체를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instance&lt;/code&gt;라고 하고 모듈 템플릿으로 부터 객체를 생성하는 것을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instantization&lt;/code&gt; 이라고 합니다.&lt;/p&gt;
 
-&lt;p&gt;이에 대한 예시로 &lt;strong&gt;그림2&lt;/strong&gt; 의 4bit adder 를 다시 확인해 봅시다.  먼저 full_adder 라는 모듈에서 서브모듈에 대한 템플릿을 정의 합니다. 이때 full_adder 모듈은 5개의 입출력 포트, 내부 로직에 대한 정의 등을 포함합니다. 이제 정의한 full_adder 모듈을 템플릿으로 하여 4bit_adder라는 상위 모듈에서 full_adder_0, full_adder_1, full_adder_2, full_adder_3 라는 고유한 이름의 객체 4개를 불러들입니다.&lt;/p&gt;
+이제 full_adder라는 모듈의 구성을 살펴봅시다. 모듈은 외부와 데이터를 주고 받을 수 있는 입출력 인터페이스를 제공합니다. 이러한 인터페이스를 `포트(port)` 라고 합니다. __그림3__ 에서 확인할 수 있듯이 full_adder 모듈은 a, b, carry_in 이라는 입력 포트, out, carry_out 이라는 출력포트로 구성되어 있습니다.
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png&quot; alt=&quot;fig 2&quot; /&gt;&lt;/p&gt;
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
 
-&lt;p&gt;&lt;strong&gt;figure 2&lt;/strong&gt; module instantiation의 예시&lt;/p&gt;
+__figure 3__ full adder 모듈
 
-&lt;h2 id=&quot;21-module&quot;&gt;2.1 Module&lt;/h2&gt;
 
-&lt;p&gt;위에서 모듈이 무었인지 알아보았습니다. 이제 이를 베릴로그에서 어떻게 기술하는지 알아봅시다.&lt;/p&gt;
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//모듈 시작&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//port를 정의&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+이제 정의한 서브모듈이 어떻게 보다 큰 모듈로 합쳐질 수 있는지 알아봅시다. 이를 이해하기 위해서는`instantiation` 의 개념을 이해할 필요가 있습니다. 먼저 각각의 모듈은 객체를 만들기 위한 템플릿을 제공합니다. 이러한 템플릿을 통하여 상위 레벨의 모듈에서 객체를 불러들입니다. 이때 각각의 객체는 고유한 이름, 변수, 파라미터, 입출력 인터페이스를 가집니다. 이러한 객체를 `instance`라고 하고 모듈 템플릿으로 부터 객체를 생성하는 것을 `instantization` 이라고 합니다.
+
+이에 대한 예시로 __그림2__ 의 4bit adder 를 다시 확인해 봅시다.  먼저 full_adder 라는 모듈에서 서브모듈에 대한 템플릿을 정의 합니다. 이때 full_adder 모듈은 5개의 입출력 포트, 내부 로직에 대한 정의 등을 포함합니다. 이제 정의한 full_adder 모듈을 템플릿으로 하여 4bit_adder라는 상위 모듈에서 full_adder_0, full_adder_1, full_adder_2, full_adder_3 라는 고유한 이름의 객체 4개를 불러들입니다. 
+
+
+
+![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
+
+__figure 2__ module instantiation의 예시
+
+
+
+## 2.1 Module
+
+위에서 모듈이 무었인지 알아보았습니다. 이제 이를 베릴로그에서 어떻게 기술하는지 알아봅시다.
+
+```verilog
+module 모듈명( //모듈 시작
+  //port를 정의
+)
   
-  &lt;span class=&quot;c1&quot;&gt;//내부로직을 정의&lt;/span&gt;
+  //내부로직을 정의
   
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//모듈 끝&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+endmodule //모듈 끝
+```
 
-&lt;p&gt;verilog의 모듈은&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;module&lt;/code&gt;이라는 키워드로 시작하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;endmodule&lt;/code&gt;이라는 키워드로 모듈을 닫습니다.&lt;/p&gt;
+verilog의 모듈은`module`이라는 키워드로 시작하고 `endmodule`이라는 키워드로 모듈을 닫습니다.
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;module&lt;/code&gt;이라는 키워드 다음에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;모듈명&lt;/code&gt;을 정의합니다.&lt;/p&gt;
+`module`이라는 키워드 다음에는 `모듈명`을 정의합니다.
 
-&lt;p&gt;그리고 모듈명 다음에 나오는 괄호 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;( )&lt;/code&gt;에서는 포트를 정의 합니다.&lt;/p&gt;
+그리고 모듈명 다음에 나오는 괄호 `( )`에서는 포트를 정의 합니다.
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png&quot; alt=&quot;fig 3&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//module 시작&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//port를 정의&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//내부로직을 정의&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//모듈 끝&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;다음은 full_adder에 대한 예시입니다. 본 예시에서 모듈이름이 full_adder로 정의 됨을 확인할 수 있습니다.&lt;/p&gt;
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
 
-&lt;h2 id=&quot;22-port&quot;&gt;2.2 Port&lt;/h2&gt;
+```verilog
+module full_adder( //module 시작
+  //port를 정의
+)
+  //내부로직을 정의
+endmodule //모듈 끝
+```
 
-&lt;p&gt;모듈이 외부 및 다른 모듈과 신호를 주고 받으려면 입출력 단자가 필요합니다. 이러한 입출력 단자를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;포트&lt;/code&gt;라고 합니다. 이러한 입력단자에서 신호를 받아 처리를 한후 출력단자로 내보냅니다. verilog에서는 총 3가지의 port가 있습니다.&lt;/p&gt;
+다음은 full_adder에 대한 예시입니다. 본 예시에서 모듈이름이 full_adder로 정의 됨을 확인할 수 있습니다.
 
-&lt;ul&gt;
-  &lt;li&gt;input : 모듈내로 데이터를 받는 포트&lt;/li&gt;
-  &lt;li&gt;output : 모듈밖으로 데이터를 내보내는 포트&lt;/li&gt;
-  &lt;li&gt;inout : 모듈 내로 데이터를 받을수도 있고 밖으로 데이터를 내보낼 수도 있는 양방향 포트&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;이때 각 포트는 &lt;strong&gt;그림4&lt;/strong&gt; 와 같이&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;input 포트 : only net&lt;/li&gt;
-  &lt;li&gt;output 포트 : reg or net&lt;/li&gt;
-  &lt;li&gt;inout 포트 : only net&lt;/li&gt;
-&lt;/ul&gt;
+## 2.2 Port
 
-&lt;p&gt;와 같은 타입으로 정의 될수 있습니다.&lt;/p&gt;
+모듈이 외부 및 다른 모듈과 신호를 주고 받으려면 입출력 단자가 필요합니다. 이러한 입출력 단자를 `포트`라고 합니다. 이러한 입력단자에서 신호를 받아 처리를 한후 출력단자로 내보냅니다. verilog에서는 총 3가지의 port가 있습니다.
 
-&lt;p&gt;또한 각 포트에 instantiation으로 외부에서 연결되는 신호는 &lt;strong&gt;그림4&lt;/strong&gt; 와 같이&lt;/p&gt;
+* input : 모듈내로 데이터를 받는 포트
+* output : 모듈밖으로 데이터를 내보내는 포트
+* inout : 모듈 내로 데이터를 받을수도 있고 밖으로 데이터를 내보낼 수도 있는 양방향 포트
 
-&lt;ul&gt;
-  &lt;li&gt;input 포트 : reg or net&lt;/li&gt;
-  &lt;li&gt;output 포트 : only net&lt;/li&gt;
-  &lt;li&gt;inout 포트 : only net&lt;/li&gt;
-&lt;/ul&gt;
+이때 각 포트는 __그림4__ 와 같이
 
-&lt;p&gt;와 같은 타입으로 정의 될 수 있습니다.&lt;/p&gt;
+* input 포트 : only net
+* output 포트 : reg or net
+* inout 포트 : only net
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png&quot; alt=&quot;figure4&quot; /&gt;&lt;/p&gt;
+와 같은 타입으로 정의 될수 있습니다.
 
-&lt;p&gt;&lt;strong&gt;figure 4&lt;/strong&gt; module의 포트 연결 규칙&lt;/p&gt;
+또한 각 포트에 instantiation으로 외부에서 연결되는 신호는 __그림4__ 와 같이 
 
-&lt;p&gt;왜 이런 규칙이 존재하는지 생각해 볼까요? 이 부분은 베릴로그가 처음이신 분은 넘어가도 괜찮습니다.&lt;/p&gt;
+* input 포트 : reg or net
+* output 포트 : only net
+* inout 포트 : only net
 
-&lt;p&gt;먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다.&lt;/p&gt;
+와 같은 타입으로 정의 될 수 있습니다.
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png&quot; alt=&quot;figure5&quot; /&gt;&lt;/p&gt;
+![figure4](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png)
 
-&lt;p&gt;&lt;strong&gt;figure 5&lt;/strong&gt; module의 포트 연결 규칙 with instantiation&lt;/p&gt;
+__figure 4__ module의 포트 연결 규칙
 
-&lt;p&gt;모듈A를 instantiation한 모듈B를 가정해 봅시다. 모듈 B의 입장에서 모듈 A의 출력포트에 연결된 신호는 모듈B의 input입니다. input은 반드시 continuous 하여야 하므로 net 타입만이 올 수 있습니다. 이와 동일하게 모듈 B의 입장에서 모듈 A의 입력 포트에 연결된 신호는 모듈B의 output입니다. 따라서 reg 혹은 net타입이 올 수 있죠.&lt;/p&gt;
 
-&lt;p&gt;이제 포트를 어떻게 표현할 수 있는지 알아 봅시다.&lt;/p&gt;
 
-&lt;p&gt;포트는 아래와 같이&lt;/p&gt;
+왜 이런 규칙이 존재하는지 생각해 볼까요? 이 부분은 베릴로그가 처음이신 분은 넘어가도 괜찮습니다.
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다. 
+
+![figure5](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png)
+
+__figure 5__ module의 포트 연결 규칙 with instantiation
+
+모듈A를 instantiation한 모듈B를 가정해 봅시다. 모듈 B의 입장에서 모듈 A의 출력포트에 연결된 신호는 모듈B의 input입니다. input은 반드시 continuous 하여야 하므로 net 타입만이 올 수 있습니다. 이와 동일하게 모듈 B의 입장에서 모듈 A의 입력 포트에 연결된 신호는 모듈B의 output입니다. 따라서 reg 혹은 net타입이 올 수 있죠.
+
+
+
+이제 포트를 어떻게 표현할 수 있는지 알아 봅시다.
+
+포트는 아래와 같이
+
+```verilog
+module 모듈명(
+  &lt;포트_타입&gt; [변수_타입] 입력_포트_명
+  &lt;포트_타입&gt; [변수_타입] 입력_포트_명
+);
   
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
+  //여기에 내부 로직 기술
   
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+endmodule
+```
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;포트_타입&amp;gt; [변수_타입] 입력_포트_명&lt;/code&gt; 와 같은 형태로 표현 할 수 있습니다.&lt;/p&gt;
+`&lt;포트_타입&gt; [변수_타입] 입력_포트_명` 와 같은 형태로 표현 할 수 있습니다.
 
-&lt;p&gt;이때&lt;/p&gt;
+이때
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;포트_타입&amp;gt;&lt;/code&gt; 은  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inout&lt;/code&gt;이 올 수 있고 반드시 정의 해야 합니다.&lt;/p&gt;
+`&lt;포트_타입&gt;` 은  `input`, `output`, `inout`이 올 수 있고 반드시 정의 해야 합니다.
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[변수_타입]&lt;/code&gt;은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wire&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reg&lt;/code&gt;가 올수 있으며 생략가능합니다. 만약 생략하였을시 기본적으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wire&lt;/code&gt;가 오게 됩니다. 만약 출력값을 유지시켜줄 필요가 있다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reg&lt;/code&gt;를 사용할 수 있습니다.&lt;/p&gt;
+`[변수_타입]`은 `wire`, `reg`가 올수 있으며 생략가능합니다. 만약 생략하였을시 기본적으로 `wire`가 오게 됩니다. 만약 출력값을 유지시켜줄 필요가 있다면 `reg`를 사용할 수 있습니다.
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;입력_포트_명&lt;/code&gt;은 포트의 이름을 정의 해줍니다.&lt;/p&gt;
+`입력_포트_명`은 포트의 이름을 정의 해줍니다.
 
-&lt;p&gt;full adder 예제를 확인 해봅시다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png&quot; alt=&quot;fig 3&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//module 키워드로 모듈시작&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
+full adder 예제를 확인 해봅시다.
+
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
+
+
+
+```verilog
+module full_adder( //module 키워드로 모듈시작
+  input a,             //1bit wire input
+  input wire b,        //1bit wire input
+  input wire carry_in, //1bit wire input
   
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;//1bit reg output&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;//1bit wire output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  output reg out,      //1bit reg output
+  output carry_out     //1bit wire output
+);
   
-  &lt;span class=&quot;c1&quot;&gt;//mux의 내부 로직&lt;/span&gt;
+  //mux의 내부 로직
   
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//endmodule 키워드로 모듈 종료&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+endmodule //endmodule 키워드로 모듈 종료
+```
 
-&lt;p&gt;&lt;strong&gt;Example 2.1&lt;/strong&gt;&lt;/p&gt;
+__Example 2.1__
 
-&lt;ul&gt;
-  &lt;li&gt;포트 a, b, carry_in은 입력 포트입니다. input 키워드를 통하여 입력으로 정의해 줍니다.&lt;/li&gt;
-  &lt;li&gt;포트 out, carry_out은 출력 포트 입니다. output 키워드를 통하여 출력으로 정의해 줍니다.&lt;/li&gt;
-  &lt;li&gt;포트 a는 변수 타입을 정의하지 않았습니다. 따라서 default값 wire형으로 정의 됩니다.&lt;/li&gt;
-  &lt;li&gt;포트 b, carry_in은 wire 타입으로 정의해 주었습니다.&lt;/li&gt;
-  &lt;li&gt;포트 out은 reg 타입으로 정의하였습니다.&lt;/li&gt;
-  &lt;li&gt;포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.&lt;/li&gt;
-&lt;/ul&gt;
+* 포트 a, b, carry_in은 입력 포트입니다. input 키워드를 통하여 입력으로 정의해 줍니다.
+* 포트 out, carry_out은 출력 포트 입니다. output 키워드를 통하여 출력으로 정의해 줍니다.
+* 포트 a는 변수 타입을 정의하지 않았습니다. 따라서 default값 wire형으로 정의 됩니다.
+* 포트 b, carry_in은 wire 타입으로 정의해 주었습니다.
+* 포트 out은 reg 타입으로 정의하였습니다.
+* 포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.
 
-&lt;p&gt;예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 이런식으로 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.&lt;/p&gt;
+예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 이런식으로 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//module 키워드로 모듈시작&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
+```verilog
+module full_adder( //module 키워드로 모듈시작
+  input wire a,        //1bit wire input
+  input wire b,        //1bit wire input
+  input wire carry_in, //1bit wire input
   
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;//1bit wire output&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit wire output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  output wire out,      //1bit wire output
+  output wire carry_out //1bit wire output
+);
   
-  &lt;span class=&quot;c1&quot;&gt;//mux의 내부 로직&lt;/span&gt;
+  //mux의 내부 로직
   
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//endmodule 키워드로 모듈 종료&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+endmodule //endmodule 키워드로 모듈 종료
+```
 
-&lt;h3 id=&quot;221-vector-form&quot;&gt;2.2.1 Vector Form&lt;/h3&gt;
 
-&lt;p&gt;hello_world&lt;/p&gt;
 
-&lt;p&gt;print hello world  DDDDDD DDDD&lt;/p&gt;
+### 2.2.1 Vector Form
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+hello_world
+
+print hello world  DDDDDD DDDD
+
+
+
+```verilog
+module nbit_adder(
+  input wire [3:0] a,
+  input wire [3:0] b,
+  input wire carry_in,
   
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  output wire [3:0] out,
+  output wire carry_out
+);
   
-  &lt;span class=&quot;c1&quot;&gt;//instantiation of full_adder instance&lt;/span&gt;
+  //instantiation of full_adder instance
   
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+endmodule
+```
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+
+```verilog
+module nbit_adder#(
+  parameter DATA_WIDTH = 4
+)(
+  input wire [DATA_WIDTH-1:0] a,
+  input wire [DATA_WIDTH-1:0] b,
+  input wire carry_in,
   
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  output wire [DATA_WIDTH-1:0] out,
+  output wire carry_out
+);
   
-  &lt;span class=&quot;c1&quot;&gt;//instantiation of full_adder instance&lt;/span&gt;
+  //instantiation of full_adder instance
   
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+endmodule
+```
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png&quot; alt=&quot;fig 6&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;figure 6&lt;/strong&gt; 4bit adder의 vector 형태 표현&lt;/p&gt;
 
-&lt;h2 id=&quot;23-instantiation&quot;&gt;2.3 Instantiation&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png&quot; alt=&quot;fig 2&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+![fig 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png)
+
+__figure 6__ 4bit adder의 vector 형태 표현
+
+
+
+
+
+## 2.3 Instantiation
+
+
+
+
+
+![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
+
+```verilog
+module nbit_adder#(
+  parameter DATA_WIDTH = 4
+)(
+  input wire [DATA_WIDTH-1:0] a,
+  input wire [DATA_WIDTH-1:0] b,
+  input wire carry_in,
   
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  output wire [DATA_WIDTH-1:0] out,
+  output wire carry_out
+);
   
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+  full_adder full_adder_0(.a(a[0]), .b(b[0]), .carry_in(carry_in), .out(out[0]), .carry_out());
+  full_adder full_adder_1(.a(a[1]), .b(b[1]), .carry_in(), .out(out[1]), .carry_out());
+  full_adder full_adder_2(.a(a[2]), .b(b[2]), .carry_in(), .out(out[2]), .carry_out());
+  full_adder full_adder_3(.a(a[3]), .b(b[3]), .carry_in(), .out(out[3]), .carry_out(carry_out));
   
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Module &amp;amp; Instantiation</summary></entry><entry><title type="html">Verilog HDL 1장</title><link href="http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction.html" rel="alternate" type="text/html" title="Verilog HDL 1장" /><published>2021-12-16T00:00:00+00:00</published><updated>2021-12-16T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction</id><content type="html" xml:base="http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Introduction</summary></entry><entry><title type="html">Jekyll 블로그 운영하기</title><link href="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Jekyll 블로그 운영하기" /><published>2021-11-28T00:00:00+00:00</published><updated>2021-11-28T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+endmodule
+```</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Module &amp;amp; Instantiation</summary></entry><entry><title type="html">Verilog HDL 1장</title><link href="http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction.html" rel="alternate" type="text/html" title="Verilog HDL 1장" /><published>2021-12-16T00:00:00+00:00</published><updated>2021-12-16T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction</id><content type="html" xml:base="http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction.html"># Introduction</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Introduction</summary></entry><entry><title type="html">Jekyll 블로그 운영하기</title><link href="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Jekyll 블로그 운영하기" /><published>2021-11-28T00:00:00+00:00</published><updated>2021-11-28T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
 
-&lt;h1 id=&quot;포스트-작성&quot;&gt;포스트 작성&lt;/h1&gt;
+# 포스트 작성
 
-&lt;h2 id=&quot;layout&quot;&gt;Layout&lt;/h2&gt;
+## Layout
 
-&lt;h3 id=&quot;1번&quot;&gt;1번&lt;/h3&gt;
+### 1번
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;article&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;여기에_제목을_입력하세요&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;여기에_태그를_입력하세요 여기에_태그를_입력하세요 여기에_태그를_입력하세요&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;immersive&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dark&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;article_header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;overlay&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dark&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;background_color&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#203028'&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;background_image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;gradient&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;linear-gradient(135deg,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;rgba(34,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;139,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.4),&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;rgba(139,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;34,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;139,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.4))'&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/background_mountain.jpg&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+```markdown
+---
+layout: article
+title: 여기에_제목을_입력하세요
+tags: 여기에_태그를_입력하세요 여기에_태그를_입력하세요 여기에_태그를_입력하세요
+mode: immersive
+header:
+  theme: dark
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /background_mountain.jpg
+---
 
 서브 타이틀 및 본문
 
-&lt;span class=&quot;c&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt; 
+&lt;!--more--&gt; 
 
 본문
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```
 
-&lt;h3 id=&quot;2번&quot;&gt;2번&lt;/h3&gt;
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;article&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;여기에_제목을_입력하세요&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;여기에_태그를_입력하세요 여기에_태그를_입력하세요 여기에_태그를_입력하세요&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;immersive&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dark&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;article_header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;overlay&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dark&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;background_color&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#203028'&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;background_image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;gradient&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;linear-gradient(135deg,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;rgba(34,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;139,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.4),&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;rgba(139,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;34,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;139,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.4))'&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/background_mountain.jpg&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+
+### 2번
+
+```markdown
+---
+layout: article
+title: 여기에_제목을_입력하세요
+tags: 여기에_태그를_입력하세요 여기에_태그를_입력하세요 여기에_태그를_입력하세요
+mode: immersive
+header:
+  theme: dark
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /background_mountain.jpg
+---
 
 서브 타이틀 및 본문
 
-&lt;span class=&quot;c&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt; 
+&lt;!--more--&gt; 
 
 본문
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```
 
-&lt;h2 id=&quot;local-preview&quot;&gt;Local Preview&lt;/h2&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://127.0.0.1:4000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+## Local Preview
 
-&lt;h1 id=&quot;포스트-업로드&quot;&gt;포스트 업로드&lt;/h1&gt;
+```bash
+bundle exec jekyll serve
+```
 
-&lt;h2 id=&quot;git-명령어&quot;&gt;Git 명령어&lt;/h2&gt;
 
-&lt;h3 id=&quot;clone&quot;&gt;Clone&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone &amp;lt;url&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```
+http://127.0.0.1:4000
+```
 
-&lt;h3 id=&quot;pull&quot;&gt;Pull&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git pull &amp;lt;원격 저장소 명&amp;gt; &amp;lt;branch 명&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;fetch&quot;&gt;Fetch&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;commit&quot;&gt;Commit&lt;/h3&gt;
+# 포스트 업로드
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+## Git 명령어
 
-&lt;h3 id=&quot;push&quot;&gt;Push&lt;/h3&gt;
+### Clone
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Blog" /><category term="TeXt" /><category term="Jekyll" /><summary type="html"></summary></entry><entry><title type="html">Jekyll TeXt 테마 적용하기</title><link href="http://localhost:4000/2021/11/27/jekyll-TeXt-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Jekyll TeXt 테마 적용하기" /><published>2021-11-27T00:00:00+00:00</published><updated>2021-11-27T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/27/jekyll-TeXt-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/11/27/jekyll-TeXt-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+```bash
+git clone &lt;url&gt;
+```
 
-&lt;h1 id=&quot;download&quot;&gt;Download&lt;/h1&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/kitian616/jekyll-TeXt-theme.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;environment&quot;&gt;Environment&lt;/h1&gt;
+### Pull
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--path&lt;/span&gt; vendor/bundle
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```bash
+git pull &lt;원격 저장소 명&gt; &lt;branch 명&gt;
+```
 
-&lt;h1 id=&quot;local-preview&quot;&gt;Local Preview&lt;/h1&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Blog" /><category term="TeXt" /><category term="Jekyll" /><summary type="html"></summary></entry><entry><title type="html">HELLO WORLD!</title><link href="http://localhost:4000/2021/11/27/hello-world.html" rel="alternate" type="text/html" title="HELLO WORLD!" /><published>2021-11-27T00:00:00+00:00</published><updated>2021-11-27T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/27/hello-world</id><content type="html" xml:base="http://localhost:4000/2021/11/27/hello-world.html">&lt;!--more--&gt;
 
-&lt;h1 id=&quot;새로운-시작&quot;&gt;&lt;em&gt;새로운 시작!&lt;/em&gt;&lt;/h1&gt;
+### Fetch
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello_world&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HELLO WORLD!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```bash
+git 
+```
 
-&lt;p&gt;오늘부터 개발 블로그를 운영하려 합니다.&lt;/p&gt;
 
-&lt;p&gt;1주일에 3회 정도 RTL 설계 관련 내용을 연재 할 계획입니다.&lt;/p&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Blog" /><summary type="html"></summary></entry></feed>
+
+### Commit
+
+```bash
+git
+```
+
+
+
+### Push
+
+```bash
+git
+```</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Blog" /><category term="TeXt" /><category term="Jekyll" /><summary type="html"></summary></entry><entry><title type="html">Jekyll TeXt 테마 적용하기</title><link href="http://localhost:4000/2021/11/27/jekyll-TeXt-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Jekyll TeXt 테마 적용하기" /><published>2021-11-27T00:00:00+00:00</published><updated>2021-11-27T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/27/jekyll-TeXt-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/11/27/jekyll-TeXt-%ED%85%8C%EB%A7%88-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+
+# Download
+
+```bash
+git clone https://github.com/kitian616/jekyll-TeXt-theme.git
+```
+
+
+
+# Environment
+
+```bash
+bundle install --path vendor/bundle
+```
+
+
+
+# Local Preview
+
+```bash
+bundle exec jekyll serve
+```</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Blog" /><category term="TeXt" /><category term="Jekyll" /><summary type="html"></summary></entry><entry><title type="html">HELLO WORLD!</title><link href="http://localhost:4000/2021/11/27/hello-world.html" rel="alternate" type="text/html" title="HELLO WORLD!" /><published>2021-11-27T00:00:00+00:00</published><updated>2021-11-27T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/27/hello-world</id><content type="html" xml:base="http://localhost:4000/2021/11/27/hello-world.html">&lt;!--more--&gt;
+
+# _새로운 시작!_
+
+```verilog
+module hello_world()
+  display(&quot;HELLO WORLD!&quot;);
+endmodule
+```
+
+
+
+오늘부터 개발 블로그를 운영하려 합니다.  
+
+1주일에 3회 정도 RTL 설계 관련 내용을 연재 할 계획입니다.</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Blog" /><summary type="html"></summary></entry></feed>

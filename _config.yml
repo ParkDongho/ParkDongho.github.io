@@ -20,7 +20,7 @@ text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate",
 highlight_theme: "tomorrow-night-bright" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : "https://parkdongho.github.io"
 baseurl : # does not include hostname
-title   : "AI-Chip Dev Blog" # 사이트 이름
+title   : "Dongho's Dev Blog" # 사이트 이름
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
 
@@ -28,7 +28,7 @@ description: > # this means to ignore newlines until "Language & timezone"
 ## => Language and Timezone
 ##############################
 lang: "en" # the language of your site, default as "en"
-timezone: KR # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+timezone: "KR" # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
@@ -118,11 +118,9 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
-
-  ## Disqus
+  provider: disqus # false (default), "disqus", "gitalk", "valine", "custom"
   disqus:
-    shortname: # the Disqus shortname for the site
+    shortname: "donghosdevblog" # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.

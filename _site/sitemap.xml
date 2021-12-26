@@ -33,6 +33,10 @@
 <lastmod>2021-12-22T00:00:00+00:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html</loc>
+<lastmod>2021-12-26T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about.html</loc>
 </url>
 <url>
@@ -40,5 +44,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page2/</loc>
 </url>
 </urlset>
