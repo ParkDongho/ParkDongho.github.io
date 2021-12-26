@@ -120,7 +120,7 @@ sharing:
 comments:
   provider: disqus # false (default), "disqus", "gitalk", "valine", "custom"
   disqus:
-    shortname: "donghosdevblog" # the Disqus shortname for the site
+    shortname: "parkdongho-github-io" # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
