@@ -84,7 +84,7 @@ out = a && b;
 out = a || b;
 ```
 
-![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-chapter2_module_%26_instantiation/시스템_반도체_설계_3장-figure_2.png)
+![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_module_%26_instantiation/시스템_반도체_설계_3장-figure_2.png)
 
 #### 3.2.2.3 비교 연산자
 

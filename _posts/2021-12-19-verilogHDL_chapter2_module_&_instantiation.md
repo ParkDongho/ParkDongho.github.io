@@ -21,7 +21,7 @@ key: post
 
 디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. __그림1__ 의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.
 
-![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png)
+![fig 1](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png)
 
 __그림1__ 4bit Adder 예제
 
@@ -29,7 +29,7 @@ __그림1__ 4bit Adder 예제
 
 그래서 회로를 여러 서브블럭들로 나누어 설계를 합니다. __그림2__ 는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다. 이때 4bit_adder 및 full_adder와 같은 설계 블록들을 `모듈(module)`이라고 합니다. 
 
-![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
+![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
 
 __figure 2__ module instantiation의 예시
 
@@ -37,7 +37,7 @@ __figure 2__ module instantiation의 예시
 
 이제 full_adder라는 모듈의 구성을 살펴봅시다. 모듈은 외부와 데이터를 주고 받을 수 있는 입출력 인터페이스를 제공합니다. 이러한 인터페이스를 `포트(port)` 라고 합니다. __그림3__ 에서 확인할 수 있듯이 full_adder 모듈은 a, b, carry_in 이라는 입력 포트, out, carry_out 이라는 출력포트로 구성되어 있습니다.
 
-![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
 
 __figure 3__ full adder 모듈
 
@@ -49,7 +49,7 @@ __figure 3__ full adder 모듈
 
 
 
-![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
+![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
 
 __figure 2__ module instantiation의 예시
 
@@ -77,7 +77,7 @@ verilog의 모듈은`module`이라는 키워드로 시작하고 `endmodule`이�
 
 ---
 
-![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
 
 ```verilog
 module full_adder( //module 시작
@@ -115,7 +115,7 @@ endmodule //모듈 끝
 
 와 같은 타입으로 정의 될 수 있습니다.
 
-![figure4](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png)
+![figure4](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png)
 
 __figure 4__ module의 포트 연결 규칙
 
@@ -125,7 +125,7 @@ __figure 4__ module의 포트 연결 규칙
 
 먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다. 
 
-![figure5](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png)
+![figure5](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png)
 
 __figure 5__ module의 포트 연결 규칙 with instantiation
 
@@ -162,7 +162,7 @@ endmodule
 
 full adder 예제를 확인 해봅시다.
 
-![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
+![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
 
 
 
@@ -213,7 +213,7 @@ endmodule //endmodule 키워드로 모듈 종료
 
 이전까지는 1bit의 입출력까지만 다루었습니다. 하지만 numerical data를 표현하기 위해서는 n-bit의 binary data 형태로 표현할수 있으면 좋겠죠. 이를 위하여 verilog에서는 verctor 형태의 데이터 선언을 지원합니다.
 
-![fig 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png)
+![fig 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png)
 
 __figure 6__ 4bit adder의 vector 형태 표현
 
@@ -319,7 +319,7 @@ instantiation의 문법은 아래와 같습니다.
 
 먼저 nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들여 봅시다.
 
-![fig 7](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png)
+![fig 7](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png)
 
 ```verilog
 module nbit_adder#(
@@ -349,7 +349,7 @@ endmodule
 
 이제 `nbit_adder` 모듈의 포트와 `full_adder` 인스턴스의 포트를 연결해줍시다.
 
-![fig 8](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png)
+![fig 8](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png)
 
 ```verilog
 module nbit_adder#(
@@ -400,7 +400,7 @@ full_adder full_adder_3(.a(a[3]), .b(b[3]), .carry_in(carry_2_w), .out(out[3]), 
 
 최종 완성본은 아래와 같습니다.
 
-![fig 9](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png)
+![fig 9](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png)
 
 ```verilog
 module nbit_adder#(
