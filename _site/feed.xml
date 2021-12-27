@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-27T04:35:17+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-27T05:53:53+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
 </subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">RTL/FPGA 공부 시 도움 될수도 있는 자료 목록</title><link href="http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html" rel="alternate" type="text/html" title="RTL/FPGA 공부 시 도움 될수도 있는 자료 목록" /><published>2021-12-26T00:00:00+00:00</published><updated>2021-12-26T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;hardware-design&quot;&gt;Hardware Design&lt;/h1&gt;
@@ -829,7 +829,7 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
 
 &lt;h3 id=&quot;347-rom&quot;&gt;3.4.7 ROM&lt;/h3&gt;
 
-&lt;h3 id=&quot;348&quot;&gt;3.4.8&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Combinational Logic</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
+&lt;h3 id=&quot;348-bcd-to-7-segment&quot;&gt;3.4.8 BCD to 7 segment&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Combinational Logic</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
 
 &lt;!--more--&gt;
 
@@ -938,8 +938,8 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
 &lt;p&gt;포트는 아래와 같이&lt;/p&gt;
 
 &lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   
   &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
@@ -986,7 +986,7 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
   &lt;li&gt;포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 이런식으로 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.&lt;/p&gt;
+&lt;p&gt;예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 아래와 같이 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//module 키워드로 모듈시작&lt;/span&gt;
   &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
@@ -1004,19 +1004,61 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
 
 &lt;h3 id=&quot;221-vector-form&quot;&gt;2.2.1 Vector Form&lt;/h3&gt;
 
+&lt;p&gt;이전까지는 1bit의 입출력까지만 다루었습니다. 하지만 numerical data를 표현하기 위해서는 n-bit의 binary data 형태로 표현할수 있으면 좋겠죠. 이를 위하여 verilog에서는 verctor 형태의 데이터 선언을 지원합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png&quot; alt=&quot;fig 6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;figure 6&lt;/strong&gt; 4bit adder의 vector 형태 표현&lt;/p&gt;
+
+&lt;p&gt;Verilog에서의 vector 선언는 아래와 같이 표현합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//포트 선언&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//변수 선언&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이전 1bit의 변수 선언에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;변수_타입&amp;gt;&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;변수명&amp;gt;&lt;/code&gt; 사이에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[MSB : LSB]&lt;/code&gt; 가 추가된 형태입니다.&lt;/p&gt;
+
+&lt;p&gt;이때 MSB 최상위 비트, LSB는 최하위 비트를 의미합니다.&lt;/p&gt;
+
+&lt;p&gt;이를 4bit adder에 적용하면 아래와 같습니다.&lt;/p&gt;
+
 &lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//4bit input port&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//4bit input port&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input port&lt;/span&gt;
   
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit output port&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//1bit output port&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   
   &lt;span class=&quot;c1&quot;&gt;//instantiation&lt;/span&gt;
   
 &lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위 예시에서는 포트 a, b, out를 4bit로 구성하였습니다.&lt;/p&gt;
+
+&lt;p&gt;4bit bus의 최상위 비트(MSB)는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; 최하위 비트(LSB)는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;이므로&lt;/p&gt;
+
+&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//포트 선언&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;형태로 선언해주었습니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 위와 같이 표현한다면 bus의 폭을 변화시키고 싶을시 모든 포트의 MSB를 수정해주어야 하는 문제가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;또한 직관적이지 못한 문제도 있지요.&lt;/p&gt;
+
+&lt;p&gt;따라서 아래와 같이 parameter를 선언하여&lt;/p&gt;
+
+&lt;p&gt;최상위 비트(MSB)는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATA_WIDTH-1&lt;/code&gt; 최하위 비트(LSB)는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;의 형태, 즉&lt;/p&gt;
+
+&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//포트 선언&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;형태로 많이들 선언합니다.&lt;/p&gt;
+
+&lt;p&gt;이를 4bit adder에 적용해보면 아래와 같습니다.&lt;/p&gt;
 
 &lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
@@ -1034,13 +1076,15 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
 &lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png&quot; alt=&quot;fig 6&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;figure 6&lt;/strong&gt; 4bit adder의 vector 형태 표현&lt;/p&gt;
-
 &lt;h2 id=&quot;23-instantiation&quot;&gt;2.3 Instantiation&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png&quot; alt=&quot;fig 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;이제 상위모듈에서 하위모듈의 인스턴스를 불러들이는 instantiation을 해봅시다.&lt;/p&gt;
+
+&lt;p&gt;nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들이는 형태이겠죠.&lt;/p&gt;
+
+&lt;p&gt;또한 불러들인 모듈에 wire를 연결해주는 작업이 필요하겠죠.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png&quot; alt=&quot;fig 7&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
@@ -1059,7 +1103,11 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
   &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
   
 &lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Module &amp;amp; Instantiation</summary></entry><entry><title type="html">Verilog HDL 1장</title><link href="http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction.html" rel="alternate" type="text/html" title="Verilog HDL 1장" /><published>2021-12-16T00:00:00+00:00</published><updated>2021-12-16T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction</id><content type="html" xml:base="http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Introduction</summary></entry><entry><title type="html">Jekyll 블로그 운영하기</title><link href="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Jekyll 블로그 운영하기" /><published>2021-11-28T00:00:00+00:00</published><updated>2021-11-28T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png&quot; alt=&quot;fig 8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png&quot; alt=&quot;fig 9&quot; /&gt;&lt;/p&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Module &amp;amp; Instantiation</summary></entry><entry><title type="html">Verilog HDL 1장</title><link href="http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction.html" rel="alternate" type="text/html" title="Verilog HDL 1장" /><published>2021-12-16T00:00:00+00:00</published><updated>2021-12-16T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction</id><content type="html" xml:base="http://localhost:4000/2021/12/16/verilogHDL_chapter1_introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Introduction</summary></entry><entry><title type="html">Jekyll 블로그 운영하기</title><link href="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Jekyll 블로그 운영하기" /><published>2021-11-28T00:00:00+00:00</published><updated>2021-11-28T00:00:00+00:00</updated><id>http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/11/28/jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;포스트-작성&quot;&gt;포스트 작성&lt;/h1&gt;
 

@@ -139,8 +139,8 @@ __figure 5__ module의 포트 연결 규칙 with instantiation
 
 ```verilog
 module 모듈명(
-  <포트_타입> [변수_타입] 입력_포트_명
-  <포트_타입> [변수_타입] 입력_포트_명
+  <포트_타입> <변수_타입> <입력_포트_명>
+  <포트_타입> <변수_타입> <입력_포트_명>
 );
   
   //여기에 내부 로직 기술
@@ -190,7 +190,7 @@ __Example 2.1__
 * 포트 out은 reg 타입으로 정의하였습니다.
 * 포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.
 
-예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 이런식으로 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.
+예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 아래와 같이 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.
 
 ```verilog
 module full_adder( //module 키워드로 모듈시작
@@ -211,16 +211,35 @@ endmodule //endmodule 키워드로 모듈 종료
 
 ### 2.2.1 Vector Form
 
+이전까지는 1bit의 입출력까지만 다루었습니다. 하지만 numerical data를 표현하기 위해서는 n-bit의 binary data 형태로 표현할수 있으면 좋겠죠. 이를 위하여 verilog에서는 verctor 형태의 데이터 선언을 지원합니다.
 
+![fig 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png)
+
+__figure 6__ 4bit adder의 vector 형태 표현
+
+
+
+Verilog에서의 vector 선언는 아래와 같이 표현합니다.
+
+```verilog
+<포트_타입> <변수_타입> [MSB : LSB] <변수명> //포트 선언
+<변수_타입> [MSB : LSB] <변수명> //변수 선언
+```
+
+이전 1bit의 변수 선언에서 `<변수_타입>`과 `<변수명>` 사이에 `[MSB : LSB]` 가 추가된 형태입니다.
+
+이때 MSB 최상위 비트, LSB는 최하위 비트를 의미합니다.
+
+이를 4bit adder에 적용하면 아래와 같습니다.
 
 ```verilog
 module nbit_adder(
-  input wire [3:0] a,
-  input wire [3:0] b,
-  input wire carry_in,
+  input wire [3:0] a,  //4bit input port
+  input wire [3:0] b,  //4bit input port
+  input wire carry_in, //1bit input port
   
-  output wire [3:0] out,
-  output wire carry_out
+  output wire [3:0] out, //4bit output port
+  output wire carry_out  //1bit output port
 );
   
   //instantiation
@@ -228,7 +247,33 @@ module nbit_adder(
 endmodule
 ```
 
+위 예시에서는 포트 a, b, out를 4bit로 구성하였습니다.
 
+4bit bus의 최상위 비트(MSB)는 `3` 최하위 비트(LSB)는 `0`이므로 
+
+```verilog
+<포트_타입> <변수_타입> [3:0] <변수명> //포트 선언
+```
+
+형태로 선언해주었습니다.
+
+
+
+하지만 위와 같이 표현한다면 bus의 폭을 변화시키고 싶을시 모든 포트의 MSB를 수정해주어야 하는 문제가 있습니다.
+
+또한 직관적이지 못한 문제도 있지요.
+
+따라서 아래와 같이 parameter를 선언하여
+
+최상위 비트(MSB)는 `DATA_WIDTH-1` 최하위 비트(LSB)는 `0`의 형태, 즉
+
+```verilog
+<포트_타입> <변수_타입> [DATA_WIDTH-1:0] <변수명> //포트 선언
+```
+
+형태로 많이들 선언합니다.
+
+이를 4bit adder에 적용해보면 아래와 같습니다.
 
 ```verilog
 module nbit_adder#(
@@ -249,23 +294,15 @@ endmodule
 
 
 
-
-
-![fig 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png)
-
-__figure 6__ 4bit adder의 vector 형태 표현
-
-
-
-
-
 ## 2.3 Instantiation
 
+이제 상위모듈에서 하위모듈의 인스턴스를 불러들이는 instantiation을 해봅시다.
 
+nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들이는 형태이겠죠.
 
+또한 불러들인 모듈에 wire를 연결해주는 작업이 필요하겠죠.
 
-
-![fig 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png)
+![fig 7](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png)
 
 ```verilog
 module nbit_adder#(
@@ -291,11 +328,11 @@ endmodule
 
 
 
+![fig 8](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png)
 
 
 
-
-
+![fig 9](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png)
 
 
 

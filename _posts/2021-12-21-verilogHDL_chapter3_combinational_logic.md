@@ -60,7 +60,7 @@ key: post
 
 ### 3.4.7 ROM
 
-### 3.4.8 
+### 3.4.8 BCD to 7 segment
 
 
 

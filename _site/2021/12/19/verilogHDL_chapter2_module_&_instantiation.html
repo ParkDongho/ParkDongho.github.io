@@ -408,8 +408,8 @@
 <p>포트는 아래와 같이</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="err">모듈명</span><span class="p">(</span>
-  <span class="o">&lt;</span><span class="err">포트</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="p">[</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="p">]</span> <span class="err">입력</span><span class="mi">_</span><span class="err">포트</span><span class="mi">_</span><span class="err">명</span>
-  <span class="o">&lt;</span><span class="err">포트</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="p">[</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="p">]</span> <span class="err">입력</span><span class="mi">_</span><span class="err">포트</span><span class="mi">_</span><span class="err">명</span>
+  <span class="o">&lt;</span><span class="err">포트</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">입력</span><span class="mi">_</span><span class="err">포트</span><span class="mi">_</span><span class="err">명</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="err">포트</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">입력</span><span class="mi">_</span><span class="err">포트</span><span class="mi">_</span><span class="err">명</span><span class="o">&gt;</span>
 <span class="p">);</span>
   
   <span class="c1">//여기에 내부 로직 기술</span>
@@ -456,7 +456,7 @@
   <li>포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.</li>
 </ul>
 
-<p>예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 이런식으로 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.</p>
+<p>예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 아래와 같이 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">full_adder</span><span class="p">(</span> <span class="c1">//module 키워드로 모듈시작</span>
   <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>        <span class="c1">//1bit wire input</span>
@@ -474,19 +474,61 @@
 
 <h3 id="221-vector-form">2.2.1 Vector Form</h3>
 
+<p>이전까지는 1bit의 입출력까지만 다루었습니다. 하지만 numerical data를 표현하기 위해서는 n-bit의 binary data 형태로 표현할수 있으면 좋겠죠. 이를 위하여 verilog에서는 verctor 형태의 데이터 선언을 지원합니다.</p>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png" alt="fig 6" /></p>
+
+<p><strong>figure 6</strong> 4bit adder의 vector 형태 표현</p>
+
+<p>Verilog에서의 vector 선언는 아래와 같이 표현합니다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="err">포트</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">MSB</span> <span class="o">:</span> <span class="n">LSB</span><span class="p">]</span> <span class="o">&lt;</span><span class="err">변수명</span><span class="o">&gt;</span> <span class="c1">//포트 선언</span>
+<span class="o">&lt;</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">MSB</span> <span class="o">:</span> <span class="n">LSB</span><span class="p">]</span> <span class="o">&lt;</span><span class="err">변수명</span><span class="o">&gt;</span> <span class="c1">//변수 선언</span>
+</code></pre></div></div>
+
+<p>이전 1bit의 변수 선언에서 <code class="language-plaintext highlighter-rouge">&lt;변수_타입&gt;</code>과 <code class="language-plaintext highlighter-rouge">&lt;변수명&gt;</code> 사이에 <code class="language-plaintext highlighter-rouge">[MSB : LSB]</code> 가 추가된 형태입니다.</p>
+
+<p>이때 MSB 최상위 비트, LSB는 최하위 비트를 의미합니다.</p>
+
+<p>이를 4bit adder에 적용하면 아래와 같습니다.</p>
+
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">(</span>
-  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">a</span><span class="p">,</span>
-  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">b</span><span class="p">,</span>
-  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">a</span><span class="p">,</span>  <span class="c1">//4bit input port</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">b</span><span class="p">,</span>  <span class="c1">//4bit input port</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in</span><span class="p">,</span> <span class="c1">//1bit input port</span>
   
-  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span><span class="p">,</span>
-  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span><span class="p">,</span> <span class="c1">//4bit output port</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span>  <span class="c1">//1bit output port</span>
 <span class="p">);</span>
   
   <span class="c1">//instantiation</span>
   
 <span class="k">endmodule</span>
 </code></pre></div></div>
+
+<p>위 예시에서는 포트 a, b, out를 4bit로 구성하였습니다.</p>
+
+<p>4bit bus의 최상위 비트(MSB)는 <code class="language-plaintext highlighter-rouge">3</code> 최하위 비트(LSB)는 <code class="language-plaintext highlighter-rouge">0</code>이므로</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="err">포트</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span><span class="err">변수명</span><span class="o">&gt;</span> <span class="c1">//포트 선언</span>
+</code></pre></div></div>
+
+<p>형태로 선언해주었습니다.</p>
+
+<p>하지만 위와 같이 표현한다면 bus의 폭을 변화시키고 싶을시 모든 포트의 MSB를 수정해주어야 하는 문제가 있습니다.</p>
+
+<p>또한 직관적이지 못한 문제도 있지요.</p>
+
+<p>따라서 아래와 같이 parameter를 선언하여</p>
+
+<p>최상위 비트(MSB)는 <code class="language-plaintext highlighter-rouge">DATA_WIDTH-1</code> 최하위 비트(LSB)는 <code class="language-plaintext highlighter-rouge">0</code>의 형태, 즉</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="err">포트</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span><span class="err">변수명</span><span class="o">&gt;</span> <span class="c1">//포트 선언</span>
+</code></pre></div></div>
+
+<p>형태로 많이들 선언합니다.</p>
+
+<p>이를 4bit adder에 적용해보면 아래와 같습니다.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
   <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
@@ -504,13 +546,15 @@
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png" alt="fig 6" /></p>
-
-<p><strong>figure 6</strong> 4bit adder의 vector 형태 표현</p>
-
 <h2 id="23-instantiation">2.3 Instantiation</h2>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png" alt="fig 2" /></p>
+<p>이제 상위모듈에서 하위모듈의 인스턴스를 불러들이는 instantiation을 해봅시다.</p>
+
+<p>nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들이는 형태이겠죠.</p>
+
+<p>또한 불러들인 모듈에 wire를 연결해주는 작업이 필요하겠죠.</p>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png" alt="fig 7" /></p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
   <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
@@ -530,6 +574,10 @@
   
 <span class="k">endmodule</span>
 </code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png" alt="fig 8" /></p>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png" alt="fig 9" /></p>
 
 </div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-12-19T00:00:00+00:00"><!-- start custom article footer snippet -->
 
