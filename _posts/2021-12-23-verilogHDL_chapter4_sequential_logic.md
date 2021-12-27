@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Verilog HDL 3장
+title: Verilog HDL 4장
 tags: Hardware Verilog VerilogHDL강좌
 mode: immersive
 header:
@@ -17,7 +17,9 @@ key: post
 
 ---
 
-### 
+# Sequential Logic
+
+### <!--more-->
 
 
 
