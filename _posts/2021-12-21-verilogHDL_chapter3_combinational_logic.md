@@ -84,7 +84,7 @@ out = a && b;
 out = a || b;
 ```
 
-
+![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-chapter2_module_%26_instantiation/시스템_반도체_설계_3장-figure_2.png)
 
 #### 3.2.2.3 비교 연산자
 
@@ -231,14 +231,18 @@ module mux_2_to_1(
   input wire s,
   output wire z
 );
+  reg z_r;
   always @(*) begin
     if (s == 1'b0) begin
-      z = a;
+      z_r = a;
     end
     else begin //s == 1'b1
-      z = b;
+      z_r = b;
     end
   end
+  
+  assign z = z_r;
+  
 endmodule
 ```
 
@@ -258,6 +262,7 @@ module mux_4_to_1(
   
   output wire z
 );
+  reg z_r;
   always @(*) begin
     if (s == 2'b00) begin
       z = a;
@@ -272,6 +277,10 @@ module mux_4_to_1(
       z = d;
     end
   end
+  
+  assign z = z_r;
+  
+endmodule
 ```
 
 __Example 3.4__ if문을 활용한 4 to 1 mux
@@ -291,21 +300,22 @@ module mux_4_to_1(
   always @(*) begin
     if (s[1] == 1'b0) begin
       if (s[0] == 1'b0) begin
-        z = a;
+        z_r = a;
       end
       else begin
-        z = b;
+        z_r = b;
       end
     end
     else begin //s[1] == 1'b1
       if (s[0] == 1'b0) begin
-        z = c;
+        z_r = c;
       end
       else begin
-        z = d;
+        z_r = d;
       end
     end
   end
+  assign z = z_r;
 endmodule
 ```
 
@@ -328,8 +338,6 @@ end
 
 
 
-__4 to 1 mux__
-
 ```verilog
 module mux_4_to_1(
   input wire a,
@@ -342,13 +350,14 @@ module mux_4_to_1(
 );
   always @(*) begin
     case(sel)
-        2'b00 : z = a;
-        2'b01 : z = b;
-        2'b10 : z = c;
-        2'b11 : z = d;
-        default   : z = 0;
+        2'b00 : z_r = a;
+        2'b01 : z_r = b;
+        2'b10 : z_r = c;
+        2'b11 : z_r = d;
+        default: z_r = 0;
     endcase
   end
+  assign z = z_r;
 endmodule
 ```
 
@@ -356,33 +365,155 @@ __Example 3.5__ case문을 활용한 4 to 1 mux
 
 
 
-
+### 3.3.5 if문 vs case문
 
 
 
 ## 3.4 Case Study
 
-### 3.4.1 4-to-1 Multiplexer
+### 3.4.1 8bit 4-to-1 Multiplexer
 
-### 3.4.2 ROM
+```verilog
+module mux_4_to_1#(
+  parameter WIDTH = 8
+)(
+  input wire [WIDTH-1:0] a, //nbit input data
+  input wire [WIDTH-1:0] b, //nbit input data
+  input wire [WIDTH-1:0] c, //nbit input data
+  input wire [WIDTH-1:0] d, //nbit input data
+  input wire [1:0] s, //2bit input select
+  
+  output wire [WIDTH-1:0] z //nbit output data
+);
+  reg [WIDTH-1:0] z_r;
+  always @(*) begin
+    case(sel)
+      2'b00 : z_r = a;
+      2'b01 : z_r = b;
+      2'b10 : z_r = c;
+      2'b11 : z_r = d;
+      default: z_r = 0;
+    endcase
+  end
+  assign z = z_r;
+endmodule
+```
 
-### 3.4.3 Decoder
+---
 
-### 3.4.4 Ripple Carry Adder
+### 3.4.2 Decoder
 
-### 3.4.5 Subtractor
+### 
 
-### 3.4.6 Comparator
+```verilog
+module decoder(
+  input wire [IN_WIDTH-1:0] data_i,
+  output wire [OUT_WIDTH-1:0] data_o
+);
+  localparam IN_WIDTH = 4;
+  localparam OUT_WIDTH = 8;
+  reg [WIDTH-1:0] data_o_r;
+  
+  always @(*) begin
+    casez(data_i)
+      4'b?000 : data_o_r = 8'b00000000;
+      4'b?001 : data_o_r = 8'b00000001;
+      4'b?010 : data_o_r = 8'b00000011;
+      4'b?011 : data_o_r = 8'b00000111;
+      4'b?100 : data_o_r = 8'b00001111;
+      4'b?101 : data_o_r = 8'b00011111;
+      4'b?110 : data_o_r = 8'b00111111;
+      4'b?111 : data_o_r = 8'b01111111;
+      default: data_o_r = 0;
+    endcase
+  end
+  assign data_o = data_o_r;
+endmodule
+```
 
-### 3.4.7 Shifter
+---
 
-### 3.4.8 ALU
+### 3.4.3 Adder
 
-### 3.4.9 IEEE754 Adder
+```verilog
+module adder(
+  input wire [DATA_IN_WIDTH-1:0] data_a_i,
+  input wire [DATA_IN_WIDTH-1:0] data_b_i,
+  input wire carry_in_i,
+  output wire [DATA_OUT_WIDTH-1:0] data_o
+);
+  assign data_o = data_a_i + data_b_i + carry_in_i;
+endmodule
+```
 
-### 3.4.10 IEEE754 Multiplier
+---
 
-### 3.4.11 Carry Look Ahead Adder
+### 3.4.4 Subtractor
 
-### 3.4.12 Pre-Fix Adder
+```verilog
+assign data_o = data_a_i - data_b_i;
+```
+
+```verilog
+assign data_o = data_a_i + ((~data_b_i) + 1);
+```
+
+
+
+```verilog
+module substractor(
+  input wire [DATA_IN_WIDTH-1:0] data_a_i,
+  input wire [DATA_IN_WIDTH-1:0] data_b_i,
+  input wire carry_in_i,
+  output wire [DATA_OUT_WIDTH-1:0] data_o
+);
+  assign data_o = data_a_i + ((~data_b_i) + 1);
+endmodule
+```
+
+---
+
+### 3.4.5 Comparator
+
+```verilog
+assign data_o = data_a_i < data_b_i;
+```
+
+```verilog
+assign data_o = (data_a_i - data_b_i) < 0;
+```
+
+```verilog
+assign result = data_a_i - data_b_i;
+assign data_o = result[MSB]; //sign bit == MSB
+```
+
+
+
+```verilog
+module comparator(
+  input wire [DATA_IN_WIDTH-1:0] data_a_i,
+  input wire [DATA_IN_WIDTH-1:0] data_b_i,
+  input wire carry_in_i,
+  output wire data_o
+);
+  wire [DATA_OUT_WIDTH-1:0] result;
+  assign result = data_a_i + ((~data_b_i) + 1);
+  assign data_o = result[DATA_OUT_WIDTH-1];
+endmodule
+```
+
+---
+
+### 3.4.6 Shifter
+
+### 3.4.7 ALU
+
+### 3.4.8 IEEE754 Adder
+
+### 3.4.9 IEEE754 Multiplier
+
+### 3.4.10 Carry Look Ahead Adder
+
+### 3.4.11 Pre-Fix Adder
 
