@@ -19,15 +19,7 @@ key: post
 
 # Sequential Logic
 
-### <!--more-->
-
-
-
-
-
-
-
-
+<!--more-->
 
 ## 4.3 case study
 
