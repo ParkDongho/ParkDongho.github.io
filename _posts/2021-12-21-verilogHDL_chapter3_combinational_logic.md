@@ -46,9 +46,11 @@ key: post
 
 ## 3.4 Case Study
 
-### 3.4.1 nbit Adder
+### 3.4.1 nbit Ripple Carry Adder
 
 ### 3.4.2 nbit Carry Look Ahead Adder
+
+### 3.4.3 nbit Pre-Fix Adder
 
 ### 3.4.3 IEEE754 Adder
 

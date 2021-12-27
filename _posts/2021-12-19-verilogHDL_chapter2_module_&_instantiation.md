@@ -33,7 +33,7 @@ __그림1__ 4bit Adder 예제
 
 __figure 2__ module instantiation의 예시
 
-
+---
 
 이제 full_adder라는 모듈의 구성을 살펴봅시다. 모듈은 외부와 데이터를 주고 받을 수 있는 입출력 인터페이스를 제공합니다. 이러한 인터페이스를 `포트(port)` 라고 합니다. __그림3__ 에서 확인할 수 있듯이 full_adder 모듈은 a, b, carry_in 이라는 입력 포트, out, carry_out 이라는 출력포트로 구성되어 있습니다.
 
@@ -75,7 +75,7 @@ verilog의 모듈은`module`이라는 키워드로 시작하고 `endmodule`이�
 
 그리고 모듈명 다음에 나오는 괄호 `( )`에서는 포트를 정의 합니다.
 
-
+---
 
 ![fig 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png)
 
@@ -119,7 +119,7 @@ endmodule //모듈 끝
 
 __figure 4__ module의 포트 연결 규칙
 
-
+---
 
 왜 이런 규칙이 존재하는지 생각해 볼까요? 이 부분은 베릴로그가 처음이신 분은 넘어가도 괜찮습니다.
 
@@ -131,7 +131,7 @@ __figure 5__ module의 포트 연결 규칙 with instantiation
 
 모듈A를 instantiation한 모듈B를 가정해 봅시다. 모듈 B의 입장에서 모듈 A의 출력포트에 연결된 신호는 모듈B의 input입니다. input은 반드시 continuous 하여야 하므로 net 타입만이 올 수 있습니다. 이와 동일하게 모듈 B의 입장에서 모듈 A의 입력 포트에 연결된 신호는 모듈B의 output입니다. 따라서 reg 혹은 net타입이 올 수 있죠.
 
-
+---
 
 이제 포트를 어떻게 표현할 수 있는지 알아 봅시다.
 
@@ -158,7 +158,7 @@ endmodule
 
 `입력_포트_명`은 포트의 이름을 정의 해줍니다.
 
-
+---
 
 full adder 예제를 확인 해봅시다.
 
@@ -217,7 +217,7 @@ endmodule //endmodule 키워드로 모듈 종료
 
 __figure 6__ 4bit adder의 vector 형태 표현
 
-
+---
 
 Verilog에서의 vector 선언는 아래와 같이 표현합니다.
 
@@ -257,7 +257,7 @@ endmodule
 
 형태로 선언해주었습니다.
 
-
+---
 
 하지만 위와 같이 표현한다면 bus의 폭을 변화시키고 싶을시 모든 포트의 MSB를 수정해주어야 하는 문제가 있습니다.
 
@@ -300,7 +300,24 @@ endmodule
 
 nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들이는 형태이겠죠.
 
-또한 불러들인 모듈에 wire를 연결해주는 작업이 필요하겠죠.
+또한 불러들인 모듈에 wire를 연결해주는 작업이 필요합니다.
+
+
+
+instantiation의 문법은 아래와 같습니다.
+
+```verilog
+<템플릿명> <인스턴스명>(.템플릿포트명(연결한_신호), .템플릿포트명(연결한_신호), ... , .템플릿포트명(연결한_신호));
+```
+
+* <템플릿명>은 원본 모듈의 명칭입니다.
+* <인스턴스명>은 템플릿을 통하여 생성한 인스턴스들의 새로운 이름 입니다. (복사한 모듈의 이름)
+* <템플릿포트명>은 원본 모듈의 포트 명칭입니다.
+* <연결한_신호>는 인스턴스 모듈의 포트에 연결한 신호명 입니다.
+
+---
+
+먼저 nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들여 봅시다.
 
 ![fig 7](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png)
 
@@ -316,23 +333,98 @@ module nbit_adder#(
   output wire carry_out
 );
   
-  full_adder full_adder_0(.a(a[0]), .b(b[0]), .carry_in(carry_in), .out(out[0]), .carry_out());
-  full_adder full_adder_1(.a(a[1]), .b(b[1]), .carry_in(), .out(out[1]), .carry_out());
-  full_adder full_adder_2(.a(a[2]), .b(b[2]), .carry_in(), .out(out[2]), .carry_out());
-  full_adder full_adder_3(.a(a[3]), .b(b[3]), .carry_in(), .out(out[3]), .carry_out(carry_out));
+  full_adder full_adder_0(.a(), .b(), .carry_in(), .out(), .carry_out());
+  full_adder full_adder_1(.a(), .b(), .carry_in(), .out(), .carry_out());
+  full_adder full_adder_2(.a(), .b(), .carry_in(), .out(), .carry_out());
+  full_adder full_adder_3(.a(), .b(), .carry_in(), .out(), .carry_out());
   
 endmodule
 ```
 
+위 예제에서 `full_adder`는 템플릿인 full_adder 모듈명입니다.
 
+이러한 템플릿을 통하여 `full_adder_0`, `full_adder_1`, `full_adder_2`, `full_adder_3` 이름의 4개의 인스턴스를 생성해주었습니다.
 
+---
 
+이제 `nbit_adder` 모듈의 포트와 `full_adder` 인스턴스의 포트를 연결해줍시다.
 
 ![fig 8](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png)
 
+```verilog
+module nbit_adder#(
+  parameter DATA_WIDTH = 4
+)(
+  input wire [DATA_WIDTH-1:0] a,
+  input wire [DATA_WIDTH-1:0] b,
+  input wire carry_in,
+  
+  output wire [DATA_WIDTH-1:0] out,
+  output wire carry_out
+);
+  
+  full_adder full_adder_0(.a(a[0]), .b(b[0]), .carry_in(carry_in), .out(out[0]), .carry_out());
+  full_adder full_adder_1(.a(a[1]), .b(b[1]), .carry_in(),         .out(out[1]), .carry_out());
+  full_adder full_adder_2(.a(a[2]), .b(b[2]), .carry_in(),         .out(out[2]), .carry_out());
+  full_adder full_adder_3(.a(a[3]), .b(b[3]), .carry_in(),         .out(out[3]), .carry_out(carry_out));
+  
+endmodule
+```
 
+```verilog
+full_adder full_adder_0(.a(a[0]), .b(b[0]), .carry_in(carry_in), .out(out[0]), .carry_out());
+```
+
+`full_adder_0` 인스턴스의 `a` 포트에 `nbit_adder` 모듈의 `a[0]` 포트를 연결시켜준 예시입니다.
+
+---
+
+마지막으로 인스턴스들 사이의 신호를 연결해줍시다.
+
+먼저 `nbit_adder` 모듈내에 내부신호를 선언해줍니다.
+
+```verilog
+wire carry_0_w;
+wire carry_1_w;
+wire carry_2_w;
+```
+
+그 다음 해당 신호들을 인스턴스에 연결해줍니다.
+
+```verilog
+full_adder full_adder_0(.a(a[0]), .b(b[0]), .carry_in(carry_in),  .out(out[0]), .carry_out(carry_0_w));
+full_adder full_adder_1(.a(a[1]), .b(b[1]), .carry_in(carry_0_w), .out(out[1]), .carry_out(carry_1_w));
+full_adder full_adder_2(.a(a[2]), .b(b[2]), .carry_in(carry_1_w), .out(out[2]), .carry_out(carry_2_w));
+full_adder full_adder_3(.a(a[3]), .b(b[3]), .carry_in(carry_2_w), .out(out[3]), .carry_out(carry_out));
+```
+
+최종 완성본은 아래와 같습니다.
 
 ![fig 9](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png)
+
+```verilog
+module nbit_adder#(
+  parameter DATA_WIDTH = 4
+)(
+  input wire [DATA_WIDTH-1:0] a,
+  input wire [DATA_WIDTH-1:0] b,
+  input wire carry_in,
+  
+  output wire [DATA_WIDTH-1:0] out,
+  output wire carry_out
+);
+  
+  wire carry_0_w;
+  wire carry_1_w;
+  wire carry_2_w;
+  
+  full_adder full_adder_0(.a(a[0]), .b(b[0]), .carry_in(carry_in),  .out(out[0]), .carry_out(carry_0_w));
+  full_adder full_adder_1(.a(a[1]), .b(b[1]), .carry_in(carry_0_w), .out(out[1]), .carry_out(carry_1_w));
+  full_adder full_adder_2(.a(a[2]), .b(b[2]), .carry_in(carry_1_w), .out(out[2]), .carry_out(carry_2_w));
+  full_adder full_adder_3(.a(a[3]), .b(b[3]), .carry_in(carry_2_w), .out(out[3]), .carry_out(carry_out));
+  
+endmodule
+```
 
 
 

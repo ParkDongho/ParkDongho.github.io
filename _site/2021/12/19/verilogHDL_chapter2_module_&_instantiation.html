@@ -315,6 +315,8 @@
 
 <p><strong>figure 2</strong> module instantiation의 예시</p>
 
+<hr />
+
 <p>이제 full_adder라는 모듈의 구성을 살펴봅시다. 모듈은 외부와 데이터를 주고 받을 수 있는 입출력 인터페이스를 제공합니다. 이러한 인터페이스를 <code class="language-plaintext highlighter-rouge">포트(port)</code> 라고 합니다. <strong>그림3</strong> 에서 확인할 수 있듯이 full_adder 모듈은 a, b, carry_in 이라는 입력 포트, out, carry_out 이라는 출력포트로 구성되어 있습니다.</p>
 
 <p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png" alt="fig 3" /></p>
@@ -347,6 +349,8 @@
 <p><code class="language-plaintext highlighter-rouge">module</code>이라는 키워드 다음에는 <code class="language-plaintext highlighter-rouge">모듈명</code>을 정의합니다.</p>
 
 <p>그리고 모듈명 다음에 나오는 괄호 <code class="language-plaintext highlighter-rouge">( )</code>에서는 포트를 정의 합니다.</p>
+
+<hr />
 
 <p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png" alt="fig 3" /></p>
 
@@ -393,6 +397,8 @@
 
 <p><strong>figure 4</strong> module의 포트 연결 규칙</p>
 
+<hr />
+
 <p>왜 이런 규칙이 존재하는지 생각해 볼까요? 이 부분은 베릴로그가 처음이신 분은 넘어가도 괜찮습니다.</p>
 
 <p>먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다.</p>
@@ -402,6 +408,8 @@
 <p><strong>figure 5</strong> module의 포트 연결 규칙 with instantiation</p>
 
 <p>모듈A를 instantiation한 모듈B를 가정해 봅시다. 모듈 B의 입장에서 모듈 A의 출력포트에 연결된 신호는 모듈B의 input입니다. input은 반드시 continuous 하여야 하므로 net 타입만이 올 수 있습니다. 이와 동일하게 모듈 B의 입장에서 모듈 A의 입력 포트에 연결된 신호는 모듈B의 output입니다. 따라서 reg 혹은 net타입이 올 수 있죠.</p>
+
+<hr />
 
 <p>이제 포트를 어떻게 표현할 수 있는지 알아 봅시다.</p>
 
@@ -426,6 +434,8 @@
 <p><code class="language-plaintext highlighter-rouge">[변수_타입]</code>은 <code class="language-plaintext highlighter-rouge">wire</code>, <code class="language-plaintext highlighter-rouge">reg</code>가 올수 있으며 생략가능합니다. 만약 생략하였을시 기본적으로 <code class="language-plaintext highlighter-rouge">wire</code>가 오게 됩니다. 만약 출력값을 유지시켜줄 필요가 있다면 <code class="language-plaintext highlighter-rouge">reg</code>를 사용할 수 있습니다.</p>
 
 <p><code class="language-plaintext highlighter-rouge">입력_포트_명</code>은 포트의 이름을 정의 해줍니다.</p>
+
+<hr />
 
 <p>full adder 예제를 확인 해봅시다.</p>
 
@@ -480,6 +490,8 @@
 
 <p><strong>figure 6</strong> 4bit adder의 vector 형태 표현</p>
 
+<hr />
+
 <p>Verilog에서의 vector 선언는 아래와 같이 표현합니다.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="err">포트</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">변수</span><span class="mi">_</span><span class="err">타입</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">MSB</span> <span class="o">:</span> <span class="n">LSB</span><span class="p">]</span> <span class="o">&lt;</span><span class="err">변수명</span><span class="o">&gt;</span> <span class="c1">//포트 선언</span>
@@ -514,6 +526,8 @@
 </code></pre></div></div>
 
 <p>형태로 선언해주었습니다.</p>
+
+<hr />
 
 <p>하지만 위와 같이 표현한다면 bus의 폭을 변화시키고 싶을시 모든 포트의 MSB를 수정해주어야 하는 문제가 있습니다.</p>
 
@@ -552,7 +566,35 @@
 
 <p>nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들이는 형태이겠죠.</p>
 
-<p>또한 불러들인 모듈에 wire를 연결해주는 작업이 필요하겠죠.</p>
+<p>또한 불러들인 모듈에 wire를 연결해주는 작업이 필요합니다.</p>
+
+<p>instantiation의 문법은 아래와 같습니다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="err">템플릿명</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">인스턴스명</span><span class="o">&gt;</span><span class="p">(.</span><span class="err">템플릿포트명</span><span class="p">(</span><span class="err">연결한</span><span class="mi">_</span><span class="err">신호</span><span class="p">),</span> <span class="p">.</span><span class="err">템플릿포트명</span><span class="p">(</span><span class="err">연결한</span><span class="mi">_</span><span class="err">신호</span><span class="p">),</span> <span class="p">...</span> <span class="p">,</span> <span class="p">.</span><span class="err">템플릿포트명</span><span class="p">(</span><span class="err">연결한</span><span class="mi">_</span><span class="err">신호</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <템플릿명>은 원본 모듈의 명칭입니다.
+</템플릿명>
+  </li>
+  <li>
+    <인스턴스명>은 템플릿을 통하여 생성한 인스턴스들의 새로운 이름 입니다. (복사한 모듈의 이름)
+</인스턴스명>
+  </li>
+  <li>
+    <템플릿포트명>은 원본 모듈의 포트 명칭입니다.
+</템플릿포트명>
+  </li>
+  <li>
+    <연결한_신호>는 인스턴스 모듈의 포트에 연결한 신호명 입니다.
+
+</연결한_신호>
+  </li>
+</ul>
+<hr />
+
+<p>먼저 nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들여 봅시다.</p>
 
 <p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png" alt="fig 7" /></p>
 
@@ -567,17 +609,93 @@
   <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span>
 <span class="p">);</span>
   
-  <span class="n">full_adder</span> <span class="n">full_adder_0</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_in</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
-  <span class="n">full_adder</span> <span class="n">full_adder_1</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
-  <span class="n">full_adder</span> <span class="n">full_adder_2</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
-  <span class="n">full_adder</span> <span class="n">full_adder_3</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_out</span><span class="p">));</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_0</span><span class="p">(.</span><span class="n">a</span><span class="p">(),</span> <span class="p">.</span><span class="n">b</span><span class="p">(),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_1</span><span class="p">(.</span><span class="n">a</span><span class="p">(),</span> <span class="p">.</span><span class="n">b</span><span class="p">(),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_2</span><span class="p">(.</span><span class="n">a</span><span class="p">(),</span> <span class="p">.</span><span class="n">b</span><span class="p">(),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_3</span><span class="p">(.</span><span class="n">a</span><span class="p">(),</span> <span class="p">.</span><span class="n">b</span><span class="p">(),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span> <span class="p">.</span><span class="n">out</span><span class="p">(),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
   
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
+<p>위 예제에서 <code class="language-plaintext highlighter-rouge">full_adder</code>는 템플릿인 full_adder 모듈명입니다.</p>
+
+<p>이러한 템플릿을 통하여 <code class="language-plaintext highlighter-rouge">full_adder_0</code>, <code class="language-plaintext highlighter-rouge">full_adder_1</code>, <code class="language-plaintext highlighter-rouge">full_adder_2</code>, <code class="language-plaintext highlighter-rouge">full_adder_3</code> 이름의 4개의 인스턴스를 생성해주었습니다.</p>
+
+<hr />
+
+<p>이제 <code class="language-plaintext highlighter-rouge">nbit_adder</code> 모듈의 포트와 <code class="language-plaintext highlighter-rouge">full_adder</code> 인스턴스의 포트를 연결해줍시다.</p>
+
 <p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png" alt="fig 8" /></p>
 
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
+  <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="p">)(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in</span><span class="p">,</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span>
+<span class="p">);</span>
+  
+  <span class="n">full_adder</span> <span class="n">full_adder_0</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_in</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_1</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span>         <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_2</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span>         <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_3</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(),</span>         <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_out</span><span class="p">));</span>
+  
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">full_adder</span> <span class="n">full_adder_0</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_in</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">());</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">full_adder_0</code> 인스턴스의 <code class="language-plaintext highlighter-rouge">a</code> 포트에 <code class="language-plaintext highlighter-rouge">nbit_adder</code> 모듈의 <code class="language-plaintext highlighter-rouge">a[0]</code> 포트를 연결시켜준 예시입니다.</p>
+
+<hr />
+
+<p>마지막으로 인스턴스들 사이의 신호를 연결해줍시다.</p>
+
+<p>먼저 <code class="language-plaintext highlighter-rouge">nbit_adder</code> 모듈내에 내부신호를 선언해줍니다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">wire</span> <span class="n">carry_0_w</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">carry_1_w</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">carry_2_w</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>그 다음 해당 신호들을 인스턴스에 연결해줍니다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">full_adder</span> <span class="n">full_adder_0</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_in</span><span class="p">),</span>  <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_0_w</span><span class="p">));</span>
+<span class="n">full_adder</span> <span class="n">full_adder_1</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_0_w</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_1_w</span><span class="p">));</span>
+<span class="n">full_adder</span> <span class="n">full_adder_2</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_1_w</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_2_w</span><span class="p">));</span>
+<span class="n">full_adder</span> <span class="n">full_adder_3</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_2_w</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_out</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p>최종 완성본은 아래와 같습니다.</p>
+
 <p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png" alt="fig 9" /></p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
+  <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="p">)(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in</span><span class="p">,</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">carry_out</span>
+<span class="p">);</span>
+  
+  <span class="kt">wire</span> <span class="n">carry_0_w</span><span class="p">;</span>
+  <span class="kt">wire</span> <span class="n">carry_1_w</span><span class="p">;</span>
+  <span class="kt">wire</span> <span class="n">carry_2_w</span><span class="p">;</span>
+  
+  <span class="n">full_adder</span> <span class="n">full_adder_0</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_in</span><span class="p">),</span>  <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_0_w</span><span class="p">));</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_1</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_0_w</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_1_w</span><span class="p">));</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_2</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_1_w</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_2_w</span><span class="p">));</span>
+  <span class="n">full_adder</span> <span class="n">full_adder_3</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_in</span><span class="p">(</span><span class="n">carry_2_w</span><span class="p">),</span> <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="p">.</span><span class="n">carry_out</span><span class="p">(</span><span class="n">carry_out</span><span class="p">));</span>
+  
+<span class="k">endmodule</span>
+</code></pre></div></div>
 
 </div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-12-19T00:00:00+00:00"><!-- start custom article footer snippet -->
 
