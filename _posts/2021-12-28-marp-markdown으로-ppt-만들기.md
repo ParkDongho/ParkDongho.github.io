@@ -1,7 +1,7 @@
 ---
 layout: article
-title: MARP : markdown으로 ppt 만들기
-tags: Hardware Verification
+title: MARP - markdown으로 ppt 만들기
+tags: Tool
 mode: immersive
 header:
   theme: dark
