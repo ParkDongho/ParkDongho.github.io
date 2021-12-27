@@ -99,7 +99,7 @@ end
 
 ### 3.4.2 ROM
 
-### 3.4.3 BCD to 7 segment
+### 3.4.3 Decoder
 
 ### 3.4.4 Ripple Carry Adder
 
