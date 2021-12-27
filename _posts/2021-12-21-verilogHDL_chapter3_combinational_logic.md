@@ -27,7 +27,7 @@ standard cell을 instantiation하는 방법
 
 RTL을 합성한 결과임
 
-
+---
 
 ## 3.2 Dataflow Modeling
 
@@ -59,7 +59,7 @@ endmodule
 
 __Example 3.1__ continuous assignment를 활용한 2 to 1 mux
 
-
+---
 
 ### 3.2.2 연산자
 
@@ -74,7 +74,7 @@ out = a % b;
 out = a ** b;
 ```
 
-
+---
 
 #### 3.2.2.2 논리 연산자
 
@@ -85,6 +85,8 @@ out = a || b;
 ```
 
 ![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_2.png)
+
+---
 
 #### 3.2.2.3 비교 연산자
 
@@ -97,6 +99,8 @@ out = a <= b;
 
 
 
+---
+
 #### 3.2.2.4 등가
 
 ```verilog
@@ -107,6 +111,8 @@ out = a !== b;
 ```
 
 
+
+---
 
 #### 3.2.2.5 비트단위
 
@@ -119,6 +125,8 @@ out = a ^~ b; 또는  a ~^ b;
 ```
 
 
+
+---
 
 #### 3.2.2.5 축소
 
@@ -133,6 +141,8 @@ out = ^~a; 또는  ~^a;
 
 
 
+---
+
 #### 3.2.2.6 시프트
 
 ```verilog
@@ -143,6 +153,8 @@ out = a <<< b;
 ```
 
 
+
+---
 
 
 ## 3.3 Behaviaral Modeling
