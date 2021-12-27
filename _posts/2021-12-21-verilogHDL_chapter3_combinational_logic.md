@@ -34,11 +34,35 @@ key: post
 
 
 
-
-
-
-
 ## 3.3 Behaviaral Modeling
+
+### 3.3.1 Blocking Assignment
+
+
+
+### 3.3.2 Non-Blocking Assignment
+
+
+
+## 3.4 Case Study
+
+### 3.4.1 nbit Adder
+
+### 3.4.2 nbit Carry Look Ahead Adder
+
+### 3.4.3 IEEE754 Adder
+
+### 3.4.4 IEEE754 Multiplier
+
+### 3.4.5 4-to-1 Multiplexer
+
+### 3.4.6 ALU
+
+### 3.4.7 ROM
+
+### 3.4.8 
+
+
 
 
 

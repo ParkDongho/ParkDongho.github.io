@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-26T09:22:18+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-27T04:35:17+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
 </subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">RTL/FPGA 공부 시 도움 될수도 있는 자료 목록</title><link href="http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html" rel="alternate" type="text/html" title="RTL/FPGA 공부 시 도움 될수도 있는 자료 목록" /><published>2021-12-26T00:00:00+00:00</published><updated>2021-12-26T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;hardware-design&quot;&gt;Hardware Design&lt;/h1&gt;
@@ -45,17 +45,16 @@
 &lt;h3 id=&quot;도서-1&quot;&gt;도서&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog &amp;lt;= 이책 추천
+  &lt;li&gt;Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog
     &lt;ul&gt;
       &lt;li&gt;원서(Amazon) : https://www.amazon.com/-/ko/dp/0134549899/ref=sr_1_1?dchild=1&amp;amp;keywords=digital+design+mano&amp;amp;qid=1635502122&amp;amp;qsid=132-6454366-7382133&amp;amp;s=books&amp;amp;sr=1-1&amp;amp;sres=0134549899%2C9353062012%2C0132774208%2C933254252X%2C0131989243%2CB01K0PVJ0E%2C8120334698%2C1292231165%2C0133760634%2C0470531088%2C0804137803%2CB00HEHG7W2%2C1948209004%2C0415790522%2C0521177235%2C0131755633&amp;amp;srpt=ABIS_BOOK&lt;/li&gt;
       &lt;li&gt;원서(Global Edition) : http://www.kyobobook.co.kr/product/detailViewEng.laf?ejkGb=ENG&amp;amp;mallGb=ENG&amp;amp;barcode=9781292231167&amp;amp;orderClick=LAG&amp;amp;Kc=&lt;/li&gt;
       &lt;li&gt;번역서 : http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;amp;mallGb=KOR&amp;amp;barcode=9791185475554&amp;amp;orderClick=LAG&amp;amp;Kc=&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;FPGA Prototyping Using Verilog Examples &amp;lt;= 원서로 추천(번역서는 중간까지만 나와있음)
+  &lt;li&gt;FPGA Prototyping Using Verilog Examples
     &lt;ul&gt;
       &lt;li&gt;원서 : https://www.amazon.com/-/ko/dp/0470185325/ref=sr_1_2?crid=1UXE7S49T5ZSI&amp;amp;dchild=1&amp;amp;keywords=verilog+examples&amp;amp;qid=1635502301&amp;amp;qsid=132-6454366-7382133&amp;amp;s=books&amp;amp;sprefix=verilog+%2Cstripbooks-intl-ship%2C324&amp;amp;sr=1-2&amp;amp;sres=0983497303%2C0470185325%2C1118011031%2C0980133793%2C1482593335%2CB01F9FW7CO%2CB00E2RKI36%2C7121257734%2C7118105678%2C7121222698%2C7115176329%2C7894360104%2C1691475297%2C125964376X%2C1728619440%2C0130449113&amp;amp;srpt=ABIS_BOOK&lt;/li&gt;
-      &lt;li&gt;번역서 : http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;amp;mallGb=KOR&amp;amp;barcode=9791156006879&amp;amp;orderClick=LAG&amp;amp;Kc=&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -115,8 +114,6 @@
   &lt;li&gt;
     &lt;p&gt;Computer Organization and Design RISC-V Edition&lt;/p&gt;
 
-    &lt;p&gt;정말로 유명한 책, 컴퓨터 구조 분야의 바이블이라 생각함&lt;/p&gt;
-
     &lt;ul&gt;
       &lt;li&gt;원서 : https://www.amazon.com/-/ko/dp/0128122757/ref=pd_sbs_5/132-6454366-7382133?pd_rd_w=jZGyt&amp;amp;pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&amp;amp;pf_rd_r=0GG2M4PW6SPAMRMG3Q1Q&amp;amp;pd_rd_r=08a23760-39a4-4074-9230-b4714ba07486&amp;amp;pd_rd_wg=aqDDf&amp;amp;pd_rd_i=0128122757&amp;amp;psc=1&lt;/li&gt;
       &lt;li&gt;번역서 : http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;amp;mallGb=KOR&amp;amp;barcode=9788964214244&amp;amp;orderClick=LAG&amp;amp;Kc=&lt;/li&gt;
@@ -124,8 +121,6 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Computer Architecture: A Quantitative Approach&lt;/p&gt;
-
-    &lt;p&gt;위의 Computer Organization and Design RISC-V Edition의 대학원 버전&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;원서 : https://www.amazon.com/-/ko/dp/0128119055/ref=sr_1_1?crid=3G2K5ZOAF7MBK&amp;amp;dchild=1&amp;amp;keywords=computer+architecture&amp;amp;qid=1635501534&amp;amp;qsid=132-6454366-7382133&amp;amp;s=books&amp;amp;sprefix=computer+architecture%2Cstripbooks-intl-ship%2C322&amp;amp;sr=1-1&amp;amp;sres=0128119055%2C1838984399%2C0123944244%2C1593276680%2C0128201096%2C0128000562%2C1119183936%2C0124077269%2C0128203315%2C1138626597%2C1284123030%2C012383872X%2C1441908765%2C0321486137%2C1681739844%2CB099WJ2TZV&amp;amp;srpt=ABIS_BOOK&lt;/li&gt;
@@ -149,7 +144,7 @@
 &lt;h3 id=&quot;도서-3&quot;&gt;도서&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;VLSI Digital Signal Processing Systems_ Design and Implementation&lt;/li&gt;
+  &lt;li&gt;VLSI Digital Signal Processing Systems Design and Implementation&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;동영상-강좌-4&quot;&gt;동영상 강좌&lt;/h3&gt;
@@ -160,14 +155,14 @@
 
 &lt;h2 id=&quot;computer-arithmetic&quot;&gt;&lt;strong&gt;Computer Arithmetic&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;h4 id=&quot;도서-4&quot;&gt;&lt;strong&gt;도서&lt;/strong&gt;&lt;/h4&gt;
+&lt;h3 id=&quot;도서-4&quot;&gt;&lt;strong&gt;도서&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Computer Arithmetic Algorithms&lt;/li&gt;
   &lt;li&gt;Computer arithmetic : algorithms and hardware designs&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;동영상-강좌-5&quot;&gt;&lt;strong&gt;동영상 강좌&lt;/strong&gt;&lt;/h4&gt;
+&lt;h3 id=&quot;동영상-강좌-5&quot;&gt;&lt;strong&gt;동영상 강좌&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;/li&gt;
@@ -219,11 +214,26 @@
       &lt;li&gt;https://www.youtube.com/watch?v=z1gBnr6NdoQ&amp;amp;t=5508s&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;DPU 설계
+    &lt;ul&gt;
+      &lt;li&gt;http://www.idec.or.kr/vod/apply/view/?&amp;amp;no=277&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Digital Systems Design of AI Semiconductor
+    &lt;ul&gt;
+      &lt;li&gt;http://www.idec.or.kr/vod/apply/view/?&amp;amp;no=278&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;딥러닝 기초와 FPGA 구현
+    &lt;ul&gt;
+      &lt;li&gt;http://www.idec.or.kr/vod/apply/view/?&amp;amp;page=2&amp;amp;no=240&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;논문&quot;&gt;논문&lt;/h3&gt;
 
-&lt;h4 id=&quot;hardware-architecture&quot;&gt;Hardware Architecture&lt;/h4&gt;
+&lt;h4 id=&quot;micro-architecture&quot;&gt;Micro Architecture&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;/li&gt;
@@ -343,7 +353,7 @@
 &lt;ul&gt;
   &lt;li&gt;Easier UVM Video Tutorial
     &lt;ul&gt;
-      &lt;li&gt;https://www.youtube.com/watch?v=imH4CFmVGWE&amp;amp;list=PLBIILfL2t1lnvzw7vF0arlvu36Wj4–D7&lt;/li&gt;
+      &lt;li&gt;https://www.youtube.com/playlist?list=PLBIILfL2t1lnvzw7vF0arlvu36Wj4–D7&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;UVM Basics (Cadence)
@@ -360,7 +370,37 @@
 
 &lt;h2 id=&quot;cosim&quot;&gt;CoSim&lt;/h2&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;HW/SW 동시협조시뮬레이션 - Verilog 시뮬레이터와 ARM ISS&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;https://www.idec.or.kr/edu/edu_library/view/?sdate=&amp;amp;edate=&amp;amp;search_val=동시&amp;amp;no=1988&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;https://www.idec.or.kr/edu/edu_library/view/?sdate=&amp;amp;edate=&amp;amp;search_val=동시&amp;amp;no=2107&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;iss&quot;&gt;ISS&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;HW/SW 동시협조시뮬레이션 - Verilog 시뮬레이터와 ARM ISS&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;https://www.idec.or.kr/edu/edu_library/view/?sdate=&amp;amp;edate=&amp;amp;search_val=동시&amp;amp;no=1988&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;https://www.idec.or.kr/edu/edu_library/view/?sdate=&amp;amp;edate=&amp;amp;search_val=동시&amp;amp;no=2107&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;algorithms&quot;&gt;Algorithms&lt;/h1&gt;
 
@@ -458,13 +498,13 @@
 
 &lt;h1 id=&quot;관련-커뮤니티&quot;&gt;관련 커뮤니티&lt;/h1&gt;
 
-&lt;h3 id=&quot;이니프로-카페&quot;&gt;이니프로 카페&lt;/h3&gt;
+&lt;h2 id=&quot;이니프로-카페&quot;&gt;이니프로 카페&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;https://cafe.naver.com/plduser&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;altera-town&quot;&gt;Altera Town&lt;/h3&gt;
+&lt;h2 id=&quot;altera-town&quot;&gt;Altera Town&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;https://cafe.naver.com/alteratown&lt;/li&gt;
@@ -472,7 +512,7 @@
 
 &lt;p&gt;​&lt;/p&gt;
 
-&lt;h3 id=&quot;xilinx-forum&quot;&gt;Xilinx Forum&lt;/h3&gt;
+&lt;h2 id=&quot;xilinx-forum&quot;&gt;Xilinx Forum&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;https://support.xilinx.com/s/?language=en_US&lt;/li&gt;
@@ -482,9 +522,30 @@
 
 &lt;h2 id=&quot;설계-독학-맛비&quot;&gt;설계 독학 맛비&lt;/h2&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;RTL Design 관련&lt;/li&gt;
+  &lt;li&gt;https://www.youtube.com/c/aifpga&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;kk-systemverilog&quot;&gt;KK SystemVerilog&lt;/h2&gt;
 
-&lt;h2 id=&quot;onur-mutlu-lectures&quot;&gt;Onur Mutlu Lectures&lt;/h2&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verification" /><summary type="html"></summary></entry><entry><title type="html">Vivado 설치하기</title><link href="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Vivado 설치하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Verification 관련&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;https://www.youtube.com/channel/UCie9pbYjNDqWhmpNz_l3b3Q&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;onur-mutlu-lectures&quot;&gt;Onur Mutlu Lectures&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Computer Architecture 관련&lt;/li&gt;
+  &lt;li&gt;https://www.youtube.com/c/OnurMutluLectures&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;블로그-1&quot;&gt;블로그&lt;/h1&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verification" /><summary type="html"></summary></entry><entry><title type="html">Vivado 설치하기</title><link href="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Vivado 설치하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;linux&quot;&gt;Linux&lt;/h1&gt;
 
@@ -746,7 +807,29 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
 
 &lt;h3 id=&quot;322-연산자&quot;&gt;3.2.2 연산자&lt;/h3&gt;
 
-&lt;h2 id=&quot;33-behaviaral-modeling&quot;&gt;3.3 Behaviaral Modeling&lt;/h2&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Combinational Logic</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
+&lt;h2 id=&quot;33-behaviaral-modeling&quot;&gt;3.3 Behaviaral Modeling&lt;/h2&gt;
+
+&lt;h3 id=&quot;331-blocking-assignment&quot;&gt;3.3.1 Blocking Assignment&lt;/h3&gt;
+
+&lt;h3 id=&quot;332-non-blocking-assignment&quot;&gt;3.3.2 Non-Blocking Assignment&lt;/h3&gt;
+
+&lt;h2 id=&quot;34-case-study&quot;&gt;3.4 Case Study&lt;/h2&gt;
+
+&lt;h3 id=&quot;341-nbit-adder&quot;&gt;3.4.1 nbit Adder&lt;/h3&gt;
+
+&lt;h3 id=&quot;342-nbit-carry-look-ahead-adder&quot;&gt;3.4.2 nbit Carry Look Ahead Adder&lt;/h3&gt;
+
+&lt;h3 id=&quot;343-ieee754-adder&quot;&gt;3.4.3 IEEE754 Adder&lt;/h3&gt;
+
+&lt;h3 id=&quot;344-ieee754-multiplier&quot;&gt;3.4.4 IEEE754 Multiplier&lt;/h3&gt;
+
+&lt;h3 id=&quot;345-4-to-1-multiplexer&quot;&gt;3.4.5 4-to-1 Multiplexer&lt;/h3&gt;
+
+&lt;h3 id=&quot;346-alu&quot;&gt;3.4.6 ALU&lt;/h3&gt;
+
+&lt;h3 id=&quot;347-rom&quot;&gt;3.4.7 ROM&lt;/h3&gt;
+
+&lt;h3 id=&quot;348&quot;&gt;3.4.8&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Combinational Logic</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
 
 &lt;!--more--&gt;
 
@@ -921,10 +1004,6 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
 
 &lt;h3 id=&quot;221-vector-form&quot;&gt;2.2.1 Vector Form&lt;/h3&gt;
 
-&lt;p&gt;hello_world&lt;/p&gt;
-
-&lt;p&gt;print hello world  DDDDDD DDDD&lt;/p&gt;
-
 &lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -934,7 +1013,7 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
   &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   
-  &lt;span class=&quot;c1&quot;&gt;//instantiation of full_adder instance&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//instantiation&lt;/span&gt;
   
 &lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -950,7 +1029,7 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
   &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   
-  &lt;span class=&quot;c1&quot;&gt;//instantiation of full_adder instance&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//instantiation&lt;/span&gt;
   
 &lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;

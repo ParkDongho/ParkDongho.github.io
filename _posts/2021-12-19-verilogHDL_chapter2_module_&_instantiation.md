@@ -211,10 +211,6 @@ endmodule //endmodule 키워드로 모듈 종료
 
 ### 2.2.1 Vector Form
 
-hello_world
-
-print hello world  DDDDDD DDDD
-
 
 
 ```verilog
@@ -227,7 +223,7 @@ module nbit_adder(
   output wire carry_out
 );
   
-  //instantiation of full_adder instance
+  //instantiation
   
 endmodule
 ```
@@ -246,7 +242,7 @@ module nbit_adder#(
   output wire carry_out
 );
   
-  //instantiation of full_adder instance
+  //instantiation
   
 endmodule
 ```
