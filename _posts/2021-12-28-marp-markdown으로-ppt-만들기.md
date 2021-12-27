@@ -19,4 +19,17 @@ key: post
 
 <!--more-->
 
-# 
+# 설치
+
+아래 명령어를 입력하여 marp-cli 설치
+
+```
+npm install -g @marp-team/marp-cli
+```
+
+
+
+# 사용방법
+
+
+

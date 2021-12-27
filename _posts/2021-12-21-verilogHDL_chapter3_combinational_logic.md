@@ -19,8 +19,6 @@ key: post
 
 <!--more-->
 
----
-
 ## 3.1 Gate Level Modeling
 
 standard cell을 instantiation하는 방법
