@@ -19,7 +19,7 @@ key: post
 
 <!--more-->
 
-
+---
 
 ## 3.1 Gate Level Modeling
 
@@ -171,7 +171,9 @@ always @(<sensitivity_list>, <sensitivity_list>, ... , <sensitivity_list>) begin
 end
 ```
 
-아래 1bit 2 to 1 mux의 예제입니다.
+---
+
+다음은 1bit 2 to 1 mux의 예제입니다.
 
 ```verilog
 always @(a, b, s) begin
@@ -196,6 +198,8 @@ always @(a, b, c, d, e, f, g, h, i, j, k, h, i, j, k) begin
   x = (g * k) - h * i;
 end
 ```
+
+---
 
 이런 상황에서 wildcard `*` 를 이용하여 모든 입력신호를 자동적으로 sensittivity list에 추가 해줄 수 있습니다.
 
@@ -260,7 +264,7 @@ endmodule
 
 __Example 3.3__ if문을 활용한 2 to 1 mux
 
-
+---
 
 
 
@@ -297,7 +301,7 @@ endmodule
 
 __Example 3.4__ if문을 활용한 4 to 1 mux
 
-
+---
 
 ```verilog
 module mux_4_to_1(
@@ -333,7 +337,7 @@ endmodule
 
 __Example 3.5__ if문을 활용한 4 to 1 mux
 
-
+---
 
 ### 3.3.4 case문
 
@@ -348,7 +352,7 @@ always @(*) begin
 end
 ```
 
-
+---
 
 ```verilog
 module mux_4_to_1(
@@ -375,11 +379,11 @@ endmodule
 
 __Example 3.5__ case문을 활용한 4 to 1 mux
 
-
+---
 
 ### 3.3.5 if문 vs case문
 
-
+---
 
 ## 3.4 Case Study
 
