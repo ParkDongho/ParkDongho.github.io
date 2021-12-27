@@ -40,29 +40,43 @@ key: post
 
 
 
-### 3.3.2 Non-Blocking Assignment
+### 3.3.2 if문
+
+
+
+### 3.3.3 case문
+
+### 
 
 
 
 ## 3.4 Case Study
 
-### 3.4.1 nbit Ripple Carry Adder
+### 3.4.1 4-to-1 Multiplexer
 
-### 3.4.2 nbit Carry Look Ahead Adder
+### 3.4.2 ROM
 
-### 3.4.3 nbit Pre-Fix Adder
+### 3.4.3 BCD to 7 segment
 
-### 3.4.3 IEEE754 Adder
+### 3.4.4 nbit Ripple Carry Adder
 
-### 3.4.4 IEEE754 Multiplier
+### 3.4.5 Subtractor
 
-### 3.4.5 4-to-1 Multiplexer
+### 3.4.6 Comparator
 
-### 3.4.6 ALU
+### 3.4.7 Shifter
 
-### 3.4.7 ROM
+### 3.4.8 ALU
 
-### 3.4.8 BCD to 7 segment
+### 3.4.9 IEEE754 Adder
+
+### 3.4.10 IEEE754 Multiplier
+
+### 3.4.11 nbit Carry Look Ahead Adder
+
+### 3.4.12 nbit Pre-Fix Adder
+
+### 
 
 
 

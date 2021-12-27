@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-27T06:36:02+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-12-27T07:10:41+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
 </subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">RTL/FPGA 공부 시 도움 될수도 있는 자료 목록</title><link href="http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html" rel="alternate" type="text/html" title="RTL/FPGA 공부 시 도움 될수도 있는 자료 목록" /><published>2021-12-26T00:00:00+00:00</published><updated>2021-12-26T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D</id><content type="html" xml:base="http://localhost:4000/2021/12/26/RTL-FPGA-%EA%B3%B5%EB%B6%80%EC%8B%9C-%EB%8F%84%EC%9B%80-%EB%90%A0%EC%88%98%EB%8F%84-%EC%9E%88%EB%8A%94-%EC%9E%90%EB%A3%8C-%EB%AA%A9%EB%A1%9D.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;hardware-design&quot;&gt;Hardware Design&lt;/h1&gt;
@@ -545,7 +545,13 @@
   &lt;li&gt;https://www.youtube.com/c/OnurMutluLectures&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;블로그-1&quot;&gt;블로그&lt;/h1&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verification" /><summary type="html"></summary></entry><entry><title type="html">Vivado 설치하기</title><link href="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Vivado 설치하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+&lt;h1 id=&quot;블로그-1&quot;&gt;블로그&lt;/h1&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verification" /><summary type="html"></summary></entry><entry><title type="html">Verilog HDL 3장</title><link href="http://localhost:4000/2021/12/23/verilogHDL_chapter4_sequential_logic.html" rel="alternate" type="text/html" title="Verilog HDL 3장" /><published>2021-12-23T00:00:00+00:00</published><updated>2021-12-23T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/23/verilogHDL_chapter4_sequential_logic</id><content type="html" xml:base="http://localhost:4000/2021/12/23/verilogHDL_chapter4_sequential_logic.html">&lt;p&gt;###&lt;/p&gt;
+
+&lt;h2 id=&quot;43-case-study&quot;&gt;4.3 case study&lt;/h2&gt;
+
+&lt;h3 id=&quot;431-sram&quot;&gt;4.3.1 SRAM&lt;/h3&gt;
+
+&lt;h3 id=&quot;431-serial-parallel-converter&quot;&gt;4.3.1 Serial Parallel Converter&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">### 4.3 case study 4.3.1 SRAM 4.3.1 Serial Parallel Converter</summary></entry><entry><title type="html">Vivado 설치하기</title><link href="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Vivado 설치하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;linux&quot;&gt;Linux&lt;/h1&gt;
 
@@ -811,27 +817,39 @@ Plug &lt;span class=&quot;s1&quot;&gt;'neoclide/coc.nvim'&lt;/span&gt;, &lt;span
 
 &lt;h3 id=&quot;331-blocking-assignment&quot;&gt;3.3.1 Blocking Assignment&lt;/h3&gt;
 
-&lt;h3 id=&quot;332-non-blocking-assignment&quot;&gt;3.3.2 Non-Blocking Assignment&lt;/h3&gt;
+&lt;h3 id=&quot;332-if문&quot;&gt;3.3.2 if문&lt;/h3&gt;
+
+&lt;h3 id=&quot;333-case문&quot;&gt;3.3.3 case문&lt;/h3&gt;
+
+&lt;p&gt;###&lt;/p&gt;
 
 &lt;h2 id=&quot;34-case-study&quot;&gt;3.4 Case Study&lt;/h2&gt;
 
-&lt;h3 id=&quot;341-nbit-ripple-carry-adder&quot;&gt;3.4.1 nbit Ripple Carry Adder&lt;/h3&gt;
+&lt;h3 id=&quot;341-4-to-1-multiplexer&quot;&gt;3.4.1 4-to-1 Multiplexer&lt;/h3&gt;
 
-&lt;h3 id=&quot;342-nbit-carry-look-ahead-adder&quot;&gt;3.4.2 nbit Carry Look Ahead Adder&lt;/h3&gt;
+&lt;h3 id=&quot;342-rom&quot;&gt;3.4.2 ROM&lt;/h3&gt;
 
-&lt;h3 id=&quot;343-nbit-pre-fix-adder&quot;&gt;3.4.3 nbit Pre-Fix Adder&lt;/h3&gt;
+&lt;h3 id=&quot;343-bcd-to-7-segment&quot;&gt;3.4.3 BCD to 7 segment&lt;/h3&gt;
 
-&lt;h3 id=&quot;343-ieee754-adder&quot;&gt;3.4.3 IEEE754 Adder&lt;/h3&gt;
+&lt;h3 id=&quot;344-nbit-ripple-carry-adder&quot;&gt;3.4.4 nbit Ripple Carry Adder&lt;/h3&gt;
 
-&lt;h3 id=&quot;344-ieee754-multiplier&quot;&gt;3.4.4 IEEE754 Multiplier&lt;/h3&gt;
+&lt;h3 id=&quot;345-subtractor&quot;&gt;3.4.5 Subtractor&lt;/h3&gt;
 
-&lt;h3 id=&quot;345-4-to-1-multiplexer&quot;&gt;3.4.5 4-to-1 Multiplexer&lt;/h3&gt;
+&lt;h3 id=&quot;346-comparator&quot;&gt;3.4.6 Comparator&lt;/h3&gt;
 
-&lt;h3 id=&quot;346-alu&quot;&gt;3.4.6 ALU&lt;/h3&gt;
+&lt;h3 id=&quot;347-shifter&quot;&gt;3.4.7 Shifter&lt;/h3&gt;
 
-&lt;h3 id=&quot;347-rom&quot;&gt;3.4.7 ROM&lt;/h3&gt;
+&lt;h3 id=&quot;348-alu&quot;&gt;3.4.8 ALU&lt;/h3&gt;
 
-&lt;h3 id=&quot;348-bcd-to-7-segment&quot;&gt;3.4.8 BCD to 7 segment&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Combinational Logic</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
+&lt;h3 id=&quot;349-ieee754-adder&quot;&gt;3.4.9 IEEE754 Adder&lt;/h3&gt;
+
+&lt;h3 id=&quot;3410-ieee754-multiplier&quot;&gt;3.4.10 IEEE754 Multiplier&lt;/h3&gt;
+
+&lt;h3 id=&quot;3411-nbit-carry-look-ahead-adder&quot;&gt;3.4.11 nbit Carry Look Ahead Adder&lt;/h3&gt;
+
+&lt;h3 id=&quot;3412-nbit-pre-fix-adder&quot;&gt;3.4.12 nbit Pre-Fix Adder&lt;/h3&gt;
+
+&lt;p&gt;###&lt;/p&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Combinational Logic</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
 
 &lt;!--more--&gt;
 
