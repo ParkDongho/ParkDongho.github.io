@@ -41,7 +41,15 @@ key: post
 >
 > __Chapter 3  : [Bus Protocol]()__
 >
-> __Chapter 4 : __ 
+> __Chapter 4 : [DMA]()__
+>
+> __Chapter 5 : [GPIO IP]()__
+>
+> __Chapter 6 : [Image Processing IP]()__
+>
+> __[3부 - NPU Design]()__
+>
+> __Chapter 1 : [Introduction]()__
 
 ---
 
