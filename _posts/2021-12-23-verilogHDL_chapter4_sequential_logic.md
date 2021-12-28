@@ -21,6 +21,8 @@ key: post
 
 > ## 목차
 >
+> ### __1부 - Verilog HDL__
+>
 > __Chapter 1 : [Introduction](https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html)__
 >
 > __Chapter 2 : [Module & Instantiation](https://parkdongho.github.io/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html)__
@@ -30,6 +32,16 @@ key: post
 > __Chapter 4 : [Sequential Logic](https://parkdongho.github.io/2021/12/23/verilogHDL_chapter4_sequential_logic.html)__
 >
 > __Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)__
+>
+> ### __2부 - SoC Design__
+>
+> __Chapter 1 : Introduction__
+>
+> __Chapter 2  : Memory Map__
+>
+> __Chapter 3  : Bus Protocol__
+>
+> __Chapter 4 : __
 
 ---
 
