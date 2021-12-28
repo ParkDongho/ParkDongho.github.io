@@ -128,7 +128,7 @@ out = a && b;
 out = a || b;
 ```
 
-![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_3.png)
+![figure 3](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_3.png)
 
 ---
 
@@ -141,7 +141,7 @@ out = a >= b;
 out = a <= b;
 ```
 
-![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_4.png)
+![figure 4](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_4.png)
 
 ---
 
@@ -154,7 +154,7 @@ out = a === b;
 out = a !== b;
 ```
 
-![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_5.png)
+![figure 5](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_5.png)
 
 
 
@@ -170,7 +170,7 @@ out = a ^ b;
 out = a ^~ b; 또는  a ~^ b;
 ```
 
-![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_6.png)
+![figure 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_6.png)
 
 ---
 
@@ -185,7 +185,7 @@ out = ^a
 out = ^~a; 또는  ~^a;
 ```
 
-![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_7.png)
+![figure 7](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_7.png)
 
 ---
 
