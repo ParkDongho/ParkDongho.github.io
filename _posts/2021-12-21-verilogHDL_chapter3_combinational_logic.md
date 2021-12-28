@@ -31,6 +31,8 @@ key: post
 >
 > __Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)__
 
+---
+
 ## 3.1 Gate Level Modeling
 
 standard cell을 instantiation하는 방법
