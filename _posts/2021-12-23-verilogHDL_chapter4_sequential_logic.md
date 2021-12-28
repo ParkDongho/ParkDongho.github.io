@@ -13,8 +13,6 @@ article_header:
     gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
     src: /background_mountain.jpg
 key: post
-
-
 ---
 
 # Sequential Logic
@@ -34,6 +32,18 @@ key: post
 > __Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)__
 
 ---
+
+## 4.1 Dataflow Modeling
+
+
+
+
+
+## 4.2 Nextstate Logic
+
+
+
+
 
 ## 4.3 case study
 
