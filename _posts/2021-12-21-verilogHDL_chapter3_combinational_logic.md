@@ -221,7 +221,7 @@ end
 
 ### 3.3.2 blocking procedural assignment
 
-procedural assignment는 blocking과 non-blocking으로 나누어 지며 blocking은 combinational logic을 non-blocking은 sequential logic을 표현하기 위해 사용됩니다. 본장에서는 combinational logic의 합성을 위해 사용되는 blocking assignment에 대해 중점적으로 알아볼것입니다.
+procedural assignment는 `blocking`과 `non-blocking`으로 나누어 지며 blocking은 combinational logic을 non-blocking은 sequential logic을 표현하기 위해 사용됩니다. 본장에서는 combinational logic의 합성을 위해 사용되는 blocking assignment에 대해 중점적으로 알아볼것입니다.
 
 * continuous assignment는 `우항의 연산결과에 변화가 발생`하는 이벤트 바로 좌항에 값을 할당하는 특성을 가졌습니다. 이와 반면에 procedural assignment는 이벤트를 감지하지 않고 문장이 실행되면 바로 할당을 합니다. 
 
