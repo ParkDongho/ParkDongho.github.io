@@ -1,11 +1,9 @@
 ---
 layout: article
 titles: About
-key: page-about
 ---
 
 <!--more-->
----
 # Park Dongho
 
 ## Language
