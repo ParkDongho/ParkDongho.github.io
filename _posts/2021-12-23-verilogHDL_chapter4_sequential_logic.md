@@ -21,7 +21,7 @@ key: post
 
 > ## 목차
 >
-> ### __1부 - Verilog HDL__
+> __[1부 - Verilog HDL]()__
 >
 > __Chapter 1 : [Introduction](https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html)__
 >
@@ -33,7 +33,7 @@ key: post
 >
 > __Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)__
 >
-> ### __2부 - SoC Design__
+> __[2부 - SoC Design]()__
 >
 > __Chapter 1 : Introduction__
 >
@@ -41,7 +41,7 @@ key: post
 >
 > __Chapter 3  : Bus Protocol__
 >
-> __Chapter 4 : __
+> __Chapter 4 : __ 
 
 ---
 
