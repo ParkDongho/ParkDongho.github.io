@@ -50,6 +50,14 @@ key: post
 > __[3부 - NPU Design]()__
 >
 > __Chapter 1 : [Introduction]()__
+>
+> __Chapter 2 : [Datapath]()__
+>
+> __[부록]()__
+>
+> __Chapter A : [Vivado 설치 방법]() __
+>
+> __Chapter B : [Vivado 사용 방법]() __
 
 ---
 

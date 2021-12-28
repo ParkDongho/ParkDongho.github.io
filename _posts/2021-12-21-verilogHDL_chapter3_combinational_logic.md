@@ -50,6 +50,14 @@ key: post
 > __[3부 - NPU Design]()__
 >
 > __Chapter 1 : [Introduction]()__
+>
+> __Chapter 2 : [Datapath]()__
+>
+> __[부록]()__
+>
+> __Chapter A : [Vivado 설치 방법]() __
+>
+> __Chapter B : [Vivado 사용 방법]() __
 
 ---
 
@@ -106,6 +114,10 @@ out = a % b;
 out = a ** b;
 ```
 
+
+
+
+
 ---
 
 #### 3.2.2.2 논리 연산자
@@ -141,6 +153,8 @@ out = a != b;
 out = a === b;
 out = a !== b;
 ```
+
+
 
 
 
@@ -205,10 +219,20 @@ end
 
 ---
 
-다음은 1bit 2 to 1 mux의 예제입니다.
+### 3.3.2 blocking procedural assignment
+
+procedural assignment는 blocking과 non-blocking으로 나누어 지며 blocking은 combinational logic을 non-blocking은 sequential logic을 표현하기 위해 사용됩니다. 본장에서는 combinational logic의 합성을 위해 사용되는 blocking assignment에 대해 중점적으로 알아볼것입니다.
+
+* continuous assignment는 `우항의 연산결과에 변화가 발생`하는 이벤트 바로 좌항에 값을 할당하는 특성을 가졌습니다. 이와 반면에 procedural assignment는 이벤트를 감지하지 않고 문장이 실행되면 바로 할당을 합니다. 
+
+* `wire`형에만 할당 가능한 continuous assignment와 달리 procedural assignment은 `reg`형 객체에만 할당을 할 수 있습니다.
+
+* 절차적 할당은 `always` 문 혹은 `intial`문 내부에서 사용됨
+
+이를 아래의 2 to 1 mux에 대한 예시를 통하여 더 자세히 알아봅시다.
 
 ```verilog
-always @(a, b, s) begin
+always @(a, b, s) begin //sensitivity list
   //procedural assignment
   z = (a & ~s) | (a & s);
 end
@@ -216,7 +240,45 @@ end
 
 __Example 3.2__ always문을 활용한 2 to 1 mux
 
+2 to 1 mux의 input은 a, b, s가 있으므로 이를 sensitivity list에 넣어 주었습니다.
+
+sensitivity list의 값 `a, b, s` 들에 변화가 존재하면 always 내부의 구문들을 실행합니다.
+
+위의 예시에서는 blocking procedural assignment인  `z = (a & ~s) | (a & s);` 을 실행합니다.
+
+### 3.3.3 blocking vs non-blocking assignment
+
+* 값을 순서대로 할당
+
+시뮬레이션 측면에서는 blocking assignment는 구문의 실행과 동시에 할당이 이루어 집니다.
+
+```verilog
+a = 1;
+b = a;
+```
+
+* 값을 동시에 할당
+
+시뮬레이션상에서는 할당할 계산결과를 queue에 저장후 iteration이 종료된 후 queue에 저장된 값을 할당을 합니다.
+
+```verilog
+a <= 1;
+b <= a;
+```
+
+__Non-blocking assignment의 활용 : sequential logic을 합성 할 수 있음__
+
+```verilog
+always @(posedge clk) begin //sensitivity list
+  //non-blocking assignment
+  a <= 1;
+  b <= a;
+end
+```
+
 ---
+
+### 3.3.3 wildcard
 
 하지만 아래 예시와 같이 매우 길고 복잡한 입력을 갖는 회로가 존재할수 있습니다. 
 
@@ -244,15 +306,11 @@ always @(*) begin //wild card *
 end
 ```
 
----
-
-### 3.3.2 procedural assignment
-
 
 
 ---
 
-### 3.3.3 if문
+### 3.3.4 if문
 
 ```verilog
 if(expression) begin
@@ -371,7 +429,7 @@ __Example 3.5__ if문을 활용한 4 to 1 mux
 
 ---
 
-### 3.3.4 case문
+### 3.3.5 case문
 
 ```verilog
 always @(*) begin
@@ -413,7 +471,9 @@ __Example 3.5__ case문을 활용한 4 to 1 mux
 
 ---
 
-### 3.3.5 if문 vs case문
+### 3.3.6 if문 vs case문
+
+
 
 ---
 
@@ -450,8 +510,6 @@ endmodule
 ---
 
 ### 3.4.2 Decoder
-
-### 
 
 ```verilog
 module decoder(
