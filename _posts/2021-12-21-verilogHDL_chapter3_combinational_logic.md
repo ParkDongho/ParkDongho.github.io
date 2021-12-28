@@ -21,43 +21,47 @@ key: post
 
 > ## 목차
 >
-> __[1부 - Verilog HDL]()__
+> **[1부 - Verilog HDL]()**
 >
-> __Chapter 1 : [Introduction](https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html)__
+> **Chapter 1 : [Introduction](https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html)**
 >
-> __Chapter 2 : [Module & Instantiation](https://parkdongho.github.io/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html)__
+> **Chapter 2 : [Module & Instantiation](https://parkdongho.github.io/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html)**
 >
-> __Chapter 3 : [Combinational Logic](https://parkdongho.github.io/2021/12/21/verilogHDL_chapter3_combinational_logic.html)__
+> **Chapter 3 : [Combinational Logic](https://parkdongho.github.io/2021/12/21/verilogHDL_chapter3_combinational_logic.html)**
 >
-> __Chapter 4 : [Sequential Logic](https://parkdongho.github.io/2021/12/23/verilogHDL_chapter4_sequential_logic.html)__
+> **Chapter 4 : [Sequential Logic](https://parkdongho.github.io/2021/12/23/verilogHDL_chapter4_sequential_logic.html)**
 >
-> __Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)__
+> **Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)**
 >
-> __[2부 - SoC Design]()__
+> **[2부 - SoC Design]()**
 >
-> __Chapter 1 : [Introduction]()__
+> **Chapter 1 : [Introduction]()**
 >
-> __Chapter 2  : [Memory Map]()__
+> **Chapter 2  : [Memory Map]()**
 >
-> __Chapter 3  : [Bus Protocol]()__
+> **Chapter 3  : [Bus Protocol]()**
 >
-> __Chapter 4 : [DMA]()__
+> **Chapter 4 : [DMA]()**
 >
-> __Chapter 5 : [GPIO IP]()__
+> **Chapter 5 : [GPIO IP]()**
 >
-> __Chapter 6 : [Image Processing IP]()__
+> **Chapter 6 : [Image Processing IP]()**
 >
-> __[3부 - NPU Design]()__
+> **[3부 - NPU Design]()**
 >
-> __Chapter 1 : [Introduction]()__
+> **Chapter 1 : [Introduction]()**
 >
-> __Chapter 2 : [Datapath]()__
+> **Chapter 2 : [Datapath]()**
 >
-> __[부록]()__
+> **[부록]()**
 >
-> __Chapter A : [Vivado 설치 방법]() __
+> **Chapter A : [Vivado 설치 방법]()** 
 >
-> __Chapter B : [Vivado 사용 방법]() __
+> **Chapter B : [Vivado 사용 방법]()** 
+>
+> **Chapter C : [Drawio 사용방법]()**
+>
+> **Chapter D : [WaveDrom 사용방법]()**
 
 ---
 
@@ -145,7 +149,7 @@ out = a <= b;
 
 ---
 
-#### 3.2.2.4 등가
+#### 3.2.2.4 등가 연산자
 
 ```verilog
 out = a == b;
@@ -160,7 +164,7 @@ out = a !== b;
 
 ---
 
-#### 3.2.2.5 비트단위
+#### 3.2.2.5 비트단위 연산자
 
 ```verilog
 out = ~a;
@@ -174,7 +178,7 @@ out = a ^~ b; 또는  a ~^ b;
 
 ---
 
-#### 3.2.2.5 축소
+#### 3.2.2.5 축소 연산자
 
 ```verilog
 out = &a;
@@ -189,7 +193,7 @@ out = ^~a; 또는  ~^a;
 
 ---
 
-#### 3.2.2.6 시프트
+#### 3.2.2.6 시프트 연산자
 
 ```verilog
 out = a >> b;
