@@ -21,11 +21,15 @@ key: post
 
 > ## 목차
 >
-> __Chapter 1 : [introduction](https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html)__
+> __Chapter 1 : [Introduction](https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html)__
 >
-> __Chapter 2 : [module & instantiation](https://parkdongho.github.io/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html)__
+> __Chapter 2 : [Module & Instantiation](https://parkdongho.github.io/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html)__
 >
-> __Chapter 3 : [combinational logic](https://parkdongho.github.io/2021/12/21/verilogHDL_chapter3_combinational_logic.html)__
+> __Chapter 3 : [Combinational Logic](https://parkdongho.github.io/2021/12/21/verilogHDL_chapter3_combinational_logic.html)__
+>
+> __Chapter 4 : [Sequential Logic](https://parkdongho.github.io/2021/12/23/verilogHDL_chapter4_sequential_logic.html)__
+>
+> __Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)__
 
 디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. __그림1__ 의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.
 
