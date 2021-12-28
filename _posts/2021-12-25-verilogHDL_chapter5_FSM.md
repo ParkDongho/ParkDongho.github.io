@@ -35,11 +35,11 @@ key: post
 >
 > __[2부 - SoC Design]()__
 >
-> __Chapter 1 : Introduction__
+> __Chapter 1 : [Introduction]()__
 >
-> __Chapter 2  : Memory Map__
+> __Chapter 2  : [Memory Map]()__
 >
-> __Chapter 3  : Bus Protocol__
+> __Chapter 3  : [Bus Protocol]()__
 >
 > __Chapter 4 : __ 
 
