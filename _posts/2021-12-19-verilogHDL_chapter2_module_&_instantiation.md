@@ -33,7 +33,7 @@ key: post
 >
 > **Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)**
 >
-> **[2부 - SoC Design]()**
+> **[2부 - H/W Accelerator Design]()**
 >
 > **Chapter 1 : [Introduction]()**
 >

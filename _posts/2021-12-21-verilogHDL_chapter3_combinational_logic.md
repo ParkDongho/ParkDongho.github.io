@@ -33,7 +33,7 @@ key: post
 >
 > **Chapter 5 : [FSM](https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html)**
 >
-> **[2부 - SoC Design]()**
+> **[2부 - H/W Accelerator Design]()**
 >
 > **Chapter 1 : [Introduction]()**
 >
@@ -91,7 +91,7 @@ assign a = b & c & d; //b & c & d의 연산결과에 변화가 발생시 a에 �
 ---
 
 ```verilog
-module(
+module mux_2_to_1(
   input wire a,
   input wire b,
   input wire s,
@@ -203,6 +203,70 @@ out = a <<< b;
 ```
 
 ![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_8.png)
+
+---
+
+#### 3.2.2.7 결합 연산자
+
+```verilog
+a = 1'b1;
+b = 2'b10;
+c = 3'b011;
+
+out = {a, b, c[1:0]}; //1 10 11
+```
+
+
+
+#### 3.2.2.8 반복 연산자
+
+```verilog
+a = 1'b1;
+b = 2'b10;
+c = 3'b011;
+
+a_3 = {3{a}}; //111
+out = {{3{a}}, a_3, {2{c[1:0]}}} //111 111 1111
+```
+
+
+
+#### 3.2.2.9 3항 연산자
+
+```verilog
+out = sel ? a : b; //sel이 참일때 a를 out에 할당, 거짓일때 b를 out에 할당
+out = sel ? a + b : a - b; //sel이 참일때 a + b를 out에 할당, 거짓일때 a - b를 out에 할당
+```
+
+
+
+```verilog
+module mux_2_to_1(
+  input wire a,
+  input wire b,
+  input wire sel,
+  output wire out
+);
+  assign out = (sel==1'b0) ? a : b; //sel==1'b0이 참일 때(sel이 0일때) a가 out에 할당됨
+endmodule
+```
+
+
+
+```verilog
+module mux_4_to_1(
+  input wire a,
+  input wire b,
+  input wire c,
+  input wire d,
+  input wire [1:0] sel,
+  output wire out
+);
+  assign out = (sel[1]==1'b0) ? ((sel[0]==1'b0) ? a : b) : ((sel[0]==1'b0) ? c : d);
+endmodule
+```
+
+
 
 ---
 
@@ -369,7 +433,6 @@ module mux_4_to_1(
   input wire c,
   input wire d,
   input wire s,
-  
   output wire z
 );
   reg z_r;
