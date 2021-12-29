@@ -45,7 +45,9 @@ key: post
 >
 > **Chapter 5 : [GPIO IP]()**
 >
-> **Chapter 6 : [Image Processing IP]()**
+> **Chapter 6 : [VLSI Signal Processing]()**
+>
+> **Chapter 7 : [Image Processing IP]()**
 >
 > **[3부 - NPU Design]()**
 >
@@ -53,15 +55,13 @@ key: post
 >
 > **Chapter 2 : [Datapath]()**
 >
-> **[부록]()**
+> **[부록A - 툴 설치/사용 방법]()**
 >
-> **Chapter A : [Vivado 설치 방법]()** 
+> **Chapter 1 : [Vivado 사용방법]()** 
 >
-> **Chapter B : [Vivado 사용 방법]()** 
+> **Chapter 2 : [Drawio 사용방법]()**
 >
-> **Chapter C : [Drawio 사용방법]()**
->
-> **Chapter D : [WaveDrom 사용방법]()**
+> **Chapter 3 : [WaveDrom 사용방법]()**
 
 ---
 
