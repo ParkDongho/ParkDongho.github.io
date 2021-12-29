@@ -334,6 +334,8 @@ a <= 1;
 b <= a;
 ```
 
+
+
 __Non-blocking assignment의 활용 : sequential logic을 합성 할 수 있음__
 
 ```verilog
@@ -376,9 +378,13 @@ end
 
 
 
+
+
 ---
 
 ### 3.3.4 if문
+
+* c언어의 if문과 유사
 
 ```verilog
 if(expression) begin
@@ -391,6 +397,8 @@ else begin
   statement;
 end
 ```
+
+
 
 
 
@@ -497,6 +505,8 @@ __Example 3.5__ if문을 활용한 4 to 1 mux
 ---
 
 ### 3.3.5 case문
+
+* c 언어의
 
 ```verilog
 always @(*) begin
@@ -621,6 +631,8 @@ endmodule
 
 ---
 
+
+
 ### 3.4.4 Subtractor
 
 ```verilog
@@ -645,6 +657,8 @@ endmodule
 ```
 
 ---
+
+
 
 ### 3.4.5 Comparator
 
@@ -680,13 +694,23 @@ endmodule
 
 ### 3.4.6 Shifter
 
+
+
 ### 3.4.7 ALU
+
+
 
 ### 3.4.8 IEEE754 Adder
 
+
+
 ### 3.4.9 IEEE754 Multiplier
 
+
+
 ### 3.4.10 Carry Look Ahead Adder
+
+
 
 ### 3.4.11 Pre-Fix Adder
 
