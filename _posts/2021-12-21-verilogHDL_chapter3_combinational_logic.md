@@ -167,11 +167,11 @@ out = a !== b;
 #### 3.2.2.5 비트단위 연산자
 
 ```verilog
-out = ~a;
-out = a & b;
-out = a | b;
-out = a ^ b;
-out = a ^~ b; 또는  a ~^ b;
+out = ~a; //not
+out = a & b; //and
+out = a | b; //or
+out = a ^ b; //xor
+out = a ^~ b; 또는  a ~^ b; //xnor
 ```
 
 ![figure 6](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_6.png)
@@ -202,7 +202,9 @@ out = a >>> b;
 out = a <<< b;
 ```
 
-![figure 2](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_8.png)
+![figure 8](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_8.png)
+
+![figure 9](https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_9.png)
 
 ---
 
@@ -300,10 +302,17 @@ procedural assignment는 `blocking`과 `non-blocking`으로 나누어 지며 blo
 이를 아래의 2 to 1 mux에 대한 예시를 통하여 더 자세히 알아봅시다.
 
 ```verilog
-always @(a, b, s) begin //sensitivity list
-  //procedural assignment
-  z = (a & ~s) | (a & s);
-end
+module mux_2_to_1(
+  input wire a,
+  input wire b,
+  input wire s,
+  output reg z
+)
+  always @(a, b, s) begin //sensitivity list
+    //procedural assignment
+    z = (a & ~s) | (a & s);
+  end
+endmodule
 ```
 
 __Example 3.2__ always문을 활용한 2 to 1 mux
@@ -313,6 +322,50 @@ __Example 3.2__ always문을 활용한 2 to 1 mux
 sensitivity list의 값 `a, b, s` 들에 변화가 존재하면 always 내부의 구문들을 실행합니다.
 
 위의 예시에서는 blocking procedural assignment인  `z = (a & ~s) | (a & s);` 을 실행합니다.
+
+---
+
+### 3.3.3 Initial문
+
+* 전체 시뮬레이션에서 한번만 실행
+
+* 합성 안됨
+* testbench나 메모리의 데이터를 초기화 할 때 사용
+
+```verilog
+module testbench()
+  reg a_test;
+  reg b_test;
+  reg s_test;
+  wire z_test;
+  
+  initial begin
+    a_test = 1'b1;
+    b_test = 1'b0;
+    s_test = 1'b0;
+    #10;
+    a_test = 1'b1;
+    b_test = 1'b1;
+    s_test = 1'b0;
+    #10;
+    a_test = 1'b0;
+    b_test = 1'b1;
+    s_test = 1'b1;
+    #10;  
+    a_test = 1'b1;
+    b_test = 1'b1;
+    s_test = 1'b0;
+    #10;
+    
+    $finish;
+  end
+  mux_2_to_1 dut(.a(a_test), .b(b_test), .s(s_test), .z(z_test)) //instantization
+endmodule
+```
+
+
+
+---
 
 ### 3.3.3 blocking vs non-blocking assignment
 
@@ -378,13 +431,12 @@ end
 
 
 
-
-
 ---
 
 ### 3.3.4 if문
 
 * c언어의 if문과 유사
+* mux로 합성됨
 
 ```verilog
 if(expression) begin
@@ -398,13 +450,7 @@ else begin
 end
 ```
 
-
-
-
-
 ---
-
-
 
 ```verilog
 module mux_2_to_1(
@@ -434,28 +480,30 @@ __Example 3.3__ if문을 활용한 2 to 1 mux
 
 
 
+#### 3.3.4.2 4 to 1 mux
+
 ```verilog
 module mux_4_to_1(
   input wire a,
   input wire b,
   input wire c,
   input wire d,
-  input wire s,
+  input wire [1:0] s,
   output wire z
 );
   reg z_r;
   always @(*) begin
     if (s == 2'b00) begin
-      z = a;
+      z_r = a;
     end
     else if (s == 2'b01) begin
-      z = b;
+      z_r = b;
     end
     else if (s == 2'b10) begin
-      z = c;
+      z_r = c;
     end
     else begin
-      z = d;
+      z_r = d;
     end
   end
   
@@ -474,10 +522,11 @@ module mux_4_to_1(
   input wire b,
   input wire c,
   input wire d,
-  input wire s,
+  input wire [1:0] s,
   
   output wire z
 );
+  reg z_r;
   always @(*) begin
     if (s[1] == 1'b0) begin
       if (s[0] == 1'b0) begin
@@ -504,9 +553,132 @@ __Example 3.5__ if문을 활용한 4 to 1 mux
 
 ---
 
+
+
+#### 3.3.4.2 if문 사용시 주의사항
+
+```verilog
+module mux_3_to_1(
+  input wire a,
+  input wire b,
+  input wire c,
+  input wire [1:0] s,
+  output wire z
+);
+  reg z_r;
+  always @(*) begin
+    if (s == 2'b00) begin
+      z_r = a;
+    end
+    else if (s == 2'b01) begin
+      z_r = b;
+    end
+    else if (s == 2'b10) begin
+      z_r = c;
+    end
+  end
+  
+  assign z = z_r;
+  
+endmodule
+```
+
+__Example 3.6__ if문을 활용한 3 to 1 mux
+
+s가 2'b11일때 어떻게 동작할까요?
+
+이전 iteration에서의 z값을 그대로 유지 할 것입니다.
+
+즉 래치가 합성이 됩니다.
+
+하지만 우리가 설계하고자 하는 회로는 combinational logic이지 latch가 아닙니다. 즉 잘못 합성이 된것이죠
+
+---
+
+그렇다면 잘못된 래치의 합성을 어떻게 피할 수 있을까요.
+
+모든 input condition에 대하여 출력에 assign되는 값을 지정해주면 됩니다.
+
+```verilog
+module mux_3_to_1(
+  input wire a,
+  input wire b,
+  input wire c,
+  input wire [1:0] s,
+  output wire z
+);
+  reg z_r;
+  always @(*) begin
+    z_r = 0; //output 초기화
+    if (s == 2'b00) begin
+      z_r = a;
+    end
+    else if (s == 2'b01) begin
+      z_r = b;
+    end
+    else if (s == 2'b10) begin
+      z_r = c;
+    end
+    //else begin
+    //  z = d;
+    //end
+  end
+  
+  assign z = z_r;
+  
+endmodule
+```
+
+__Example 3.7__ if문을 활용한 3 to 1 mux
+
+위의 예시의 경우는 if문을 초기화 하기전 출력을 초기화해주었습니다.
+
+따라서 만약 s == 2'b11인 상황에서
+
+z가 초기화한 값 0이 출력될 것입니다.
+
+```verilog
+module mux_3_to_1(
+  input wire a,
+  input wire b,
+  input wire c,
+  input wire [1:0] s,
+  output wire z
+);
+  reg z_r;
+  always @(*) begin
+    if (s == 2'b00) begin
+      z_r = a;
+    end
+    else if (s == 2'b01) begin
+      z_r = b;
+    end
+    else begin // s == 2'b10. 2'b11
+      z_r = c;
+    end
+  end
+  assign z = z_r;
+endmodule
+```
+
+__Example 3.8__ if문을 활용한 3 to 1 mux
+
+혹은 if문을 반드시 else로 닫아주는 방법도 존재합니다.
+
+s == 2'b11인 상황에서 z = c가 출력되겠죠.
+
+따라서 만약 s == 2'b11인 상황에서
+
+z가 초기화한 값 0이 출력될 것입니다.
+
+---
+
+
+
 ### 3.3.5 case문
 
-* c 언어의
+* c 언어의 case문과 break를 정의 하지 않는점에서 차이점이 존재
+* 일종의 truth up table이라 생각하면 됨
 
 ```verilog
 always @(*) begin
@@ -518,6 +690,156 @@ always @(*) begin
   endcase
 end
 ```
+
+
+
+```verilog
+always @(*) begin
+  case(expression)
+      condition : begin 
+        statements;
+        statements;
+      end
+      condition : begin 
+        statements;
+        statements;
+      end
+      condition : begin 
+        statements;
+        statements;
+      end
+      default   : begin
+        statements;
+        statements;
+      end
+  endcase
+end
+```
+
+
+
+---
+
+```verilog
+module mux_4_to_1(
+  input wire a,
+  input wire b,
+  input wire c,
+  input wire d,
+  input wire [1:0] sel,
+  
+  output wire z
+);
+  reg z_r;
+  always @(*) begin
+    case(sel)
+        2'b00 : z_r = a;
+        2'b01 : z_r = b;
+        2'b10 : z_r = c;
+        2'b11 : z_r = d;
+        default: z_r = 0;
+    endcase
+  end
+  assign z = z_r;
+endmodule
+```
+
+__Example 3.9__ case문을 활용한 4 to 1 mux
+
+
+
+#### 3.3.5.2 casex, casez
+
+__casex__ : 'x', 'z'를 don't care로 처리
+
+__casez__ : 'z'를 don't care로 처리, 'z'대신에 ?로 표시 가능
+
+```verilog
+module priority_encoder(
+  input wire [IN_WIDTH-1:0] data_i,
+  output wire [OUT_WIDTH-1:0] data_o
+);
+  localparam IN_WIDTH = 4;
+  localparam OUT_WIDTH = 8;
+  reg [OUT_WIDTH-1:0] data_o_r;
+  
+  always @(*) begin
+    casez(data_i)
+      4'b?000 : data_o_r = 8'b00000000;
+      4'b?001 : data_o_r = 8'b00000001;
+      4'b?010 : data_o_r = 8'b00000011;
+      4'b?011 : data_o_r = 8'b00000111;
+      4'b?100 : data_o_r = 8'b00001111;
+      4'b?101 : data_o_r = 8'b00011111;
+      4'b?110 : data_o_r = 8'b00111111;
+      4'b?111 : data_o_r = 8'b01111111;
+      default: data_o_r = 0;
+    endcase
+  end
+  assign data_o = data_o_r;
+endmodule
+```
+
+__Example 3.10__ Priority Encoder
+
+
+
+#### 3.3.5.1 case문 사용시 주의사항 1 : 의도하지 않은 latch의 합성 - full case
+
+case문 또한 모든 입력의 condition에 대하여 출력의 값이 규정되지 않으면 잘못된가 합성될 수 있습니다.
+
+```verilog
+module mux_4_to_1(
+  input wire a,
+  input wire b,
+  input wire c,
+  input wire d,
+  input wire s,
+  
+  output wire z
+);
+  always @(*) begin
+    case(sel)
+        2'b00 : z_r = a;
+        2'b01 : z_r = b;
+        2'b10 : z_r = c;
+        //2'b11 일때의 출력 z_r의 값이 정의 되지않음
+        //래치가 합성됨
+    endcase
+  end
+  assign z = z_r;
+endmodule
+```
+
+__Example 3.5__ case문을 활용한 4 to 1 mux 
+
+
+
+---
+
+```verilog
+module mux_4_to_1(
+  input wire a,
+  input wire b,
+  input wire c,
+  input wire d,
+  input wire s,
+  
+  output wire z
+);
+  z_r = 0; //output 초기화
+  always @(*) begin
+    case(sel)
+        2'b00 : z_r = a;
+        2'b01 : z_r = b;
+        2'b10 : z_r = c;
+    endcase
+  end
+  assign z = z_r;
+endmodule
+```
+
+__Example 3.5__ case문을 활용한 4 to 1 mux
 
 ---
 
@@ -536,8 +858,7 @@ module mux_4_to_1(
         2'b00 : z_r = a;
         2'b01 : z_r = b;
         2'b10 : z_r = c;
-        2'b11 : z_r = d;
-        default: z_r = 0;
+        default: z_r = 0; //default값을 정의하여 출력값을 초기화
     endcase
   end
   assign z = z_r;
@@ -548,11 +869,103 @@ __Example 3.5__ case문을 활용한 4 to 1 mux
 
 ---
 
+#### 3.3.5.2 case문 사용시 주의사항 2 : parallel case
+
+```verilog
+module intctl2b (
+  input wire [3:0] data_in, 
+  output reg [4:0] data_out
+);
+  always @(data_in) begin
+    data_out = 0;
+    
+    casez (data_in)
+      4'b1??? : data_out = 1;
+      4'b?1?? : data_out = 6;
+      4'b??1? : data_out = 8;
+      4'b???1 : data_out= 10;
+		endcase
+  end
+endmodule
+```
+
+* 둘 이상의 케이스 항목과 일치함
+* 이를 중첩 케이스 항목이라 합니다.
+* 이를 non-parallel case라 합니다.
+
+```verilog
+data_in == 4'b11??  => data_out = 1 or 6 or ...
+data_in == 4'b?11?  => data_out = 6 or 8 or ...
+data_in == 4'b??11  => data_out = 8 or 10 or ...
+```
+
+---
+
+```verilog
+module intctl2b (
+  input wire [3:0] data_in, 
+  output reg [4:0] data_out
+);
+  always @(data_in) begin
+    data_out = 0;
+    
+    casez (data_in)
+      4'b1??? : data_out = 1;
+      4'b01?? : data_out = 6;
+      4'b001? : data_out = 8;
+      4'b0001 : data_out = 10;
+		endcase
+  end
+endmodule
+```
+
+* 각 케이스 항목이 고유함
+
+* 이를 parallel case라 합니다.
+* 다음과 같은 parallel case로 작성하는 것이 좋습니다.
+
+---
+
+```verilog
+module intctl2b (
+  input wire [3:0] data_in, 
+  output reg [4:0] data_out
+);
+  always @(data_in) begin
+    data_out = 0;
+    
+    (* parallel_case *) //synthesis directives
+    casez (data_in)
+      4'b1??? : data_out = 1;
+      4'b?1?? : data_out = 6;
+      4'b??1? : data_out = 8;
+      4'b???1 : data_out = 10;
+		endcase
+  end
+endmodule
+```
+
+* 만약 non-parallel case임에도 각각의 케이스 항목이 독립적으로 실행을 설계자가 보장할 수 있다면
+* 즉 위 예시에서 data_in이 4'b1000, 4'b0100, 4'b0010, 4'b0001만이 입력됨을 보장할 수 있다면
+* synthesis directives : (* parallel_case *)를 추가하여 강제로 prallel하게 동작하도록 합성 할 수 있습니다.
+* 대표적으로 FSM을 one-hot encoding 할 때 가능합니다.
+* 이를 통하면 로직 사이즈를 줄이고 타이밍 특성을 좋게 만들수 있습니다.
+
+---
+
 ### 3.3.6 if문 vs case문
 
 
 
+
+
+
+
+* priority encoding이 필요 없을 시 case문으로 표현하는 것이 유리함
+
 ---
+
+
 
 ## 3.4 Case Study
 
@@ -692,25 +1105,9 @@ endmodule
 
 ---
 
-### 3.4.6 Shifter
+### 3.4.6 ALU
 
 
 
-### 3.4.7 ALU
 
-
-
-### 3.4.8 IEEE754 Adder
-
-
-
-### 3.4.9 IEEE754 Multiplier
-
-
-
-### 3.4.10 Carry Look Ahead Adder
-
-
-
-### 3.4.11 Pre-Fix Adder
 
