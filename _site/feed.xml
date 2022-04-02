@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-04-02T15:42:28+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-04-02T16:31:16+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
 </subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">FPGA 학습시 도움될만한 사이트 목록</title><link href="http://localhost:4000/2022/04/02/%ED%94%84%EB%A1%A0%ED%8A%B8-%EC%84%A4%EA%B3%84-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8.html" rel="alternate" type="text/html" title="FPGA 학습시 도움될만한 사이트 목록" /><published>2022-04-02T00:00:00+00:00</published><updated>2022-04-02T00:00:00+00:00</updated><id>http://localhost:4000/2022/04/02/%ED%94%84%EB%A1%A0%ED%8A%B8-%EC%84%A4%EA%B3%84-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8</id><content type="html" xml:base="http://localhost:4000/2022/04/02/%ED%94%84%EB%A1%A0%ED%8A%B8-%EC%84%A4%EA%B3%84-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
@@ -39,16 +39,6 @@
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pWabdHdmpZk&quot;&gt;&lt;strong&gt;1일차 오후&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=mvgjsJASoEU&amp;amp;t=463s&quot;&gt;&lt;strong&gt;2일차 오전&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=EYGmMTnZZks&quot;&gt;&lt;strong&gt;2일차 오후&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2-ieee-std-1364-2001&quot;&gt;&lt;em&gt;2. &lt;strong&gt;“IEEE Std 1364-2001”&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
-
-&lt;p&gt;Verilog HDL의 시뮬레이터가 어떻게 동작하는지 궁금 할 시 다음 자료를 참고할것!&lt;/p&gt;
-
-&lt;p&gt;학교 도서관 계정으로 ieee xplore에 접속하면 무료로 볼 수 있다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/document/954909&quot;&gt;&lt;strong&gt;1364-2001 : IEEE Standard for Verilog Hardware Description Language&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;2단계-digital-circuit-design-with-xilinx-fpga&quot;&gt;2단계: Digital Circuit Design with Xilinx FPGA&lt;/h2&gt;
