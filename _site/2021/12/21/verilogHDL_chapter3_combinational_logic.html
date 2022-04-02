@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Verilog HDL 3장 - Dongho's Dev Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Veriloghdl_chapter3_combinational_logic - Dongho's Dev Blog</title>
 
-<meta name="description" content="Combinational Logic">
+<meta name="description" content="Combinational Logic  목차  1부 - Verilog HDL를 활용한 디지털 회로 설계  Chapter 1 : Introduction  Chapter 2 : Module &amp; Instantiation  Chapter 3 : Combinational Logic  ...">
 <link rel="canonical" href="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html"><link rel="alternate" type="application/rss+xml" title="Dongho's Dev Blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
@@ -254,9 +254,9 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__main--immersive page__viewport has-aside cell cell--auto">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
-      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header header--dark"><div class="main">
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -271,23 +271,7 @@
         <ul><li class="navigation__item"><a href="/archive.html">Archive</a></li><li class="navigation__item"><a href="/about.html">About</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
-</div><div class="page__content"><div class="article__header--overlay"><div class="hero hero--dark overlay" style="background-image:linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4)),url(/background_mountain.jpg);background-color:#203028;"><div class="hero__content"><div class ="main"><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Hardware">Hardware</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Verilog">Verilog</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=VerilogHDL%EA%B0%95%EC%A2%8C">VerilogHDL강좌</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Dec 21, 2021</span>
-            </li></ul></div><div class="article__header"><header><h1>Verilog HDL 3장</h1></header><span class="split-space">&nbsp;</span>
-          <a class="edit-on-github"
-            title="Edit on Github"
-            href="https://github.com/ParkDongho/ParkDongho.github.io/tree/master/_posts/2021-12-21-verilogHDL_chapter3_combinational_logic.md">
-            <i class="far fa-edit"></i></a></div><p class="overlay__excerpt">Combinational Logic</p></div></div>
-              </div>
-            </div><div class ="main"><div class="grid grid--reverse">
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
               <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div>
 </aside></div>
@@ -295,59 +279,1153 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="Verilog HDL 3장"><meta itemprop="author" content="Park Dongho"/><meta itemprop="datePublished" content="2021-12-21T00:00:00+00:00">
-    <meta itemprop="keywords" content="Hardware,Verilog,VerilogHDL강좌"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Veriloghdl_chapter3_combinational_logic</h1></header><span class="split-space">&nbsp;</span>
+          <a class="edit-on-github"
+            title="Edit on Github"
+            href="https://github.com/ParkDongho/ParkDongho.github.io/tree/master/_posts/2021-12-21-verilogHDL_chapter3_combinational_logic.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Veriloghdl_chapter3_combinational_logic"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Dec 21, 2021</span>
+            </li></ul></div><meta itemprop="author" content="Park Dongho"/><meta itemprop="datePublished" content="2021-12-21T00:00:00+00:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><h1 id="combinational-logic">Combinational Logic</h1>
 
-<!--more-->
+<blockquote>
+  <h2 id="목차">목차</h2>
+
+  <p><strong><a href="">1부 - Verilog HDL를 활용한 디지털 회로 설계</a></strong></p>
+
+  <p><strong>Chapter 1 : <a href="https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html">Introduction</a></strong></p>
+
+  <p><strong>Chapter 2 : <a href="https://parkdongho.github.io/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">Module &amp; Instantiation</a></strong></p>
+
+  <p><strong>Chapter 3 : <a href="https://parkdongho.github.io/2021/12/21/verilogHDL_chapter3_combinational_logic.html">Combinational Logic</a></strong></p>
+
+  <p><strong>Chapter 4 : <a href="https://parkdongho.github.io/2021/12/23/verilogHDL_chapter4_sequential_logic.html">Sequential Logic</a></strong></p>
+
+  <p><strong>Chapter 5 : <a href="https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html">FSM</a></strong></p>
+</blockquote>
+
+<hr />
 
 <h2 id="31-gate-level-modeling">3.1 Gate Level Modeling</h2>
 
+<hr />
+
+<p>standard cell을 instantiation하는 방법</p>
+
+<p>RTL을 합성한 결과임</p>
+
+<hr />
+
 <h2 id="32-dataflow-modeling">3.2 Dataflow Modeling</h2>
+
+<hr />
 
 <h3 id="321-continuous-assignment">3.2.1 Continuous Assignment</h3>
 
+<p>연속 할당문은 net형 변수 객체에 우항의 연산결과를 할당합니다.</p>
+
+<p>이때 <code class="language-plaintext highlighter-rouge">우항의 연산결과가 변화가 발생</code>하면 바로 좌항에 값을 할당하는 특성을 가집니다.</p>
+
+<p>이러한 특성은 combinational logic의 표현에 적합합니다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assign</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//b값에 변화가 발생시 a에 할당</span>
+<span class="k">assign</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">&amp;</span> <span class="n">c</span> <span class="o">&amp;</span> <span class="n">d</span><span class="p">;</span> <span class="c1">//b &amp; c &amp; d의 연산결과에 변화가 발생시 a에 결과를 할당</span>
+</code></pre></div></div>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_2_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">s</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">s</span><span class="p">);</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.1</strong> continuous assignment를 활용한 2 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<h3 id="322-데이터-형">3.2.2 데이터 형</h3>
+
+<h4 id="3221-4-state-system">3.2.2.1 4 state system</h4>
+
+<ul>
+  <li>
+    <p>0 : 논리 0</p>
+  </li>
+  <li>
+    <p>1 : 논리 1</p>
+  </li>
+  <li>
+    <p>z : 하이 임피턴스 상태</p>
+  </li>
+  <li>
+    <p>x : unknown</p>
+  </li>
+</ul>
+
+<hr />
+
+<h4 id="3221-데이터-타입">3.2.2.1 데이터 타입</h4>
+
+<ul>
+  <li>
+    <p>wire : 물리적인 연결선을 의미, 값을 저장 불가</p>
+
+    <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span><span class="p">(</span><span class="kt">input</span> <span class="n">a</span><span class="p">,</span> <span class="kt">input</span> <span class="n">b</span><span class="p">,</span> <span class="kt">input</span> <span class="n">c</span><span class="p">,</span> <span class="kt">output</span> <span class="n">out</span><span class="p">)</span>
+	<span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>reg : 다음 값이 할당되기까지 현재값을 유지, 절차적 할당(procedural assignment)의 출력에 사용</p>
+
+    <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span><span class="p">(</span><span class="kt">input</span> <span class="n">a</span><span class="p">,</span> <span class="kt">input</span> <span class="n">b</span><span class="p">,</span> <span class="kt">input</span> <span class="n">c</span><span class="p">,</span> <span class="kt">output</span> <span class="n">out</span><span class="p">);</span>
+  <span class="kt">reg</span> <span class="n">out</span>
+  <span class="k">always</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">;</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
 <h3 id="322-연산자">3.2.2 연산자</h3>
+
+<h4 id="3221-산수-연산자">3.2.2.1 산수 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_2.drawio.png" alt="figure 2" /></p>
+
+<hr />
+
+<h4 id="3222-논리-연산자">3.2.2.2 논리 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">out</span> <span class="o">=</span> <span class="o">!</span><span class="n">a</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">||</span> <span class="n">b</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_3.drawio.png" alt="figure 3" /></p>
+
+<hr />
+
+<h4 id="3223-비교-연산자">3.2.2.3 비교 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_4.drawio.png" alt="figure 4" /></p>
+
+<hr />
+
+<h4 id="3224-등가-연산자">3.2.2.4 등가 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">===</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">!==</span> <span class="n">b</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_5.drawio.png" alt="figure 5" /></p>
+
+<hr />
+
+<h4 id="3225-비트단위-연산자">3.2.2.5 비트단위 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">out</span> <span class="o">=</span> <span class="o">~</span><span class="n">a</span><span class="p">;</span> <span class="c1">//not</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//and</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//or</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">^</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//xor</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">^~</span> <span class="n">b</span><span class="p">;</span> <span class="err">또는</span>  <span class="n">a</span> <span class="o">~^</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//xnor</span>
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_6.drawio.png" alt="figure 6" /></p>
+
+<hr />
+
+<h4 id="3225-축소-연산자">3.2.2.5 축소 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">out</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="o">~&amp;</span><span class="n">a</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="o">|</span><span class="n">a</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="o">~|</span><span class="n">a</span><span class="p">;</span>
+<span class="n">out</span> <span class="o">=</span> <span class="o">^</span><span class="n">a</span>
+<span class="n">out</span> <span class="o">=</span> <span class="o">^~</span><span class="n">a</span><span class="p">;</span> <span class="err">또는</span>  <span class="o">~^</span><span class="n">a</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_7.drawio.png" alt="figure 7" /></p>
+
+<hr />
+
+<h4 id="3226-시프트-연산자">3.2.2.6 시프트 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// a / 2^b</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// a * 2^b</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// a / 2^b</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&lt;&lt;&lt;</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// a * 2^b</span>
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_8.drawio.png" alt="figure 8" /></p>
+
+<hr />
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_9.drawio.png" alt="figure 9" /></p>
+
+<hr />
+
+<h4 id="3227-결합-연산자">3.2.2.7 결합 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mb">2'b10</span><span class="p">;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mb">3'b011</span><span class="p">;</span>
+
+<span class="n">out</span> <span class="o">=</span> <span class="o">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span><span class="o">}</span><span class="p">;</span> <span class="c1">//1 10 11</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="3228-반복-연산자">3.2.2.8 반복 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mb">2'b10</span><span class="p">;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mb">3'b011</span><span class="p">;</span>
+
+<span class="n">a_3</span> <span class="o">=</span> <span class="o">{</span><span class="mi">3</span><span class="o">{</span><span class="n">a</span><span class="o">}}</span><span class="p">;</span> <span class="c1">//111</span>
+<span class="n">out</span> <span class="o">=</span> <span class="p">,</span> <span class="n">a_3</span><span class="p">,</span> <span class="o">{</span><span class="mi">2</span><span class="o">{</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span><span class="o">}}}</span> <span class="c1">//111 111 1111</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="3229-3항-연산자">3.2.2.9 3항 연산자</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">out</span> <span class="o">=</span> <span class="n">sel</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//sel이 참일때 a를 out에 할당, 거짓일때 b를 out에 할당</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">sel</span> <span class="o">?</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">:</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//sel이 참일때 a + b를 out에 할당, 거짓일때 a - b를 out에 할당</span>
+</code></pre></div></div>
+
+<ul>
+  <li>2 to 1 mux의 표현에 적합함</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_10.drawio.png" alt="figure 10" /></p>
+
+<hr />
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_10.drawio.png" alt="figure 10" /></p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_2_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">sel</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="p">(</span><span class="n">sel</span><span class="o">==</span><span class="mb">1'b0</span><span class="p">)</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//sel==1'b0이 참일 때(sel이 0일때) a가 out에 할당됨</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.2</strong> 3항 연산자를 활용한 2 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_11.drawio.png" alt="figure 11" /></p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_4_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">c</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">d</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">sel</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="p">(</span><span class="n">sel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mb">1'b0</span><span class="p">)</span> <span class="o">?</span> <span class="p">((</span><span class="n">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mb">1'b0</span><span class="p">)</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="p">((</span><span class="n">sel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mb">1'b0</span><span class="p">)</span> <span class="o">?</span> <span class="n">c</span> <span class="o">:</span> <span class="n">d</span><span class="p">);</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.3</strong> 3항 연산자를 활용한 4 to 1 mux</p>
+</blockquote>
+
+<hr />
 
 <h2 id="33-behaviaral-modeling">3.3 Behaviaral Modeling</h2>
 
-<h3 id="331-blocking-assignment">3.3.1 Blocking Assignment</h3>
+<hr />
 
-<h3 id="332-if문">3.3.2 if문</h3>
+<h3 id="331-always문">3.3.1 always문</h3>
 
-<h3 id="333-case문">3.3.3 case문</h3>
+<ul>
+  <li>
+    <p>time-step 마다 매번 실행됨</p>
+  </li>
+  <li>
+    <p>sensitivity list 내부의 값에 변화가 발생시 <code class="language-plaintext highlighter-rouge">begin ~ end</code> 내부의 구문이 실행됩니다.</p>
+  </li>
+  <li>sensitivity list 값의 구분은 <code class="language-plaintext highlighter-rouge">,</code> 를 통하여 합니다.</li>
+  <li>always문 내부에서는 <code class="language-plaintext highlighter-rouge">procedural assignment</code>만 가능합니다. 즉 <code class="language-plaintext highlighter-rouge">assign</code> 문을 통한 <code class="language-plaintext highlighter-rouge">continous assignment</code>는 불가능합니다.</li>
+</ul>
 
-<p>###</p>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">&lt;</span><span class="n">sensitivity_list</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">sensitivity_list</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">...</span> <span class="p">,</span> <span class="o">&lt;</span><span class="n">sensitivity_list</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="c1">//procedural assignment</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_10.drawio.png" alt="figure 10" /></p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="c1">//procedural assignment</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="332-wildcard">3.3.2 wildcard</h3>
+
+<ul>
+  <li>
+    <p>아래 예시와 같이 매우 길고 복잡한 입력을 갖는 회로가 존재할수 있습니다.</p>
+  </li>
+  <li>
+    <p>이러한 회로의 sensitivity list를 기술시 실수를 하기 쉽습니다.</p>
+  </li>
+</ul>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="c1">//procedural assignment</span>
+  <span class="n">z</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">b</span> <span class="o">|</span> <span class="n">c</span><span class="p">);</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">d</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="p">(</span><span class="n">f</span> <span class="o">*</span> <span class="n">j</span><span class="p">);</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span> <span class="o">*</span> <span class="n">i</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>이런 상황에서 wildcard <code class="language-plaintext highlighter-rouge">*</code> 를 이용하여 모든 입력신호를 자동적으로 sensittivity list에 추가 해줄 수 있습니다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span> <span class="c1">//wild card *</span>
+  <span class="c1">//procedural assignment</span>
+  <span class="n">z</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">b</span> <span class="o">|</span> <span class="n">c</span><span class="p">);</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">d</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="p">(</span><span class="n">f</span> <span class="o">*</span> <span class="n">j</span><span class="p">);</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span> <span class="o">*</span> <span class="n">i</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="333-procedural-assignment">3.3.3 procedural assignment</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">wire</code>형에만 할당 가능한 continuous assignment와 달리 procedural assignment은 <code class="language-plaintext highlighter-rouge">reg</code>형 객체에만 할당을 할 수 있습니다.</li>
+  <li>절차적 할당(procedural assignment)은 이벤트를 감지하지 않고 식에 도달하면 바로 실행을 하는 소프트웨어적인 특성이 있습니다.</li>
+  <li>절차적 할당(procedural assignment)은 <code class="language-plaintext highlighter-rouge">blocking</code>과 <code class="language-plaintext highlighter-rouge">non-blocking</code>으로 나누어집니다.</li>
+  <li>blocking assignment
+    <ul>
+      <li>blocking은 combinational logic을 표현 하기 위해 사용</li>
+      <li>표현식 :  <code class="language-plaintext highlighter-rouge">a = b</code></li>
+    </ul>
+  </li>
+  <li>non-blocking assignment
+    <ul>
+      <li>non-blocking은 sequential logic을 표현하기 위해 사용</li>
+      <li>표현식 :  <code class="language-plaintext highlighter-rouge">a &lt;= b</code></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_2_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">reg</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="k">begin</span> <span class="c1">//sensitivity list</span>
+    <span class="c1">//procedural assignment</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">s</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">s</span><span class="p">);</span> <span class="c1">//reg형이 와야함</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.4</strong> always문 및 blocking assignment를 활용한 2 to 1 mux</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>2 to 1 mux의 input은 <code class="language-plaintext highlighter-rouge">a, b, s</code>가 있으므로 이를 sensitivity list에 넣어 주었습니다.</p>
+  </li>
+  <li>
+    <p>sensitivity list의 값 <code class="language-plaintext highlighter-rouge">a, b, s</code> 에 변화가 발생하면 always 내부의 구문들을 실행합니다.</p>
+  </li>
+  <li>
+    <p>위의 예시에서는 blocking procedural assignment인  <code class="language-plaintext highlighter-rouge">z = (a &amp; ~s) | (a &amp; s);</code> 을 실행합니다.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="334-blocking-vs-non-blocking-assignment">3.3.4 blocking vs non-blocking assignment</h3>
+
+<p><strong>blocking assignment</strong></p>
+
+<ul>
+  <li>
+    <p>RHS(우변 방정식)를 평가하고 blocking assignment의 LHS(좌변 방정식)를 업데이트합니다.</p>
+  </li>
+  <li>
+    <p>blocking assignment의 활용 : Combinational Logic의 표현에 적합</p>
+  </li>
+</ul>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="k">begin</span> <span class="c1">//sensitivity list</span>
+  <span class="c1">//non-blocking assignment</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">c</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><strong>non-blocking assignment</strong></p>
+
+<ul>
+  <li>
+    <p>time step의 시작 부분에서 non-blocking assignment의 RHS(우변 방정식를 평가합니다.</p>
+  </li>
+  <li>
+    <p>time step의 끝에서 non-blocking assignment의 LHS(좌변 방정식)를 업데이트합니다.</p>
+  </li>
+  <li>
+    <p>Non-blocking assignment의 활용 : sequential logic의 표현에 적합</p>
+  </li>
+</ul>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">clk</span><span class="p">)</span> <span class="k">begin</span> <span class="c1">//sensitivity list</span>
+  <span class="c1">//non-blocking assignment</span>
+  <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">b</span> <span class="o">&lt;=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">c</span> <span class="o">&lt;=</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="335-initial문">3.3.5 Initial문</h3>
+
+<ul>
+  <li>
+    <p>전체 시뮬레이션에서 한번만 실행</p>
+  </li>
+  <li>
+    <p>testbench나 메모리의 데이터를 초기화 할 때 사용</p>
+  </li>
+</ul>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">initial</span> <span class="k">begin</span> <span class="c1">//전체 시뮬레이션 동안 한번만 실행</span>
+    <span class="c1">//procedural assignment</span>
+    <span class="c1">//procedural assignment</span>
+    <span class="c1">//procedural assignment</span>
+  <span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">`timescale</span> <span class="mi">1</span><span class="n">ns</span><span class="o">/</span><span class="mi">10</span><span class="n">ps</span>  <span class="c1">// 단위/해상도</span>
+<span class="k">module</span> <span class="n">testbench</span><span class="p">();</span>
+  <span class="kt">reg</span> <span class="n">a_test</span><span class="p">;</span>
+  <span class="kt">reg</span> <span class="n">b_test</span><span class="p">;</span>
+  <span class="kt">reg</span> <span class="n">s_test</span><span class="p">;</span>
+  <span class="kt">wire</span> <span class="n">z_test</span><span class="p">;</span>
+  
+  <span class="k">initial</span> <span class="k">begin</span>
+    <span class="n">a_test</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+    <span class="n">b_test</span> <span class="o">=</span> <span class="mb">1'b0</span><span class="p">;</span>
+    <span class="n">s_test</span> <span class="o">=</span> <span class="mb">1'b0</span><span class="p">;</span>
+    <span class="p">#</span><span class="mi">5</span><span class="p">;</span> <span class="c1">//5ns delay</span>
+    <span class="n">a_test</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+    <span class="n">b_test</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+    <span class="n">s_test</span> <span class="o">=</span> <span class="mb">1'b0</span><span class="p">;</span>
+    <span class="p">#</span><span class="mi">5</span><span class="p">;</span> <span class="c1">//5ns delay</span>
+    <span class="n">a_test</span> <span class="o">=</span> <span class="mb">1'b0</span><span class="p">;</span>
+    <span class="n">b_test</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+    <span class="n">s_test</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+    <span class="p">#</span><span class="mi">5</span><span class="p">;</span> <span class="c1">//5ns delay</span>
+    <span class="n">a_test</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+    <span class="n">b_test</span> <span class="o">=</span> <span class="mb">1'b1</span><span class="p">;</span>
+    <span class="n">s_test</span> <span class="o">=</span> <span class="mb">1'b0</span><span class="p">;</span>
+    <span class="p">#</span><span class="mi">5</span><span class="p">;</span> <span class="c1">//5ns delay</span>
+    <span class="p">$</span><span class="nb">finish</span><span class="p">;</span>
+  <span class="k">end</span>
+  
+  <span class="n">mux_2_to_1</span> <span class="n">dut</span><span class="p">(.</span><span class="n">a</span><span class="p">(</span><span class="n">a_test</span><span class="p">),</span> <span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b_test</span><span class="p">),</span> <span class="p">.</span><span class="n">s</span><span class="p">(</span><span class="n">s_test</span><span class="p">),</span> <span class="p">.</span><span class="n">z</span><span class="p">(</span><span class="n">z_test</span><span class="p">));</span> <span class="c1">//instantization</span>
+  
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.5</strong> intial문을 활용한 testbench</p>
+</blockquote>
+
+<hr />
+
+<h3 id="336-if문">3.3.6 if문</h3>
+
+<ul>
+  <li>
+    <p>c언어의 if문과 유사</p>
+  </li>
+  <li>
+    <p>mux로 합성됨</p>
+  </li>
+</ul>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="n">statement</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">expression</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="n">statement</span><span class="p">;</span>
+<span class="k">end</span>
+<span class="k">else</span> <span class="k">begin</span>
+  <span class="n">statement</span><span class="p">;</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="3361-2-to-1-mux">3.3.6.1 2 to 1 mux</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_2_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="kt">reg</span> <span class="n">z_r</span><span class="p">;</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">1'b0</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="n">z_r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">end</span>
+    <span class="k">else</span> <span class="k">begin</span> <span class="c1">//s == 1'b1</span>
+      <span class="n">z_r</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z_r</span><span class="p">;</span>
+  
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.6</strong> if문을 활용한 2 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<h4 id="3362-4-to-1-mux">3.3.6.2 4 to 1 mux</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_4_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">c</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">d</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="kt">reg</span> <span class="n">z_r</span><span class="p">;</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b00</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="n">z_r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">end</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b01</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="n">z_r</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="k">end</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b10</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="n">z_r</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+    <span class="k">end</span>
+    <span class="k">else</span> <span class="k">begin</span>
+      <span class="n">z_r</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z_r</span><span class="p">;</span>
+  
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.7</strong> if문을 활용한 4 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_4_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">c</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">d</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">s</span><span class="p">,</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="kt">reg</span> <span class="n">z_r</span><span class="p">;</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mb">1'b0</span><span class="p">)</span> <span class="k">begin</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mb">1'b0</span><span class="p">)</span> <span class="k">begin</span>
+        <span class="n">z_r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+      <span class="k">end</span>
+      <span class="k">else</span> <span class="k">begin</span>
+        <span class="n">z_r</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="k">else</span> <span class="k">begin</span> <span class="c1">//s[1] == 1'b1</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mb">1'b0</span><span class="p">)</span> <span class="k">begin</span>
+        <span class="n">z_r</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+      <span class="k">end</span>
+      <span class="k">else</span> <span class="k">begin</span>
+        <span class="n">z_r</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z_r</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.8</strong> if문을 활용한 4 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<h4 id="3363-if문-사용시-주의사항">3.3.6.3 if문 사용시 주의사항</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_3_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">reg</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b00</span><span class="p">)</span>      
+      <span class="n">z</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b01</span><span class="p">)</span> 
+      <span class="n">z</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b10</span><span class="p">)</span> 
+      <span class="n">z</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.9</strong> if문을 활용한 3 to 1 mux</p>
+</blockquote>
+
+<ul>
+  <li>s가 2’b11일떄의 state가 규정되어 있지 않으므로 만약 s가 2’b11이라면 이전 timestep에서의 z값을 그대로 유지 할 것입니다. 이는 의도 하지 않은 latch의 합성을 의미합니다.</li>
+</ul>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_3_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">reg</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="n">z</span> <span class="o">=</span> <span class="mb">1'b0</span><span class="p">;</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b00</span><span class="p">)</span>      
+      <span class="n">z</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b01</span><span class="p">)</span> 
+      <span class="n">z</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b10</span><span class="p">)</span> 
+      <span class="n">z</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.10</strong> if문을 활용한 3 to 1 mux</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>위의 예시의 경우는 if문을 초기화 하기전 출력을 초기화해주었습니다.</p>
+  </li>
+  <li>
+    <p>따라서 만약 s == 2’b11인 상황에서 z가 초기화한 값 0이 출력될 것입니다.</p>
+  </li>
+</ul>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_3_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">reg</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b00</span><span class="p">)</span>      
+      <span class="n">z</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="mb">2'b01</span><span class="p">)</span> 
+      <span class="n">z</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="k">else</span>                 
+      <span class="n">z</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.11</strong> if문을 활용한 3 to 1 mux</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>혹은 if문을 반드시 else로 닫아주는 방법도 존재합니다.</p>
+  </li>
+  <li>
+    <p>s == 2’b11인 상황에서 z = c가 출력되겠죠.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="335-case문">3.3.5 case문</h3>
+
+<ul>
+  <li>c 언어의 case문과 달리 break를 정의 하지 않는점에서 차이점이 존재</li>
+  <li>해당하는 condition의 statement를 끝까지 실행</li>
+  <li>일종의 truth up table로 표현할 수 있는 회로 설계에 적합</li>
+</ul>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="k">case</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+      <span class="n">condition</span> <span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+      <span class="n">condition</span> <span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+      <span class="n">condition</span> <span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+      <span class="k">default</span>   <span class="o">:</span> <span class="n">statements</span><span class="p">;</span>
+  <span class="k">endcase</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="k">case</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+      <span class="n">condition</span> <span class="o">:</span> <span class="k">begin</span> 
+        <span class="n">statements</span><span class="p">;</span>
+        <span class="n">statements</span><span class="p">;</span>
+      <span class="k">end</span>
+      <span class="n">condition</span> <span class="o">:</span> <span class="k">begin</span> 
+        <span class="n">statements</span><span class="p">;</span>
+        <span class="n">statements</span><span class="p">;</span>
+      <span class="k">end</span>
+      <span class="n">condition</span> <span class="o">:</span> <span class="k">begin</span> 
+        <span class="n">statements</span><span class="p">;</span>
+        <span class="n">statements</span><span class="p">;</span>
+      <span class="k">end</span>
+      <span class="k">default</span>   <span class="o">:</span> <span class="k">begin</span>
+        <span class="n">statements</span><span class="p">;</span>
+        <span class="n">statements</span><span class="p">;</span>
+      <span class="k">end</span>
+  <span class="k">endcase</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<ul>
+  <li>구문이 두줄 이상일시 <code class="language-plaintext highlighter-rouge">begin</code> ~ <code class="language-plaintext highlighter-rouge">end</code> 로 묶어 표현</li>
+</ul>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_4_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">b</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">c</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">d</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">sel</span><span class="p">,</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="kt">reg</span> <span class="n">z_r</span><span class="p">;</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">case</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span>
+        <span class="mb">2'b00</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+        <span class="mb">2'b01</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+        <span class="mb">2'b10</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="mb">2'b11</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+        <span class="nl">default:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z_r</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.12</strong> case문을 활용한 4 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<h4 id="3352-casex-casez">3.3.5.2 casex, casez</h4>
+
+<p><strong>casex</strong> : ‘x’, ‘z’, ‘?’를 don’t care로 처리</p>
+
+<p><strong>casez</strong> : ‘z’,  ‘?’를 don’t care로 처리, ‘z’대신에 ?로 표시 가능</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">case</span><span class="p">(</span><span class="n">data_i</span><span class="p">)</span>
+  <span class="mb">4'b1000</span><span class="p">,</span> <span class="mb">4'b1001</span><span class="p">,</span> <span class="mb">4'b1010</span><span class="p">,</span> <span class="mb">4'b1011</span><span class="p">,</span> 
+  <span class="mb">4'b1100</span><span class="p">,</span> <span class="mb">4'b1101</span><span class="p">,</span> <span class="mb">4'b1110</span><span class="p">,</span> <span class="mb">4'b1111</span><span class="o">:</span> 
+    <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">3'b100</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">casez</span><span class="p">(</span><span class="n">data_i</span><span class="p">)</span>
+	<span class="mb">4'b1???</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">3'b100</span><span class="p">;</span>
+</code></pre></div></div>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">priority_encoder</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">IN_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_i</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">OUT_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_o</span>
+<span class="p">);</span>
+  <span class="k">localparam</span> <span class="n">IN_WIDTH</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+  <span class="k">localparam</span> <span class="n">OUT_WIDTH</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="n">OUT_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_o_r</span><span class="p">;</span>
+  
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">casez</span><span class="p">(</span><span class="n">data_i</span><span class="p">)</span>
+      <span class="mb">4'b1???</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">3'b100</span><span class="p">;</span>
+      <span class="mb">4'b01??</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">3'b011</span><span class="p">;</span>
+      <span class="mb">4'b001?</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">3'b010</span><span class="p">;</span>
+      <span class="mb">4'b0001</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">3'b001</span><span class="p">;</span>
+      <span class="mb">4'b0000</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">3'b000</span><span class="p">;</span>
+      <span class="nl">default:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+  <span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">data_o_r</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.13</strong> Priority Encoder</p>
+</blockquote>
+
+<hr />
+
+<h4 id="3351-case문-사용시-주의사항-1--의도하지-않은-latch의-합성---full-case">3.3.5.1 case문 사용시 주의사항 1 : 의도하지 않은 latch의 합성 - full case</h4>
+
+<p>case문 또한 모든 입력의 condition에 대하여 출력의 값이 규정되지 않으면 잘못된 래치가 합성될 수 있습니다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_4_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">case</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span>
+        <span class="mb">2'b00</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+        <span class="mb">2'b01</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+        <span class="mb">2'b10</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="c1">//2'b11 일때의 출력 z_r의 값이 정의 되지않음 //래치가 합성됨</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z_r</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.14</strong> case문을 활용한 4 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_4_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="n">z_r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//output 초기화</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">case</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span>
+        <span class="mb">2'b00</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+        <span class="mb">2'b01</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+        <span class="mb">2'b10</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z_r</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.15</strong> case문을 활용한 4 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_4_to_1</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">s</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">z</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">case</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span>
+        <span class="mb">2'b00</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+        <span class="mb">2'b01</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+        <span class="mb">2'b10</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="nl">default:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//default값을 정의하여 출력값을 초기화</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z_r</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Example 3.16</strong> case문을 활용한 4 to 1 mux</p>
+</blockquote>
+
+<hr />
+
+<h4 id="3352-case문-사용시-주의사항-2--parallel-case">3.3.5.2 case문 사용시 주의사항 2 : parallel case</h4>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">intctl2b</span> <span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_in</span><span class="p">,</span> 
+  <span class="kt">output</span> <span class="kt">reg</span> <span class="p">[</span><span class="mi">4</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_out</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="n">data_in</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="n">data_out</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">casez</span> <span class="p">(</span><span class="n">data_in</span><span class="p">)</span> <span class="c1">//data_in == 4'b11xx, 4'bx11x, 4'bxx11, 4'b1xx1, ...</span>
+      <span class="mb">4'b1???</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="mb">4'b?1??</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+      <span class="mb">4'b??1?</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+      <span class="mb">4'b???1</span> <span class="o">:</span> <span class="n">data_out</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>케이스 항목이 두번 이상 일치함(data_in == 4’b11xx, 4’bx11x, 4’bxx11, 4’b1xx1, …)</p>
+  </li>
+  <li>이를 non-parallel case라 합니다.</li>
+  <li>priority 라우팅 네트워크를 추론</li>
+</ul>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">intctl2b</span> <span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_in</span><span class="p">,</span> 
+  <span class="kt">output</span> <span class="kt">reg</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_out</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="n">data_in</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="n">data_out</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">casez</span> <span class="p">(</span><span class="n">data_in</span><span class="p">)</span>
+      <span class="mb">4'b1???</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+      <span class="mb">4'b01??</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+      <span class="mb">4'b001?</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">63</span><span class="p">;</span>
+      <span class="mb">4'b0001</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>각 케이스 항목이 고유함</p>
+  </li>
+  <li>
+    <p>이를 parallel case라 합니다.</p>
+  </li>
+  <li>
+    <p>멀티플렉싱 라우팅 네트워크를 추론</p>
+  </li>
+</ul>
+
+<hr />
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">intctl2b</span> <span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_in</span><span class="p">,</span> 
+  <span class="kt">output</span> <span class="kt">reg</span> <span class="p">[</span><span class="mi">4</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_out</span>
+<span class="p">);</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="n">data_in</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="n">data_out</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">(</span><span class="o">*</span> <span class="n">parallel_case</span> <span class="o">*</span><span class="p">)</span> <span class="c1">//synthesis directives</span>
+    <span class="k">casez</span> <span class="p">(</span><span class="n">data_in</span><span class="p">)</span>
+      <span class="mb">4'b1???</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+      <span class="mb">4'b?1??</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+      <span class="mb">4'b??1?</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">63</span><span class="p">;</span>
+      <span class="mb">4'b???1</span> <span class="o">:</span> <span class="n">data_out</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<ul>
+  <li>만약 non-parallel case임에도 각각의 케이스 항목이 mutually exclusive하게 실행됨을 설계자가 보장할 수 있다면, 즉 위 예시에서 data_in이 4’b1000, 4’b0100, 4’b0010, 4’b0001만이 입력됨을 보장할 수 있다면 <code class="language-plaintext highlighter-rouge">synthesis directives : (* parallel_case *)</code>를 추가하여 강제로 prallel하게 동작하도록 합성 할 수 있습니다.</li>
+</ul>
+
+<hr />
+
+<h3 id="336-if문-vs-case문">3.3.6 if문 vs case문</h3>
+
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-21-verilogHDL_chapter3_combinational_logic/시스템_반도체_설계_3장-figure_12.drawio.png" alt="figure 12" /></p>
+
+<ul>
+  <li>
+    <p>priority encoding이 필요 할때는 if else문으로 표현하는 것이 유리하며</p>
+  </li>
+  <li>
+    <p>priority encoding이 필요 없을 시 case문으로 표현하는 것이 유리합니다.</p>
+  </li>
+</ul>
+
+<hr />
 
 <h2 id="34-case-study">3.4 Case Study</h2>
 
-<h3 id="341-4-to-1-multiplexer">3.4.1 4-to-1 Multiplexer</h3>
+<hr />
 
-<h3 id="342-rom">3.4.2 ROM</h3>
+<h3 id="341-8bit-4-to-1-multiplexer">3.4.1 8bit 4-to-1 Multiplexer</h3>
 
-<h3 id="343-bcd-to-7-segment">3.4.3 BCD to 7 segment</h3>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">mux_4_to_1</span><span class="p">#(</span>
+  <span class="k">parameter</span> <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="p">)(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">a</span><span class="p">,</span> <span class="c1">//nbit input data</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">b</span><span class="p">,</span> <span class="c1">//nbit input data</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">c</span><span class="p">,</span> <span class="c1">//nbit input data</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">d</span><span class="p">,</span> <span class="c1">//nbit input data</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">s</span><span class="p">,</span> <span class="c1">//2bit input select</span>
+  
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">z</span> <span class="c1">//nbit output data</span>
+<span class="p">);</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">z_r</span><span class="p">;</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">case</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span>
+      <span class="mb">2'b00</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+      <span class="mb">2'b01</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+      <span class="mb">2'b10</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+      <span class="mb">2'b11</span> <span class="o">:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+      <span class="nl">default:</span> <span class="n">z_r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+  <span class="k">assign</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z_r</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
 
-<h3 id="344-nbit-ripple-carry-adder">3.4.4 nbit Ripple Carry Adder</h3>
+<hr />
 
-<h3 id="345-subtractor">3.4.5 Subtractor</h3>
+<h3 id="342-7segment-decoder">3.4.2 7segment Decoder</h3>
 
-<h3 id="346-comparator">3.4.6 Comparator</h3>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">decoder</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">IN_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_i</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">OUT_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_o</span>
+<span class="p">);</span>
+  <span class="k">localparam</span> <span class="n">IN_WIDTH</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+  <span class="k">localparam</span> <span class="n">OUT_WIDTH</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_o_r</span><span class="p">;</span>
+  
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="k">casez</span><span class="p">(</span><span class="n">data_i</span><span class="p">)</span>
+      <span class="mb">4'b0000</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b00000000</span><span class="p">;</span> <span class="c1">//0</span>
+      <span class="mb">4'b0001</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b00000001</span><span class="p">;</span> <span class="c1">//1</span>
+      <span class="mb">4'b0010</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b00000011</span><span class="p">;</span> <span class="c1">//2</span>
+      <span class="mb">4'b0011</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b00000111</span><span class="p">;</span> <span class="c1">//3</span>
+      <span class="mb">4'b0100</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b00001111</span><span class="p">;</span> <span class="c1">//4</span>
+      <span class="mb">4'b0101</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b00011111</span><span class="p">;</span> <span class="c1">//5</span>
+      <span class="mb">4'b0110</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b00111111</span><span class="p">;</span> <span class="c1">//6</span>
+      <span class="mb">4'b0111</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b01111111</span><span class="p">;</span> <span class="c1">//7</span>
+      <span class="mb">4'b1000</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b01111111</span><span class="p">;</span> <span class="c1">//8</span>
+      <span class="mb">4'b1001</span> <span class="o">:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mb">8'b01111111</span><span class="p">;</span> <span class="c1">//9</span>
+      <span class="nl">default:</span> <span class="n">data_o_r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">endcase</span>
+  <span class="k">end</span>
+  <span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">data_o_r</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
 
-<h3 id="347-shifter">3.4.7 Shifter</h3>
+<hr />
 
-<h3 id="348-alu">3.4.8 ALU</h3>
+<h3 id="343-adder">3.4.3 Adder</h3>
 
-<h3 id="349-ieee754-adder">3.4.9 IEEE754 Adder</h3>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">adder</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_IN_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_a_i</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_IN_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_b_i</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in_i</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_OUT_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_o</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">data_a_i</span> <span class="o">+</span> <span class="n">data_b_i</span> <span class="o">+</span> <span class="n">carry_in_i</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
 
-<h3 id="3410-ieee754-multiplier">3.4.10 IEEE754 Multiplier</h3>
+<hr />
 
-<h3 id="3411-nbit-carry-look-ahead-adder">3.4.11 nbit Carry Look Ahead Adder</h3>
+<h3 id="344-subtractor">3.4.4 Subtractor</h3>
 
-<h3 id="3412-nbit-pre-fix-adder">3.4.12 nbit Pre-Fix Adder</h3>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">data_a_i</span> <span class="o">-</span> <span class="n">data_b_i</span><span class="p">;</span>
+</code></pre></div></div>
 
-<p>###</p>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">data_a_i</span> <span class="o">+</span> <span class="p">((</span><span class="o">~</span><span class="n">data_b_i</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">substractor</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_IN_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_a_i</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_IN_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_b_i</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in_i</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_OUT_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_o</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">data_a_i</span> <span class="o">+</span> <span class="p">((</span><span class="o">~</span><span class="n">data_b_i</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="345-comparator">3.4.5 Comparator</h3>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">data_a_i</span> <span class="o">&lt;</span> <span class="n">data_b_i</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="p">(</span><span class="n">data_a_i</span> <span class="o">-</span> <span class="n">data_b_i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assign</span> <span class="n">result</span> <span class="o">=</span> <span class="n">data_a_i</span> <span class="o">-</span> <span class="n">data_b_i</span><span class="p">;</span>
+<span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">MSB</span><span class="p">];</span> <span class="c1">//sign bit == MSB</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">comparator</span><span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_IN_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_a_i</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_IN_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">data_b_i</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">carry_in_i</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">data_o</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="n">DATA_OUT_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">result</span><span class="p">;</span>
+  <span class="k">assign</span> <span class="n">result</span> <span class="o">=</span> <span class="n">data_a_i</span> <span class="o">+</span> <span class="p">((</span><span class="o">~</span><span class="n">data_b_i</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="k">assign</span> <span class="n">data_o</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">DATA_OUT_WIDTH</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="346-alu">3.4.6 ALU</h3>
 
 </div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-12-21T00:00:00+00:00"><!-- start custom article footer snippet -->
 

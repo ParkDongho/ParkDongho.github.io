@@ -303,15 +303,63 @@
 
 <!--more-->
 
+<blockquote>
+  <h2 id="목차">목차</h2>
+
+  <p><strong><a href="">1부 - Verilog HDL</a></strong></p>
+
+  <p><strong>Chapter 1 : <a href="https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html">Introduction</a></strong></p>
+
+  <p><strong>Chapter 2 : <a href="https://parkdongho.github.io/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">Module &amp; Instantiation</a></strong></p>
+
+  <p><strong>Chapter 3 : <a href="https://parkdongho.github.io/2021/12/21/verilogHDL_chapter3_combinational_logic.html">Combinational Logic</a></strong></p>
+
+  <p><strong>Chapter 4 : <a href="https://parkdongho.github.io/2021/12/23/verilogHDL_chapter4_sequential_logic.html">Sequential Logic</a></strong></p>
+
+  <p><strong>Chapter 5 : <a href="https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html">FSM</a></strong></p>
+
+  <p><strong><a href="">2부 - H/W Accelerator Design</a></strong></p>
+
+  <p><strong>Chapter 1 : <a href="">Introduction</a></strong></p>
+
+  <p><strong>Chapter 2  : <a href="">Memory Map</a></strong></p>
+
+  <p><strong>Chapter 3  : <a href="">Bus Protocol</a></strong></p>
+
+  <p><strong>Chapter 4 : <a href="">DMA</a></strong></p>
+
+  <p><strong>Chapter 5 : <a href="">GPIO IP</a></strong></p>
+
+  <p><strong>Chapter 6 : <a href="">VLSI Signal Processing</a></strong></p>
+
+  <p><strong>Chapter 7 : <a href="">Image Processing IP</a></strong></p>
+
+  <p><strong><a href="">3부 - NPU Design</a></strong></p>
+
+  <p><strong>Chapter 1 : <a href="">Introduction</a></strong></p>
+
+  <p><strong>Chapter 2 : <a href="">Datapath</a></strong></p>
+
+  <p><strong><a href="">부록A - 툴 설치/사용 방법</a></strong></p>
+
+  <p><strong>Chapter 1 : <a href="">Vivado 사용방법</a></strong></p>
+
+  <p><strong>Chapter 2 : <a href="">Drawio 사용방법</a></strong></p>
+
+  <p><strong>Chapter 3 : <a href="">WaveDrom 사용방법</a></strong></p>
+</blockquote>
+
+<hr />
+
 <p>디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. <strong>그림1</strong> 의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png" alt="fig 1" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png" alt="fig 1" /></p>
 
 <p><strong>그림1</strong> 4bit Adder 예제</p>
 
 <p>그래서 회로를 여러 서브블럭들로 나누어 설계를 합니다. <strong>그림2</strong> 는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다. 이때 4bit_adder 및 full_adder와 같은 설계 블록들을 <code class="language-plaintext highlighter-rouge">모듈(module)</code>이라고 합니다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png" alt="fig 2" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png" alt="fig 2" /></p>
 
 <p><strong>figure 2</strong> module instantiation의 예시</p>
 
@@ -319,7 +367,7 @@
 
 <p>이제 full_adder라는 모듈의 구성을 살펴봅시다. 모듈은 외부와 데이터를 주고 받을 수 있는 입출력 인터페이스를 제공합니다. 이러한 인터페이스를 <code class="language-plaintext highlighter-rouge">포트(port)</code> 라고 합니다. <strong>그림3</strong> 에서 확인할 수 있듯이 full_adder 모듈은 a, b, carry_in 이라는 입력 포트, out, carry_out 이라는 출력포트로 구성되어 있습니다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png" alt="fig 3" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png" alt="fig 3" /></p>
 
 <p><strong>figure 3</strong> full adder 모듈</p>
 
@@ -327,7 +375,7 @@
 
 <p>이에 대한 예시로 <strong>그림2</strong> 의 4bit adder 를 다시 확인해 봅시다.  먼저 full_adder 라는 모듈에서 서브모듈에 대한 템플릿을 정의 합니다. 이때 full_adder 모듈은 5개의 입출력 포트, 내부 로직에 대한 정의 등을 포함합니다. 이제 정의한 full_adder 모듈을 템플릿으로 하여 4bit_adder라는 상위 모듈에서 full_adder_0, full_adder_1, full_adder_2, full_adder_3 라는 고유한 이름의 객체 4개를 불러들입니다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png" alt="fig 2" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png" alt="fig 2" /></p>
 
 <p><strong>figure 2</strong> module instantiation의 예시</p>
 
@@ -352,7 +400,7 @@
 
 <hr />
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png" alt="fig 3" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png" alt="fig 3" /></p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">full_adder</span><span class="p">(</span> <span class="c1">//module 시작</span>
   <span class="c1">//port를 정의</span>
@@ -393,7 +441,7 @@
 
 <p>와 같은 타입으로 정의 될 수 있습니다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png" alt="figure4" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png" alt="figure4" /></p>
 
 <p><strong>figure 4</strong> module의 포트 연결 규칙</p>
 
@@ -403,7 +451,7 @@
 
 <p>먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png" alt="figure5" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png" alt="figure5" /></p>
 
 <p><strong>figure 5</strong> module의 포트 연결 규칙 with instantiation</p>
 
@@ -439,7 +487,7 @@
 
 <p>full adder 예제를 확인 해봅시다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png" alt="fig 3" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png" alt="fig 3" /></p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">full_adder</span><span class="p">(</span> <span class="c1">//module 키워드로 모듈시작</span>
   <span class="kt">input</span> <span class="n">a</span><span class="p">,</span>             <span class="c1">//1bit wire input</span>
@@ -486,7 +534,7 @@
 
 <p>이전까지는 1bit의 입출력까지만 다루었습니다. 하지만 numerical data를 표현하기 위해서는 n-bit의 binary data 형태로 표현할수 있으면 좋겠죠. 이를 위하여 verilog에서는 verctor 형태의 데이터 선언을 지원합니다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png" alt="fig 6" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png" alt="fig 6" /></p>
 
 <p><strong>figure 6</strong> 4bit adder의 vector 형태 표현</p>
 
@@ -596,7 +644,7 @@
 
 <p>먼저 nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들여 봅시다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png" alt="fig 7" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png" alt="fig 7" /></p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
   <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
@@ -625,7 +673,7 @@
 
 <p>이제 <code class="language-plaintext highlighter-rouge">nbit_adder</code> 모듈의 포트와 <code class="language-plaintext highlighter-rouge">full_adder</code> 인스턴스의 포트를 연결해줍시다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png" alt="fig 8" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png" alt="fig 8" /></p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
   <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
@@ -672,7 +720,7 @@
 
 <p>최종 완성본은 아래와 같습니다.</p>
 
-<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png" alt="fig 9" /></p>
+<p><img src="https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png" alt="fig 9" /></p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">nbit_adder</span><span class="p">#(</span>
   <span class="k">parameter</span> <span class="n">DATA_WIDTH</span> <span class="o">=</span> <span class="mi">4</span>
@@ -702,7 +750,7 @@
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
 </div><div class="article__license"></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2021/12/16/verilogHDL_chapter1_introduction.html">Verilog HDL 1장</a></div><div class="next"><span>NEXT</span><a href="/2021/12/21/verilogHDL_chapter3_combinational_logic.html">Verilog HDL 3장</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2021/12/16/verilogHDL_chapter1_introduction.html">Verilog HDL 1장</a></div><div class="next"><span>NEXT</span><a href="/2021/12/21/verilogHDL_chapter3_combinational_logic.html">Veriloghdl_chapter3_combinational_logic</a></div></div></div>
 
 </div>
 

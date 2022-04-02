@@ -304,7 +304,37 @@
   <li>아래 명령어로 neovim 설치</li>
 </ol>
 
+<p><strong>ubuntu</strong></p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>neovim
+</code></pre></div></div>
+
+<p><strong>RHEL</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>yum <span class="nb">install</span> <span class="nt">-y</span> https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+<span class="nb">sudo </span>yum <span class="nb">install</span> <span class="nt">-y</span> neovim python3-neovim
+</code></pre></div></div>
+
+<p><strong>RHEL에서 0.4 버전 이상 설치해야 할 시</strong></p>
+
+<p>위의 방법으로는 RHEL에서는 0.38버전 까지만 설치됨</p>
+
+<p>하지만 CoC는 0.4 버전 부터 지원</p>
+
+<p>새로운 버전은 아래와 같은 방법을 통하여 설치할 수 있음</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># prepare</span>
+dnf <span class="nb">install </span>curl
+<span class="c"># for the sake of running appimage:</span>
+dnf <span class="nb">install </span>fuse-libs
+
+<span class="c"># get appimage binary</span>
+curl <span class="nt">-o</span> /usr/local/bin/nvim <span class="nt">-LO</span> https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+<span class="c"># to get the nightly version instead:</span>
+<span class="c">#curl -o /usr/local/bin/nvim -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage</span>
+
+<span class="c"># make it executable</span>
+<span class="nb">chmod </span>u+x /usr/local/bin/nvim
 </code></pre></div></div>
 
 <ol>
@@ -328,7 +358,14 @@
 
 <p>curl이 설치 되어 있지 않다면 curl을 설치해줍니다.</p>
 
+<p><strong>ubuntu</strong></p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>curl
+</code></pre></div></div>
+
+<p><strong>RHEL</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>yum <span class="nb">install </span>curl
 </code></pre></div></div>
 
 <ol>
@@ -377,16 +414,39 @@ Plug <span class="s1">'vim-airline/vim-airline'</span>
 <span class="s2">"Tagbar
 Plug 'preservim/tagbar'
 
-"</span>COC
-Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span class="s1">'branch'</span>: <span class="s1">'release'</span><span class="o">}</span>
-Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span class="s1">'branch'</span>: <span class="s1">'master'</span>, <span class="s1">'do'</span>: <span class="s1">'yarn install --frozen-lockfile'</span><span class="o">}</span>
+"</span>CtrlP 파일 탐색 플러그인
+Plug <span class="s1">'ctrlpvim/ctrlp.vim'</span>
 
-call plug#end<span class="o">()</span>
+<span class="s2">"COC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
+call plug#end()
+
+syntax on "</span> 형식별 구문 강조 표시
+colorschme <span class="o">[</span>scheme명] <span class="s2">" 테마 적용.
+set number "</span> 라인 넘버 표시. <span class="o">(=</span> nu<span class="o">)</span>
+<span class="nb">set </span>showcmd <span class="s2">" 사용자가 입력한 명령어 표시
+set showmatch "</span> 현재 선택된 괄호의 쌍을 표시
+<span class="nb">set </span>relativenumber <span class="s2">" 커서를 기준으로 라인 넘버 표시. 커서 위치에 따라 바뀜. (= rnu)
+set cursorline "</span> 커서가 있는 라인을 강조 표시. <span class="o">(=</span> cul<span class="o">)</span>
+<span class="nb">set </span>ruler <span class="s2">" 커서 위치 표시. (= ru)
+set laststatus=2 "</span> 상태바 표시. <span class="o">(=</span> <span class="nb">ls</span><span class="o">)</span> <span class="o">[</span>0: 상태바 미표시 / 1: 2개 이상의 윈도우에서 표시 / 2: 항상 표시]
+<span class="s2">" 상태바 커스터마이징 %&lt;item&gt;으로 사용하며, </span><span class="se">\는</span><span class="s2"> 구분자로 공백을 넣을 경우는 구분자를 넣어줘야함.
+set statusline=%F</span><span class="se">\ </span><span class="s2">%y%m%r</span><span class="se">\ </span><span class="s2">%=Line:</span><span class="se">\ </span><span class="s2">%l/%L</span><span class="se">\ </span><span class="s2">[%p%%]</span><span class="se">\ </span><span class="s2">Col:%c</span><span class="se">\ </span><span class="s2">Buf:%n
+hi statusline ctermfg=White ctermbg=4 cterm=none "</span>활성화된 상태바 배경색 및 폰트색 설정
+hi statuslineNC <span class="nv">ctermfg</span><span class="o">=</span>White <span class="nv">ctermbg</span><span class="o">=</span>8 <span class="nv">cterm</span><span class="o">=</span>none <span class="s2">" 윈도우가 2개 이상인 경우 비활성화된 윈도우의 배경색 및 폰트색 설정
+set mouse=a "</span> 마우스로 스크롤 및 리사이즈 가능. <span class="o">[</span>n : Normal mode / v : Visual mode / i : Insert mode / a : All modes]
 
 colorscheme jellybeans
 <span class="nb">set </span><span class="nv">background</span><span class="o">=</span>dark
-~
+
+<span class="nb">set </span>autoindent <span class="s2">" 새로운 라인이 추가될 때, 이전 라인의 들여쓰기에 자동으로 맞춤. (= ai)
+set expandtab  "</span> Tab을 Space로 변경. <span class="o">(=</span> et<span class="o">)</span>
+<span class="nb">set </span><span class="nv">tabstop</span><span class="o">=</span>2 <span class="s2">" 탭으로 들여쓰기시 사용할 스페이스바 개수. (= ts)
+set shiftwidth=2 "</span> &lt;&lt;, <span class="o">&gt;&gt;</span> 으로 들여쓰기시 사용할 스페이스바 개수. <span class="o">(=</span> sw<span class="o">)</span>
+<span class="nb">set </span><span class="nv">softtabstop</span><span class="o">=</span>2 <span class="s2">" 스페이스바 n개를 하나의 탭으로 처리. (= sts)
+"</span> ex<span class="o">)</span> 스페이스바 4개가 연속으로 있다면 백스페이스로 스페이스바를 지우면 스페이스바 4개를 하나의 탭으로 인식해 삭제.
 </code></pre></div></div>
 
 <p>init.vim 파일을 수정후 아래명령어를 nvim command mode로 입력하여 실행합니다.</p>
@@ -400,13 +460,29 @@ colorscheme jellybeans
 
 <h2 id="31-coc-설치">3.1 CoC 설치</h2>
 
+<p><strong>Ubuntu</strong></p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL install-node.vercel.app/lts | bash
+</code></pre></div></div>
+
+<p><strong>RHEL</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL install-node.now.sh/lts | sudo bash
 </code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">~/.config/nvim/init.vim</code> 파일에 다음을 추가</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span class="s1">'branch'</span>: <span class="s1">'release'</span><span class="o">}</span>
 Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span class="s1">'branch'</span>: <span class="s1">'master'</span>, <span class="s1">'do'</span>: <span class="s1">'yarn install --frozen-lockfile'</span><span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="cocnvim-buildindexjs-not-found-please-install-dependencies-and-compile-cocnvim-by-yarn-install-발생시">[coc.nvim] build/index.js not found, please install dependencies and compile coc.nvim by: yarn install 발생시</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>yun <span class="nb">install </span>nodejs
+<span class="nb">sudo </span>npm <span class="nb">install</span> <span class="nt">-g</span> yarn
+<span class="nb">cd</span> ~/.vim/plugged/coc.nvim/
+yarn <span class="nb">install
+</span>yarn build
 </code></pre></div></div>
 
 <h2 id="32-language-server-설치">3.2 Language Server 설치</h2>
@@ -509,7 +585,7 @@ Plug <span class="s1">'neoclide/coc.nvim'</span>, <span class="o">{</span><span 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
 </div><div class="article__license"></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2021/12/21/verilogHDL_chapter3_combinational_logic.html">Verilog HDL 3장</a></div><div class="next"><span>NEXT</span><a href="/2021/12/22/vivado-%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html">Vivado 설치하기</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2021/12/21/verilogHDL_chapter3_combinational_logic.html">Veriloghdl_chapter3_combinational_logic</a></div><div class="next"><span>NEXT</span><a href="/2021/12/22/vivado-%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html">Vivado 설치하기</a></div></div></div>
 
 </div>
 
