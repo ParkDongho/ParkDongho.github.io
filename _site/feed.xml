@@ -1,5 +1,521 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-04-02T15:39:39+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
-</subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">Npu 논문</title><link href="http://localhost:4000/2022/01/09/NPU-%EB%85%BC%EB%AC%B8.html" rel="alternate" type="text/html" title="Npu 논문" /><published>2022-01-09T00:00:00+00:00</published><updated>2022-01-09T00:00:00+00:00</updated><id>http://localhost:4000/2022/01/09/NPU-%EB%85%BC%EB%AC%B8</id><content type="html" xml:base="http://localhost:4000/2022/01/09/NPU-%EB%85%BC%EB%AC%B8.html"></content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><summary type="html"></summary></entry><entry><title type="html">우분투 설치하기</title><link href="http://localhost:4000/2022/01/01/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="우분투 설치하기" /><published>2022-01-01T00:00:00+00:00</published><updated>2022-01-01T00:00:00+00:00</updated><id>http://localhost:4000/2022/01/01/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2022/01/01/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-04-02T15:41:00+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongho’s Dev Blog</title><subtitle>Your Site Description
+</subtitle><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><entry><title type="html">FPGA 학습시 도움될만한 사이트 목록</title><link href="http://localhost:4000/2022/04/02/%ED%94%84%EB%A1%A0%ED%8A%B8-%EC%84%A4%EA%B3%84-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8.html" rel="alternate" type="text/html" title="FPGA 학습시 도움될만한 사이트 목록" /><published>2022-04-02T00:00:00+00:00</published><updated>2022-04-02T00:00:00+00:00</updated><id>http://localhost:4000/2022/04/02/%ED%94%84%EB%A1%A0%ED%8A%B8-%EC%84%A4%EA%B3%84-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8</id><content type="html" xml:base="http://localhost:4000/2022/04/02/%ED%94%84%EB%A1%A0%ED%8A%B8-%EC%84%A4%EA%B3%84-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;h2 id=&quot;선수과목&quot;&gt;선수과목&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-논리회로&quot;&gt;1. 논리회로&lt;/h3&gt;
+
+&lt;h3 id=&quot;2-c언어&quot;&gt;2. c언어&lt;/h3&gt;
+
+&lt;h3 id=&quot;3-마이크로프로세서&quot;&gt;3. 마이크로프로세서&lt;/h3&gt;
+
+&lt;h1 id=&quot;기초&quot;&gt;기초&lt;/h1&gt;
+
+&lt;h2 id=&quot;1단계-verilog-hdl-basic&quot;&gt;1단계: Verilog HDL Basic&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-verilog-hdl-a-guide-to-digital-design-and-synthesis&quot;&gt;&lt;em&gt;1. &lt;strong&gt;“Verilog HDL: A Guide to Digital Design and Synthesis”&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;verilog 관련 서적으로는 &lt;strong&gt;&lt;em&gt;“Verilog HDL: A Guide to Digital Design and Synthesis”&lt;/em&gt;&lt;/strong&gt; 이 가장 유명함&lt;/p&gt;
+
+&lt;p&gt;처음엔 조금 어려울수도 있지만 verilog에 대해 엄밀하게 설명되어 있는 도서임&lt;/p&gt;
+
+&lt;p&gt;본 도서를 적극 추천!!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/-/ko/dp/0130449113/ref=sr_1_1?dchild=1&amp;amp;keywords=verilog+hdl&amp;amp;qid=1635502028&amp;amp;qsid=132-6454366-7382133&amp;amp;s=books&amp;amp;sr=1-1&amp;amp;sres=8177589180%2C0984629246%2C0134516753%2C0134549899%2C0963013351%2C8131794741%2CB08GS5LRRG%2C9333223371%2C981108775X%2C1691475297%2C1118841093%2C1598291068%2C0367778815%2C172153038X%2C0132774208%2C0136019285&amp;amp;srpt=ABIS_BOOK&quot;&gt;원서&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;amp;mallGb=KOR&amp;amp;barcode=9788972835011&amp;amp;orderClick=LEa&amp;amp;Kc=&quot;&gt;번역서&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;본 교재를 바탕으로한 충북대 IDEC쪽 강의가 유튜브에 공개되어있음.&lt;/p&gt;
+
+&lt;p&gt;어렵게 느껴질 시 참고 할 것&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;“충북대 IDEC Verilog HDL”&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9SbI38MMN7Y&amp;amp;t=1768s&quot;&gt;&lt;strong&gt;1일차 오전&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pWabdHdmpZk&quot;&gt;&lt;strong&gt;1일차 오후&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=mvgjsJASoEU&amp;amp;t=463s&quot;&gt;&lt;strong&gt;2일차 오전&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=EYGmMTnZZks&quot;&gt;&lt;strong&gt;2일차 오후&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-ieee-std-1364-2001&quot;&gt;&lt;em&gt;2. &lt;strong&gt;“IEEE Std 1364-2001”&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Verilog HDL의 시뮬레이터가 어떻게 동작하는지 궁금 할 시 다음 자료를 참고할것!&lt;/p&gt;
+
+&lt;p&gt;학교 도서관 계정으로 ieee xplore에 접속하면 무료로 볼 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/document/954909&quot;&gt;&lt;strong&gt;1364-2001 : IEEE Standard for Verilog Hardware Description Language&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2단계-digital-circuit-design-with-xilinx-fpga&quot;&gt;2단계: Digital Circuit Design with Xilinx FPGA&lt;/h2&gt;
+
+&lt;p&gt;학습한 문법을 바탕으로 논리회로 시간에 배운 간단한 논리회로를 설계해보자.&lt;/p&gt;
+
+&lt;p&gt;기본 컴포넌트(and, or, not, D-FF, …)부터 Dataflow modeling, FSM 까지 직접 구현 해보자.&lt;/p&gt;
+
+&lt;p&gt;참고할만한 자료는 아래와 같다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-주교재--xilinx-university-program--hdl-design-using-vivado&quot;&gt;&lt;em&gt;1. 주교재 : &lt;strong&gt;“Xilinx University Program : HDL Design using Vivado”&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Xilinx측의 자료 중 verilog 혹은 fpga를 처음 접하는 사람을 위해 잘정리가되어 있는 자료가 있어 추천한다.&lt;/p&gt;
+
+&lt;p&gt;step-by-step으로 이루어져 있어 문제를 하나씩 해결해보며 RTL 설계를 배울 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.xilinx.com/support/university/vivado/vivado-teaching-material/hdl-design.html&quot;&gt;HDL Design using Vivado&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-digital-design-with-an-introduction-to-the-verilog-hdl-vhdl-and-systemverilog&quot;&gt;&lt;em&gt;2. &lt;strong&gt;“Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog”&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;학교에서 교재로 많이 사용하는 것으로 알고 있다.&lt;/p&gt;
+
+&lt;p&gt;디지털 회로 설계 이론이 잘 정리 되어 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/-/ko/dp/0134549899/ref=sr_1_1?dchild=1&amp;amp;keywords=digital+design+mano&amp;amp;qid=1635502122&amp;amp;qsid=132-6454366-7382133&amp;amp;s=books&amp;amp;sr=1-1&amp;amp;sres=0134549899%2C9353062012%2C0132774208%2C933254252X%2C0131989243%2CB01K0PVJ0E%2C8120334698%2C1292231165%2C0133760634%2C0470531088%2C0804137803%2CB00HEHG7W2%2C1948209004%2C0415790522%2C0521177235%2C0131755633&amp;amp;srpt=ABIS_BOOK&quot;&gt;&lt;strong&gt;원서(Amazon)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewEng.laf?ejkGb=ENG&amp;amp;mallGb=ENG&amp;amp;barcode=9781292231167&amp;amp;orderClick=LAG&amp;amp;Kc=&quot;&gt;&lt;strong&gt;원서(Global Edition)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;amp;mallGb=KOR&amp;amp;barcode=9791185475554&amp;amp;orderClick=LAG&amp;amp;Kc=&quot;&gt;&lt;strong&gt;번역서&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-fpga-prototyping-using-verilog-examples&quot;&gt;&lt;em&gt;3. &lt;strong&gt;“FPGA Prototyping Using Verilog Examples”&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;좀더 실무적인 내용이 많이 나와 있는 책이다.&lt;/p&gt;
+
+&lt;p&gt;번역서가 존재하지만 추천 하지는 않는다.&lt;/p&gt;
+
+&lt;p&gt;(원서의 내용중 60% 이상의 내용이 빠져있으며 번역의 품질 또한 좋지 않다)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/-/ko/dp/0470185325/ref=sr_1_2?crid=1UXE7S49T5ZSI&amp;amp;dchild=1&amp;amp;keywords=verilog+examples&amp;amp;qid=1635502301&amp;amp;qsid=132-6454366-7382133&amp;amp;s=books&amp;amp;sprefix=verilog+%2Cstripbooks-intl-ship%2C324&amp;amp;sr=1-2&amp;amp;sres=0983497303%2C0470185325%2C1118011031%2C0980133793%2C1482593335%2CB01F9FW7CO%2CB00E2RKI36%2C7121257734%2C7118105678%2C7121222698%2C7115176329%2C7894360104%2C1691475297%2C125964376X%2C1728619440%2C0130449113&amp;amp;srpt=ABIS_BOOK&quot;&gt;&lt;strong&gt;원서&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3단계-project&quot;&gt;3단계: Project&lt;/h2&gt;
+
+&lt;h3 id=&quot;1--digital-clock&quot;&gt;1.  Digital Clock&lt;/h3&gt;
+
+&lt;p&gt;verilog HDL을 활용하여 디지털 시계를 만들어 보자!&lt;/p&gt;
+
+&lt;p&gt;스탑워치 기능도 추가해보자!&lt;/p&gt;
+
+&lt;h3 id=&quot;2-ieee-std-754&quot;&gt;2. IEEE Std 754&lt;/h3&gt;
+
+&lt;p&gt;부동 소수점 덧셈기 및 곱셈기를 만들어보자.&lt;/p&gt;
+
+&lt;h2 id=&quot;4단계-더-나아가기&quot;&gt;4단계: 더 나아가기&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-linux&quot;&gt;1. linux&lt;/h3&gt;
+
+&lt;p&gt;대부분의 상용 EDA툴은 linux에서만 설치된다.&lt;/p&gt;
+
+&lt;p&gt;따라서 리눅스 활용 능력은 반도체 설계자에게 필수적이다.&lt;/p&gt;
+
+&lt;p&gt;리눅스 커널같이 깊이있는 내용까지는 몰라도 되지만&lt;/p&gt;
+
+&lt;p&gt;windows를 사용하듯이 리눅스 명령어를 자유자재로 사용할 수 있을 정도로는 알아둘 필요가 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-vim&quot;&gt;2. Vim&lt;/h3&gt;
+
+&lt;p&gt;RTL 설계자들은 일반적으로 vim 에디터를 활용하여 코딩을 한다.&lt;/p&gt;
+
+&lt;p&gt;EDA 서버에 ssh로 접속하여 개발을 하기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;따라서 vim 사용법은 알아둘 필요가 있다.&lt;/p&gt;
+
+&lt;h4 id=&quot;vim-내장-튜토리얼&quot;&gt;vim 내장 튜토리얼&lt;/h4&gt;
+
+&lt;p&gt;기초적인 사용법은 vim에 내장된 튜토리얼로 빠르게 학습 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;먼저 vim을 설치 후 터미널에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim vimtutor&lt;/code&gt;을 입력하자&lt;/p&gt;
+
+&lt;h4 id=&quot;도서&quot;&gt;&lt;strong&gt;도서&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;손에 잡히는 VIM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-git&quot;&gt;3. Git&lt;/h3&gt;
+
+&lt;p&gt;반도체 설계시 형상관리의 중요성은 말할 수 없다.&lt;/p&gt;
+
+&lt;p&gt;git 및 github 활용 방법 정도는 알아둘필요가 있다.&lt;/p&gt;
+
+&lt;h1 id=&quot;초급&quot;&gt;초급&lt;/h1&gt;
+
+&lt;h3 id=&quot;1-reset&quot;&gt;1. Reset&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2002SJ_Resets.pdf&quot;&gt;&lt;strong&gt;Synchronous Resets? Asynchronous Resets? I am so confused!&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2&quot;&gt;2.&lt;/h3&gt;
+
+&lt;h3 id=&quot;6-uart&quot;&gt;6. UART&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;7-sram-controller&quot;&gt;7. SRAM Controller&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2단계--컴퓨터-구조&quot;&gt;2단계 : 컴퓨터 구조&lt;/h2&gt;
+
+&lt;p&gt;advance한 디지털 시스템을 설계 할 때 컴퓨터 구조는 좋은 디자인 예시이다.&lt;/p&gt;
+
+&lt;p&gt;컴퓨터 구조에서 사용되는 개념이 다양한 디지털 시스템에서도 사용되기 떄문이다.&lt;/p&gt;
+
+&lt;p&gt;아래는 기초적인 컴퓨터 구조를 배울때 참고할만한 자료 목록이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-computer-organization-and-design--risc-v-edition&quot;&gt;&lt;em&gt;1. &lt;strong&gt;“Computer Organization and Design : RISC-V Edition”&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;RISC-V 구조 연구의 양대 산맥을 이루고 있는 &lt;strong&gt;David A. Patterson, John L. Hennessy&lt;/strong&gt; 교수님의 책이다.&lt;/p&gt;
+
+&lt;p&gt;컴퓨터 구조 관련 바이블이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/-/ko/dp/0128122757/ref=pd_sbs_5/132-6454366-7382133?pd_rd_w=jZGyt&amp;amp;pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&amp;amp;pf_rd_r=0GG2M4PW6SPAMRMG3Q1Q&amp;amp;pd_rd_r=08a23760-39a4-4074-9230-b4714ba07486&amp;amp;pd_rd_wg=aqDDf&amp;amp;pd_rd_i=0128122757&amp;amp;psc=1&quot;&gt;[원서]&lt;/a&gt; &lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;amp;mallGb=KOR&amp;amp;barcode=9788964214244&amp;amp;orderClick=LAG&amp;amp;Kc=&quot;&gt;[번역서]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3단계--프로젝트-주제&quot;&gt;3단계 : 프로젝트 주제&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-자신만의-cpu-설계-하기&quot;&gt;&lt;em&gt;1. &lt;strong&gt;“자신만의 CPU 설계 하기”&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;간단한 &lt;strong&gt;single cycle cpu&lt;/strong&gt;를 설계해보자&lt;/p&gt;
+
+&lt;p&gt;이전 장에서 소개한 교재 &lt;strong&gt;&lt;em&gt;“Computer Organization and Design : RISC-V Edition”&lt;/em&gt;&lt;/strong&gt; 의 dataflow 부분의 내용을 참고하여 구현해보자&lt;/p&gt;
+
+&lt;p&gt;추가적으로 cpu 설계 시 참고할만한 좋은 자료가 있어 링크한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://donny.co.kr/wp/&quot;&gt;&lt;strong&gt;Dr. Donny’s Blog&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;국내 블로거가 본인이 IDEC Newsletter에 연재했던 내용을 소스코드와 함께 공유하고 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://donny.co.kr/wp/?p=162&quot;&gt;&lt;strong&gt;마이크로프로세서 설계 무작정 따라하기 – Part 1&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://donny.co.kr/wp/?p=163&quot;&gt;&lt;strong&gt;마이크로프로세서 설계 무작정 따라하기 – Part 2&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://donny.co.kr/wp/?p=164&quot;&gt;&lt;strong&gt;마이크로프로세서 설계 무작정 따라하기 – Part 3&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.donny.co.kr/simplecore/&quot;&gt;&lt;strong&gt;source code&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.fpga4student.com&quot;&gt;&lt;strong&gt;FPGA4Student.com&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.fpga4student.com/2017/04/verilog-code-for-16-bit-risc-processor.html&quot;&gt;&lt;strong&gt;Verilog Code for 16-bit RISC Processor&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4단계--더-나아가기&quot;&gt;4단계 : 더 나아가기&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-verilog-hdl의-고급-문법&quot;&gt;1. Verilog HDL의 고급 문법&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;generate&lt;/li&gt;
+  &lt;li&gt;function&lt;/li&gt;
+  &lt;li&gt;task&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;중급&quot;&gt;중급&lt;/h1&gt;
+
+&lt;h2 id=&quot;1단계--advanced-digital-system-design&quot;&gt;1단계 : Advanced Digital System Design&lt;/h2&gt;
+
+&lt;h3 id=&quot;0-advanced-digital-design-with-the-verilog-hdl&quot;&gt;0. &lt;strong&gt;Advanced Digital Design with the Verilog HDL&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Advanced-Digital-Design-Verilog-HDL/dp/0136019285&quot;&gt;&lt;strong&gt;[amazon]&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-sync--async-reset&quot;&gt;1. Sync &amp;amp; Async Reset&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2003Boston_Resets.pdf&quot;&gt;&lt;strong&gt;Asynchronous &amp;amp; Synchronous Reset Design Techniques&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-sync-fifo&quot;&gt;2. Sync FIFO&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://faculty.kfupm.edu.sa/COE/aimane/coe405/FPGA%20Prototyping%20with%20Verilog%20examples.pdf&quot;&gt;&lt;strong&gt;FPGA Prototyping Using Verilog Examples&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-clock-domain-crossing&quot;&gt;3. Clock Domain Crossing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2008Boston_CDC.pdf&quot;&gt;&lt;strong&gt;Clock Domain Crossing (CDC) Design &amp;amp; Verification Techniques Using SystemVerilog&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2001SJ_AsyncClk.pdf&quot;&gt;&lt;strong&gt;Synthesis and Scripting Techniques for Designing Multi-Asynchronous Clock Designs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4-reset-synchronizer&quot;&gt;4. Reset Synchronizer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2003Boston_Resets.pdf&quot;&gt;&lt;strong&gt;Asynchronous &amp;amp; Synchronous Reset Design Techniques&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5-async-fifo&quot;&gt;5. Async FIFO&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://zipcpu.com/blog/2018/07/06/afifo.html&quot;&gt;&lt;strong&gt;Crossing clock domains with an Asynchronous FIFO&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2002SJ_FIFO1.pdf&quot;&gt;&lt;strong&gt;Simulation and Synthesis Techniques for Asynchronous FIFO&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2002SJ_FIFO2.pdf&quot;&gt;&lt;strong&gt;Simulation and Synthesis Techniques for Asynchronous FIFO Design with Asynchronous Pointer Comparisons&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;6-crossbar-switch&quot;&gt;6. Crossbar Switch&lt;/h3&gt;
+
+&lt;h3 id=&quot;7-simple-router&quot;&gt;7. Simple Router&lt;/h3&gt;
+
+&lt;h3 id=&quot;8-vga-controller&quot;&gt;8. VGA Controller&lt;/h3&gt;
+
+&lt;h2 id=&quot;2단계--amba-axi4-bus-protocol&quot;&gt;2단계 : AMBA AXI4 BUS Protocol&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;동영상 강좌&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.idec.or.kr/vod/apply/view/?pay=&amp;amp;search_val=axi&amp;amp;no=11&quot;&gt;&lt;strong&gt;SoC architecture 설계&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.idec.or.kr/vod/apply/view/?pay=&amp;amp;search_val=axi&amp;amp;no=124&quot;&gt;&lt;strong&gt;AMBA AXI 기반 IP 설계와 검증&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.idec.or.kr/vod/apply/view/?pay=&amp;amp;search_val=axi&amp;amp;no=257&quot;&gt;&lt;strong&gt;AMBA AXI와 AXI-Stream 설계와 검증&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;블로그&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://zipcpu.com/blog/2020/03/08/easyaxil.html&quot;&gt;&lt;strong&gt;Buidilng an AXI-Lite slave the easy way&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://zipcpu.com/blog/2020/03/23/wbm2axisp.html&quot;&gt;&lt;strong&gt;Building a basic AXI Master&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Protocol Reference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=2ahUKEwinjsTP7KL2AhXYdHAKHc9SCFEQFnoECAUQAQ&amp;amp;url=http%3A%2F%2Fwww.gstitt.ece.ufl.edu%2Fcourses%2Ffall15%2Feel4720_5721%2Flabs%2Frefs%2FAXI4_specification.pdf&amp;amp;usg=AOvVaw3Gaz8t1AzK3xU8gzY_a7PV&quot;&gt;&lt;strong&gt;AMBA AXI and ACE Protocol Specification&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.xilinx.com/support/documentation/ip_documentation/axi_ref_guide/latest/ug1037-vivado-axi-reference-guide.pdf&quot;&gt;&lt;strong&gt;Vivado Design Suite: AXI Reference Guide (UG1037) - Xilinx&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;AXI Protocol Checker&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.xilinx.com/products/intellectual-property/axi_protocol_checker.html&quot;&gt;&lt;strong&gt;AXI Protocol Checker - Xilinx&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://documentation-service.arm.com/static/5fa14378b1a7c5445f290251?token=&quot;&gt;&lt;strong&gt;AMBA 3 AXI Protocol Checker User Guide - Arm&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;AXI Verification IP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=&amp;amp;ved=2ahUKEwjx2er57aL2AhXHAN4KHfxYDwoQFnoECBUQAQ&amp;amp;url=https%3A%2F%2Fwww.xilinx.com%2Fproducts%2Fintellectual-property%2Faxi-vip.html&amp;amp;usg=AOvVaw3RT5603GmM2TgkLAEK7qIT&quot;&gt;&lt;strong&gt;AXI Verification IP (VIP) - Xilinx&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.synopsys.com/verification/verification-ip/amba/amba-axi.html&quot;&gt;&lt;strong&gt;VC Verification IP for AMBA AXI - Synopsys&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3단계--project-1--axi-dma&quot;&gt;3단계 : Project 1 : AXI DMA&lt;/h2&gt;
+
+&lt;p&gt;이전 장에서 학습한 AXI4 프로토콜을 바탕으로 AXI DMA를 구현해보자!&lt;/p&gt;
+
+&lt;h2 id=&quot;3단계--project-2--image-processing-accelerator&quot;&gt;3단계 : Project 2 : Image Processing Accelerator&lt;/h2&gt;
+
+&lt;p&gt;sobel mask와 같은 간단한 영상처리 알고리즘을 실시간으로 처리하는 가속기를 만들어보자!
+참고할 만한 강좌는 아래와 같다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtube.com/playlist?list=PLTYvvOtCsmxzjHY70DYA8pe5D8745T_5m&quot;&gt;&lt;strong&gt;Image Processing using Zynq&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4단계--더-나아가기-1&quot;&gt;4단계 : 더 나아가기&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-고속-디지털-회로-설계를-위한-엄선된-주제&quot;&gt;1. 고속 디지털 회로 설계를 위한 엄선된 주제&lt;/h3&gt;
+
+&lt;h4 id=&quot;a-coding-guideline-for-good-synthesis&quot;&gt;A. Coding Guideline for Good Synthesis&lt;/h4&gt;
+
+&lt;p&gt;CE Cuming의 paper는 훌륭한 insight를 제공한다.&lt;/p&gt;
+
+&lt;p&gt;**Full case &amp;amp; Parallel case **&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG1999SJ_SynthMismatch.pdf&quot;&gt;&lt;strong&gt;RTL Coding Styles That Yield Simulation and Synthesis Mismatches&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG1999Boston_FullParallelCase.pdf&quot;&gt;&lt;strong&gt;“full_case parallel_case”, the Evil Twins of Verilog Synthesis&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Blocking vs Non-Blocking&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2000SJ_NBA.pdf&quot;&gt;&lt;strong&gt;Nonblocking Assignments in Verilog Synthesis, Coding Styles That Kill!&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2002Boston_NBAwithDelays.pdf&quot;&gt;&lt;strong&gt;Verilog Nonblocking Assignments With Delays, Myths &amp;amp; Mysteries&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;FSM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG1998SJ_FSM.pdf&quot;&gt;&lt;strong&gt;State Machine Coding Styles for Synthesis&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsICU2002_FSMFundamentals.pdf&quot;&gt;&lt;strong&gt;The Fundamentals of Efficient Synthesizable Finite State Machine Design using NC-Verilog and BuildGates&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sunburst-design.com/papers/CummingsSNUG2000Boston_FSM.pdf&quot;&gt;&lt;strong&gt;Coding And Scripting Techniques For FSM Designs With Synthesis-Optimized, Glitch-Free Outputs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;b-pipelining&quot;&gt;B. Pipelining&lt;/h4&gt;
+
+&lt;h4 id=&quot;c-set-up--hold-time-violation&quot;&gt;C. Set up &amp;amp; Hold Time Violation&lt;/h4&gt;
+
+&lt;h4 id=&quot;d-timing-closure&quot;&gt;D. Timing Closure&lt;/h4&gt;
+
+&lt;p&gt;모든 실제 회로에는 딜레이가 존재합니다. 이러한 딜레이로 인하여 목표로 하는 clock speed에서 정상 동작 하지 않을 수 있습니다. 예를들어 clock period가 10ns일때 D-FF에서 보낸 데이터가 combination logic을 지나 다음 D-FF에 도착할때 까지의 딜레이가 10ns를 초과하면 도착하는 데이터가 깨지게 됩니다. 이러한 에러를 타이밍 에러라고 합니다. 그렇다면 타이밍 에러를 잡으려면 어떻게 해야 할까요? 클럭을 낮춘다? 이는 목표로 하는 성능을 만족하지 못하는 것이기 때문에 다른방법이 필요 합니다. 이러한 타이밍 에러를 잡는 디버깅 과정을 타이밍 클로저 라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;타이밍 클로저&lt;/strong&gt;에 대한 폴로님이 작성하신 좋은 자료가 이니프로 카페에 존재하여 링크합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cafe.naver.com/plduser?iframe_url=/ArticleSearchList.nhn%3Fsearch.clubid=12923266%26search.searchdate=all%26search.searchBy=0%26search.query=%C5%B8%C0%CC%B9%D6+%C5%AC%B7%CE%C0%FA%26search.defaultValue=1%26search.sortBy=date%26userDisplay=15%26search.media=0%26search.option=0&quot;&gt;이니프로 카페&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;고급&quot;&gt;고급&lt;/h1&gt;
+
+&lt;h2 id=&quot;1-advanced-computer-architecture&quot;&gt;1. Advanced Computer Architecture&lt;/h2&gt;
+
+&lt;h3 id=&quot;a-computer-architecture-a-quantitative-approach&quot;&gt;A. “Computer Architecture: A Quantitative Approach”&lt;/h3&gt;
+
+&lt;p&gt;대학원 수준의 컴퓨터 구조론 전공서이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Architecture-Quantitative-Approach-Kaufmann/dp/0128119055&quot;&gt;[Amazon]&lt;/a&gt; &lt;a href=&quot;http://www.yes24.com/Product/Goods/39476814&quot;&gt;[yes24]&lt;/a&gt; &lt;a href=&quot;https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=108525939&quot;&gt;[알라딘]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-vlsi-signal-processing&quot;&gt;2. VLSI Signal Processing&lt;/h2&gt;
+
+&lt;p&gt;알고리즘을 하드웨어에 매핑하기위한 수학적 모델링&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-system-modeling&quot;&gt;3. System Modeling&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Transaction Modeling&lt;/li&gt;
+  &lt;li&gt;Functional Modeling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-deep-learning-accelerator&quot;&gt;4. Deep Learning Accelerator&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;동영상 강좌&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=tDxA3VT5kzY&quot;&gt;&lt;strong&gt;머신 러닝을 위한 하드웨어 가속&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://accelergy.mit.edu/sparse_tutorial.html&quot;&gt;&lt;strong&gt;MIT : Sparse Tensor Accelerator Modeling(ISCA 2021)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://inst.eecs.berkeley.edu/~ee290-2/sp21/&quot;&gt;&lt;strong&gt;UC Berkeley&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;도서&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Efficient-Processing-Deep-Neural-Networks/dp/168173835X&quot;&gt;&lt;strong&gt;Efficient Processing of Deep Neural Networks&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;블로그&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/BirenResearch/AIChip_Paper_List&quot;&gt;&lt;strong&gt;AI-Chip Paper List&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-system-verilog&quot;&gt;5. System Verilog&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-verification-with-sv&quot;&gt;6. Verification with SV&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;system verilog&lt;/li&gt;
+  &lt;li&gt;assertion&lt;/li&gt;
+  &lt;li&gt;code coverage&lt;/li&gt;
+  &lt;li&gt;functional coverage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;7-formal-verification&quot;&gt;7. Formal Verification&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;8-uvm&quot;&gt;8. UVM&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://youtube.com/playlist?list=PL8NoqZRUC7hcUeGjTGmAzuXZCwCmgY5kI&quot;&gt;UVM&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://youtube.com/playlist?list=PL8NoqZRUC7hcWE8IQXBPeN6LnvHldAUzi&quot;&gt;UVM Framework guide&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;9-state-of-the-art&quot;&gt;9. State of the Art&lt;/h2&gt;
+
+&lt;h1 id=&quot;기타--software-개발&quot;&gt;기타 : Software 개발&lt;/h1&gt;
+
+&lt;h2 id=&quot;c-언어&quot;&gt;C 언어&lt;/h2&gt;
+
+&lt;h3 id=&quot;도서-1&quot;&gt;도서&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;The C Programming Language&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;C Programming : A Modern Approach&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;vitis-활용-펌웨어-개발&quot;&gt;Vitis 활용 펌웨어 개발&lt;/h2&gt;
+
+&lt;h3 id=&quot;ultra96-tutorial-20192-mipi-to-dp-video-output-using-vivado-and-vitis&quot;&gt;Ultra96 Tutorial 2019.2 MIPI to DP Video Output using Vivado and Vitis&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.naver.com/iniproinc/221993940263&quot;&gt;이니프로 블로그&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hardware-software-codesign-with-vivado-and-vitis&quot;&gt;Hardware Software CoDesign with Vivado and Vitis&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=LU9hP7KLDgE&amp;amp;list=PLXHMvqUANAFOviU0J8HSp0E91lLJInzX1&amp;amp;index=80&quot;&gt;[youtube - 1]&lt;/a&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=SnAdaL7UZz4&amp;amp;list=LL&amp;amp;index=3&quot;&gt;[youtube - 2]&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;툴강좌&quot;&gt;툴강좌&lt;/h1&gt;
+
+&lt;h3 id=&quot;xilinx&quot;&gt;Xilinx&lt;/h3&gt;
+
+&lt;h3 id=&quot;vivado&quot;&gt;Vivado&lt;/h3&gt;
+
+&lt;h3 id=&quot;vitis&quot;&gt;Vitis&lt;/h3&gt;
+
+&lt;h2 id=&quot;asic&quot;&gt;Asic&lt;/h2&gt;
+
+&lt;h3 id=&quot;vcs&quot;&gt;VCS&lt;/h3&gt;
+
+&lt;h3 id=&quot;verdi&quot;&gt;Verdi&lt;/h3&gt;
+
+&lt;h3 id=&quot;design-conpiler&quot;&gt;Design Conpiler&lt;/h3&gt;
+
+&lt;h1 id=&quot;교육-사이트&quot;&gt;교육 사이트&lt;/h1&gt;
+
+&lt;h2 id=&quot;idec&quot;&gt;IDEC&lt;/h2&gt;
+
+&lt;h2 id=&quot;sw-soc-융합-아카데미&quot;&gt;SW-SoC 융합 아카데미&lt;/h2&gt;
+
+&lt;h2 id=&quot;keti-한국-전자-기술-연구원&quot;&gt;KETI 한국 전자 기술 연구원&lt;/h2&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Tool" /><summary type="html">Introduction 선수과목 1. 논리회로 2. c언어 3. 마이크로프로세서 기초 1단계: Verilog HDL Basic 1. “Verilog HDL: A Guide to Digital Design and Synthesis” verilog 관련 서적으로는 “Verilog HDL: A Guide to Digital Design and Synthesis” 이 가장 유명함 처음엔 조금 어려울수도 있지만 verilog에 대해 엄밀하게 설명되어 있는 도서임 본 도서를 적극 추천!! 원서 번역서 본 교재를 바탕으로한 충북대 IDEC쪽 강의가 유튜브에 공개되어있음. 어렵게 느껴질 시 참고 할 것 “충북대 IDEC Verilog HDL” 1일차 오전 1일차 오후 2일차 오전 2일차 오후 2. “IEEE Std 1364-2001” Verilog HDL의 시뮬레이터가 어떻게 동작하는지 궁금 할 시 다음 자료를 참고할것! 학교 도서관 계정으로 ieee xplore에 접속하면 무료로 볼 수 있다. 1364-2001 : IEEE Standard for Verilog Hardware Description Language 2단계: Digital Circuit Design with Xilinx FPGA 학습한 문법을 바탕으로 논리회로 시간에 배운 간단한 논리회로를 설계해보자. 기본 컴포넌트(and, or, not, D-FF, …)부터 Dataflow modeling, FSM 까지 직접 구현 해보자. 참고할만한 자료는 아래와 같다. 1. 주교재 : “Xilinx University Program : HDL Design using Vivado” Xilinx측의 자료 중 verilog 혹은 fpga를 처음 접하는 사람을 위해 잘정리가되어 있는 자료가 있어 추천한다. step-by-step으로 이루어져 있어 문제를 하나씩 해결해보며 RTL 설계를 배울 수 있다. HDL Design using Vivado 2. “Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog” 학교에서 교재로 많이 사용하는 것으로 알고 있다. 디지털 회로 설계 이론이 잘 정리 되어 있다. 원서(Amazon) 원서(Global Edition) 번역서 3. “FPGA Prototyping Using Verilog Examples” 좀더 실무적인 내용이 많이 나와 있는 책이다. 번역서가 존재하지만 추천 하지는 않는다. (원서의 내용중 60% 이상의 내용이 빠져있으며 번역의 품질 또한 좋지 않다) 원서 3단계: Project 1. Digital Clock verilog HDL을 활용하여 디지털 시계를 만들어 보자! 스탑워치 기능도 추가해보자! 2. IEEE Std 754 부동 소수점 덧셈기 및 곱셈기를 만들어보자. 4단계: 더 나아가기 1. linux 대부분의 상용 EDA툴은 linux에서만 설치된다. 따라서 리눅스 활용 능력은 반도체 설계자에게 필수적이다. 리눅스 커널같이 깊이있는 내용까지는 몰라도 되지만 windows를 사용하듯이 리눅스 명령어를 자유자재로 사용할 수 있을 정도로는 알아둘 필요가 있다. 2. Vim RTL 설계자들은 일반적으로 vim 에디터를 활용하여 코딩을 한다. EDA 서버에 ssh로 접속하여 개발을 하기 때문이다. 따라서 vim 사용법은 알아둘 필요가 있다. vim 내장 튜토리얼 기초적인 사용법은 vim에 내장된 튜토리얼로 빠르게 학습 할 수 있다. 먼저 vim을 설치 후 터미널에 vim vimtutor을 입력하자 도서 손에 잡히는 VIM 3. Git 반도체 설계시 형상관리의 중요성은 말할 수 없다. git 및 github 활용 방법 정도는 알아둘필요가 있다. 초급 1. Reset Synchronous Resets? Asynchronous Resets? I am so confused! 2. 6. UART 7. SRAM Controller 2단계 : 컴퓨터 구조 advance한 디지털 시스템을 설계 할 때 컴퓨터 구조는 좋은 디자인 예시이다. 컴퓨터 구조에서 사용되는 개념이 다양한 디지털 시스템에서도 사용되기 떄문이다. 아래는 기초적인 컴퓨터 구조를 배울때 참고할만한 자료 목록이다. 1. “Computer Organization and Design : RISC-V Edition” RISC-V 구조 연구의 양대 산맥을 이루고 있는 David A. Patterson, John L. Hennessy 교수님의 책이다. 컴퓨터 구조 관련 바이블이다. [원서] [번역서] 3단계 : 프로젝트 주제 1. “자신만의 CPU 설계 하기” 간단한 single cycle cpu를 설계해보자 이전 장에서 소개한 교재 “Computer Organization and Design : RISC-V Edition” 의 dataflow 부분의 내용을 참고하여 구현해보자 추가적으로 cpu 설계 시 참고할만한 좋은 자료가 있어 링크한다. Dr. Donny’s Blog 국내 블로거가 본인이 IDEC Newsletter에 연재했던 내용을 소스코드와 함께 공유하고 있다. 마이크로프로세서 설계 무작정 따라하기 – Part 1 마이크로프로세서 설계 무작정 따라하기 – Part 2 마이크로프로세서 설계 무작정 따라하기 – Part 3 source code FPGA4Student.com Verilog Code for 16-bit RISC Processor 4단계 : 더 나아가기 1. Verilog HDL의 고급 문법 generate function task 중급 1단계 : Advanced Digital System Design 0. Advanced Digital Design with the Verilog HDL [amazon] 1. Sync &amp;amp; Async Reset Asynchronous &amp;amp; Synchronous Reset Design Techniques 2. Sync FIFO FPGA Prototyping Using Verilog Examples 3. Clock Domain Crossing Clock Domain Crossing (CDC) Design &amp;amp; Verification Techniques Using SystemVerilog Synthesis and Scripting Techniques for Designing Multi-Asynchronous Clock Designs 4. Reset Synchronizer Asynchronous &amp;amp; Synchronous Reset Design Techniques 5. Async FIFO Crossing clock domains with an Asynchronous FIFO Simulation and Synthesis Techniques for Asynchronous FIFO Simulation and Synthesis Techniques for Asynchronous FIFO Design with Asynchronous Pointer Comparisons 6. Crossbar Switch 7. Simple Router 8. VGA Controller 2단계 : AMBA AXI4 BUS Protocol 동영상 강좌 SoC architecture 설계 AMBA AXI 기반 IP 설계와 검증 AMBA AXI와 AXI-Stream 설계와 검증 블로그 Buidilng an AXI-Lite slave the easy way Building a basic AXI Master Protocol Reference AMBA AXI and ACE Protocol Specification Vivado Design Suite: AXI Reference Guide (UG1037) - Xilinx AXI Protocol Checker AXI Protocol Checker - Xilinx AMBA 3 AXI Protocol Checker User Guide - Arm AXI Verification IP AXI Verification IP (VIP) - Xilinx VC Verification IP for AMBA AXI - Synopsys 3단계 : Project 1 : AXI DMA 이전 장에서 학습한 AXI4 프로토콜을 바탕으로 AXI DMA를 구현해보자! 3단계 : Project 2 : Image Processing Accelerator sobel mask와 같은 간단한 영상처리 알고리즘을 실시간으로 처리하는 가속기를 만들어보자! 참고할 만한 강좌는 아래와 같다. Image Processing using Zynq 4단계 : 더 나아가기 1. 고속 디지털 회로 설계를 위한 엄선된 주제 A. Coding Guideline for Good Synthesis CE Cuming의 paper는 훌륭한 insight를 제공한다. **Full case &amp;amp; Parallel case ** RTL Coding Styles That Yield Simulation and Synthesis Mismatches “full_case parallel_case”, the Evil Twins of Verilog Synthesis Blocking vs Non-Blocking Nonblocking Assignments in Verilog Synthesis, Coding Styles That Kill! Verilog Nonblocking Assignments With Delays, Myths &amp;amp; Mysteries FSM State Machine Coding Styles for Synthesis The Fundamentals of Efficient Synthesizable Finite State Machine Design using NC-Verilog and BuildGates Coding And Scripting Techniques For FSM Designs With Synthesis-Optimized, Glitch-Free Outputs B. Pipelining C. Set up &amp;amp; Hold Time Violation D. Timing Closure 모든 실제 회로에는 딜레이가 존재합니다. 이러한 딜레이로 인하여 목표로 하는 clock speed에서 정상 동작 하지 않을 수 있습니다. 예를들어 clock period가 10ns일때 D-FF에서 보낸 데이터가 combination logic을 지나 다음 D-FF에 도착할때 까지의 딜레이가 10ns를 초과하면 도착하는 데이터가 깨지게 됩니다. 이러한 에러를 타이밍 에러라고 합니다. 그렇다면 타이밍 에러를 잡으려면 어떻게 해야 할까요? 클럭을 낮춘다? 이는 목표로 하는 성능을 만족하지 못하는 것이기 때문에 다른방법이 필요 합니다. 이러한 타이밍 에러를 잡는 디버깅 과정을 타이밍 클로저 라고 합니다. 타이밍 클로저에 대한 폴로님이 작성하신 좋은 자료가 이니프로 카페에 존재하여 링크합니다. 이니프로 카페 고급 1. Advanced Computer Architecture A. “Computer Architecture: A Quantitative Approach” 대학원 수준의 컴퓨터 구조론 전공서이다. [Amazon] [yes24] [알라딘] 2. VLSI Signal Processing 알고리즘을 하드웨어에 매핑하기위한 수학적 모델링 3. System Modeling Transaction Modeling Functional Modeling 4. Deep Learning Accelerator 동영상 강좌 머신 러닝을 위한 하드웨어 가속 MIT : Sparse Tensor Accelerator Modeling(ISCA 2021) UC Berkeley 도서 Efficient Processing of Deep Neural Networks 블로그 AI-Chip Paper List 5. System Verilog 6. Verification with SV system verilog assertion code coverage functional coverage 7. Formal Verification 8. UVM UVM UVM Framework guide 9. State of the Art 기타 : Software 개발 C 언어 도서 The C Programming Language C Programming : A Modern Approach Vitis 활용 펌웨어 개발 Ultra96 Tutorial 2019.2 MIPI to DP Video Output using Vivado and Vitis 이니프로 블로그 Hardware Software CoDesign with Vivado and Vitis [youtube - 1] [youtube - 2] 툴강좌 Xilinx Vivado Vitis Asic VCS Verdi Design Conpiler 교육 사이트 IDEC SW-SoC 융합 아카데미 KETI 한국 전자 기술 연구원</summary></entry><entry><title type="html">Npu 논문</title><link href="http://localhost:4000/2022/01/09/NPU-%EB%85%BC%EB%AC%B8.html" rel="alternate" type="text/html" title="Npu 논문" /><published>2022-01-09T00:00:00+00:00</published><updated>2022-01-09T00:00:00+00:00</updated><id>http://localhost:4000/2022/01/09/NPU-%EB%85%BC%EB%AC%B8</id><content type="html" xml:base="http://localhost:4000/2022/01/09/NPU-%EB%85%BC%EB%AC%B8.html"></content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><summary type="html"></summary></entry><entry><title type="html">우분투 설치하기</title><link href="http://localhost:4000/2022/01/01/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="우분투 설치하기" /><published>2022-01-01T00:00:00+00:00</published><updated>2022-01-01T00:00:00+00:00</updated><id>http://localhost:4000/2022/01/01/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2022/01/01/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;1-iso-피일-다운로드&quot;&gt;1. iso 피일 다운로드&lt;/h1&gt;
 
@@ -264,175 +780,7 @@ service ssh restart
 
 &lt;h3 id=&quot;431-sram&quot;&gt;4.3.1 SRAM&lt;/h3&gt;
 
-&lt;h3 id=&quot;431-serial-parallel-converter&quot;&gt;4.3.1 Serial Parallel Converter&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Sequential Logic</summary></entry><entry><title type="html">Vivado 설치하기</title><link href="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Vivado 설치하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;테스트 환경&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;Ubuntu : 20.04.2&lt;/p&gt;
-
-  &lt;p&gt;VIvado : 2021.2&lt;/p&gt;
-
-  &lt;p&gt;FPGA : Zybo Z7-20&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;1-vivado-설치&quot;&gt;1. Vivado 설치&lt;/h2&gt;
-
-&lt;h3 id=&quot;11-libtinfo5-설치-linux-only&quot;&gt;1.1 libtinfo5 설치 (linux only)&lt;/h3&gt;
-
-&lt;h4 id=&quot;ubuntu&quot;&gt;Ubuntu&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libncurses5
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libtinfo5
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libncurses5-dev libncursesw5-dev
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ncurses-compat-libs
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;vivado 설치 전 다음을 설치해주어야합니다.&lt;/li&gt;
-  &lt;li&gt;만약 설치하지 않고 vivado를 설치시 generating installed list에서 설치가 멈출 수 있습니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;centos&quot;&gt;CentOS&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum update
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum upgrade
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ncurses-compat-libs
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;12a-vivado-설치-파일-다운로드&quot;&gt;1.2.a Vivado 설치 파일 다운로드&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.xilinx.com/support/download.html&quot;&gt;Xilinx 홈페이지&lt;/a&gt;에서 &lt;strong&gt;Xilinx Unified Installer 2021.2 SFD&lt;/strong&gt;을 다운로드&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;참고사항 : 로그인 해야됨&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Xilinx_Unified_2021.2_1021_0703.tar.gz 이라는 파일이 다운로드 됨&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;13-vivado-설치-파일-압축-해제&quot;&gt;1.3 Vivado 설치 파일 압축 해제&lt;/h3&gt;
-
-&lt;h4 id=&quot;윈도우&quot;&gt;&lt;strong&gt;윈도우&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;다운로드한 설치파일을 압축 해제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;리눅스&quot;&gt;&lt;strong&gt;리눅스&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Downloads
-&lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-zxvf&lt;/span&gt; Xilinx_Unified_2021.2_1021_0703.tar.gz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;다운로드한 설치 파일을 압축 해제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;14-vivado-설치&quot;&gt;1.4 Vivado 설치&lt;/h3&gt;
-
-&lt;h4 id=&quot;윈도우-1&quot;&gt;&lt;strong&gt;윈도우&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;압축해제한 폴더로 이동&lt;/li&gt;
-  &lt;li&gt;xsetup.exe 실행&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;리눅스-1&quot;&gt;&lt;strong&gt;리눅스&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;h5 id=&quot;unified-installer&quot;&gt;Unified Installer&lt;/h5&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/Downloads
-cd Xilinx_Unified_2021.2_1021_0703
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;압축 해제한 폴더로 이동&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./xsetup
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./xsetup&lt;/code&gt; 명령어로 xsetup 파일을 실행&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;self-extracting&quot;&gt;Self Extracting&lt;/h5&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Downloads 폴더에 Xilinx_Unified_2021.2_0703_Lin64.bin&lt;/code&gt; 파일 다운로드&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chomod +x FileName.bin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;실행 권한 부여&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ./FileName.bin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;실행&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2-boardfile&quot;&gt;2. Boardfile&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/Digilent/vivado-boards/archive/master.zip?_ga=2.105728387.1284391481.1641576304-238917689.1641576304&quot;&gt;링크&lt;/a&gt;에서 보드파일을 다운로드&lt;/li&gt;
-  &lt;li&gt;다운로드 한 zip 파일을 압축해제 후 해당 파일의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/vivado-boars-master/new&lt;/code&gt; 경로에 존재하는 board_files 폴더를 아래 경로에 복사&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;윈도우&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:\Xilinx\Vivado\2015.1\data\boards.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;리눅스&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/Xilinx/Vivado/2021.2/data/boards
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;덮어쓰기 경고 발생시 덮어쓰기 실시&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://digilent.com/reference/software/vivado/board-files?redirect=1&quot;&gt;reference&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3-driverlinux-only&quot;&gt;3. Driver(linux only)&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;Vivado Install&amp;gt;/data/xicom/cable_drivers/lin64/install_script/install_drivers/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;위 디렉토리로 이동&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;Vivado Install&amp;gt;&lt;/code&gt;은 Vivado가 설치된 디렉토리임&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./install_drivers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./install_drivers&lt;/code&gt; 명령어로 드라이버 설치&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;adduser &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt; dialout
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;위 명령어 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo adduser $USER dialout&lt;/code&gt;를 통하여 dialout group에 현재 유저를 추가&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adduser &amp;lt;username&amp;gt; dialout
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;다른 유저를 추가하고 싶을시 위 명령어를 사용&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;username&amp;gt;&lt;/code&gt;은 추가하고 싶은 유저명임&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Tool" /><summary type="html"></summary></entry><entry><title type="html">NeoVIM 설정하기</title><link href="http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="NeoVIM 설정하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+&lt;h3 id=&quot;431-serial-parallel-converter&quot;&gt;4.3.1 Serial Parallel Converter&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Sequential Logic</summary></entry><entry><title type="html">NeoVIM 설정하기</title><link href="http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="NeoVIM 설정하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/neovim-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
 
 &lt;h1 id=&quot;1-neovim&quot;&gt;1. NEOVIM&lt;/h1&gt;
 
@@ -714,7 +1062,175 @@ yarn &lt;span class=&quot;nb&quot;&gt;install
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;suggest.preferCompleteThanJumpPlaceholder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;clangd.path&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Tool" /><category term="Vim" /><summary type="html"></summary></entry><entry><title type="html">Veriloghdl_chapter3_combinational_logic</title><link href="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html" rel="alternate" type="text/html" title="Veriloghdl_chapter3_combinational_logic" /><published>2021-12-21T00:00:00+00:00</published><updated>2021-12-21T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic</id><content type="html" xml:base="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html">&lt;h1 id=&quot;combinational-logic&quot;&gt;Combinational Logic&lt;/h1&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Tool" /><category term="Vim" /><summary type="html"></summary></entry><entry><title type="html">Vivado 설치하기</title><link href="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="Vivado 설치하기" /><published>2021-12-22T00:00:00+00:00</published><updated>2021-12-22T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2021/12/22/vivado-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html">&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;테스트 환경&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;Ubuntu : 20.04.2&lt;/p&gt;
+
+  &lt;p&gt;VIvado : 2021.2&lt;/p&gt;
+
+  &lt;p&gt;FPGA : Zybo Z7-20&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;1-vivado-설치&quot;&gt;1. Vivado 설치&lt;/h2&gt;
+
+&lt;h3 id=&quot;11-libtinfo5-설치-linux-only&quot;&gt;1.1 libtinfo5 설치 (linux only)&lt;/h3&gt;
+
+&lt;h4 id=&quot;ubuntu&quot;&gt;Ubuntu&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libncurses5
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libtinfo5
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libncurses5-dev libncursesw5-dev
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ncurses-compat-libs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vivado 설치 전 다음을 설치해주어야합니다.&lt;/li&gt;
+  &lt;li&gt;만약 설치하지 않고 vivado를 설치시 generating installed list에서 설치가 멈출 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;centos&quot;&gt;CentOS&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum upgrade
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;yum &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ncurses-compat-libs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;12a-vivado-설치-파일-다운로드&quot;&gt;1.2.a Vivado 설치 파일 다운로드&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.xilinx.com/support/download.html&quot;&gt;Xilinx 홈페이지&lt;/a&gt;에서 &lt;strong&gt;Xilinx Unified Installer 2021.2 SFD&lt;/strong&gt;을 다운로드&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;참고사항 : 로그인 해야됨&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Xilinx_Unified_2021.2_1021_0703.tar.gz 이라는 파일이 다운로드 됨&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;13-vivado-설치-파일-압축-해제&quot;&gt;1.3 Vivado 설치 파일 압축 해제&lt;/h3&gt;
+
+&lt;h4 id=&quot;윈도우&quot;&gt;&lt;strong&gt;윈도우&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다운로드한 설치파일을 압축 해제&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;리눅스&quot;&gt;&lt;strong&gt;리눅스&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Downloads
+&lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-zxvf&lt;/span&gt; Xilinx_Unified_2021.2_1021_0703.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다운로드한 설치 파일을 압축 해제&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;14-vivado-설치&quot;&gt;1.4 Vivado 설치&lt;/h3&gt;
+
+&lt;h4 id=&quot;윈도우-1&quot;&gt;&lt;strong&gt;윈도우&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;압축해제한 폴더로 이동&lt;/li&gt;
+  &lt;li&gt;xsetup.exe 실행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;리눅스-1&quot;&gt;&lt;strong&gt;리눅스&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h5 id=&quot;unified-installer&quot;&gt;Unified Installer&lt;/h5&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/Downloads
+cd Xilinx_Unified_2021.2_1021_0703
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;압축 해제한 폴더로 이동&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./xsetup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./xsetup&lt;/code&gt; 명령어로 xsetup 파일을 실행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;self-extracting&quot;&gt;Self Extracting&lt;/h5&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Downloads 폴더에 Xilinx_Unified_2021.2_0703_Lin64.bin&lt;/code&gt; 파일 다운로드&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chomod +x FileName.bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;실행 권한 부여&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ./FileName.bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;실행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-boardfile&quot;&gt;2. Boardfile&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Digilent/vivado-boards/archive/master.zip?_ga=2.105728387.1284391481.1641576304-238917689.1641576304&quot;&gt;링크&lt;/a&gt;에서 보드파일을 다운로드&lt;/li&gt;
+  &lt;li&gt;다운로드 한 zip 파일을 압축해제 후 해당 파일의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/vivado-boars-master/new&lt;/code&gt; 경로에 존재하는 board_files 폴더를 아래 경로에 복사&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;윈도우&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:\Xilinx\Vivado\2015.1\data\boards.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;리눅스&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/Xilinx/Vivado/2021.2/data/boards
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;덮어쓰기 경고 발생시 덮어쓰기 실시&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://digilent.com/reference/software/vivado/board-files?redirect=1&quot;&gt;reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-driverlinux-only&quot;&gt;3. Driver(linux only)&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;Vivado Install&amp;gt;/data/xicom/cable_drivers/lin64/install_script/install_drivers/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위 디렉토리로 이동&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;Vivado Install&amp;gt;&lt;/code&gt;은 Vivado가 설치된 디렉토리임&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./install_drivers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./install_drivers&lt;/code&gt; 명령어로 드라이버 설치&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;adduser &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt; dialout
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위 명령어 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo adduser $USER dialout&lt;/code&gt;를 통하여 dialout group에 현재 유저를 추가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adduser &amp;lt;username&amp;gt; dialout
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다른 유저를 추가하고 싶을시 위 명령어를 사용&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;username&amp;gt;&lt;/code&gt;은 추가하고 싶은 유저명임&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Tool" /><summary type="html"></summary></entry><entry><title type="html">Veriloghdl_chapter3_combinational_logic</title><link href="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html" rel="alternate" type="text/html" title="Veriloghdl_chapter3_combinational_logic" /><published>2021-12-21T00:00:00+00:00</published><updated>2021-12-21T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic</id><content type="html" xml:base="http://localhost:4000/2021/12/21/verilogHDL_chapter3_combinational_logic.html">&lt;h1 id=&quot;combinational-logic&quot;&gt;Combinational Logic&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
@@ -1852,448 +2368,4 @@ yarn &lt;span class=&quot;nb&quot;&gt;install
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;346-alu&quot;&gt;3.4.6 ALU&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><summary type="html">Combinational Logic 목차 1부 - Verilog HDL를 활용한 디지털 회로 설계 Chapter 1 : Introduction Chapter 2 : Module &amp;amp; Instantiation Chapter 3 : Combinational Logic Chapter 4 : Sequential Logic Chapter 5 : FSM 3.1 Gate Level Modeling standard cell을 instantiation하는 방법 RTL을 합성한 결과임 3.2 Dataflow Modeling 3.2.1 Continuous Assignment 연속 할당문은 net형 변수 객체에 우항의 연산결과를 할당합니다. 이때 우항의 연산결과가 변화가 발생하면 바로 좌항에 값을 할당하는 특성을 가집니다. 이러한 특성은 combinational logic의 표현에 적합합니다. assign a = b; //b값에 변화가 발생시 a에 할당 assign a = b &amp;amp; c &amp;amp; d; //b &amp;amp; c &amp;amp; d의 연산결과에 변화가 발생시 a에 결과를 할당 module mux_2_to_1( input wire a, input wire b, input wire s, output wire z ); assign z = (a &amp;amp; ~s) | (a &amp;amp; s); endmodule Example 3.1 continuous assignment를 활용한 2 to 1 mux 3.2.2 데이터 형 3.2.2.1 4 state system 0 : 논리 0 1 : 논리 1 z : 하이 임피턴스 상태 x : unknown 3.2.2.1 데이터 타입 wire : 물리적인 연결선을 의미, 값을 저장 불가 module(input a, input b, input c, output out) assign out = a + b + c; endmodule reg : 다음 값이 할당되기까지 현재값을 유지, 절차적 할당(procedural assignment)의 출력에 사용 module(input a, input b, input c, output out); reg out always(*) begin out = a + b + c; end endmodule 3.2.2 연산자 3.2.2.1 산수 연산자 out = a * b; out = a / b; out = a + b; out = a - b; out = a % b; out = a ** b; 3.2.2.2 논리 연산자 out = !a; out = a &amp;amp;&amp;amp; b; out = a || b; 3.2.2.3 비교 연산자 out = a &amp;gt; b; out = a &amp;lt; b; out = a &amp;gt;= b; out = a &amp;lt;= b; 3.2.2.4 등가 연산자 out = a == b; out = a != b; out = a === b; out = a !== b; 3.2.2.5 비트단위 연산자 out = ~a; //not out = a &amp;amp; b; //and out = a | b; //or out = a ^ b; //xor out = a ^~ b; 또는 a ~^ b; //xnor 3.2.2.5 축소 연산자 out = &amp;amp;a; out = ~&amp;amp;a; out = |a; out = ~|a; out = ^a out = ^~a; 또는 ~^a; 3.2.2.6 시프트 연산자 out = a &amp;gt;&amp;gt; b; // a / 2^b out = a &amp;lt;&amp;lt; b; // a * 2^b out = a &amp;gt;&amp;gt;&amp;gt; b; // a / 2^b out = a &amp;lt;&amp;lt;&amp;lt; b; // a * 2^b 3.2.2.7 결합 연산자 a = 1'b1; b = 2'b10; c = 3'b011; out = {a, b, c[1:0]}; //1 10 11 3.2.2.8 반복 연산자 a = 1'b1; b = 2'b10; c = 3'b011; a_3 = {3{a}}; //111 out = , a_3, {2{c[1:0]}}} //111 111 1111 3.2.2.9 3항 연산자 out = sel ? a : b; //sel이 참일때 a를 out에 할당, 거짓일때 b를 out에 할당 out = sel ? a + b : a - b; //sel이 참일때 a + b를 out에 할당, 거짓일때 a - b를 out에 할당 2 to 1 mux의 표현에 적합함 module mux_2_to_1( input wire a, input wire b, input wire sel, output wire out ); assign out = (sel==1'b0) ? a : b; //sel==1'b0이 참일 때(sel이 0일때) a가 out에 할당됨 endmodule Example 3.2 3항 연산자를 활용한 2 to 1 mux module mux_4_to_1( input wire a, input wire b, input wire c, input wire d, input wire [1:0] sel, output wire out ); assign out = (sel[1]==1'b0) ? ((sel[0]==1'b0) ? a : b) : ((sel[0]==1'b0) ? c : d); endmodule Example 3.3 3항 연산자를 활용한 4 to 1 mux 3.3 Behaviaral Modeling 3.3.1 always문 time-step 마다 매번 실행됨 sensitivity list 내부의 값에 변화가 발생시 begin ~ end 내부의 구문이 실행됩니다. sensitivity list 값의 구분은 , 를 통하여 합니다. always문 내부에서는 procedural assignment만 가능합니다. 즉 assign 문을 통한 continous assignment는 불가능합니다. always @(&amp;lt;sensitivity_list&amp;gt;, &amp;lt;sensitivity_list&amp;gt;, ... , &amp;lt;sensitivity_list&amp;gt;) begin //procedural assignment end always @(a, b, s) begin //procedural assignment end 3.3.2 wildcard 아래 예시와 같이 매우 길고 복잡한 입력을 갖는 회로가 존재할수 있습니다. 이러한 회로의 sensitivity list를 기술시 실수를 하기 쉽습니다. always @(a, b, c, d, e, f, g, h, i, j, k, h, i, j, k) begin //procedural assignment z = a &amp;amp; (b | c); y = d + e + (f * j); x = (g * k) - h * i; end 이런 상황에서 wildcard * 를 이용하여 모든 입력신호를 자동적으로 sensittivity list에 추가 해줄 수 있습니다. always @(*) begin //wild card * //procedural assignment z = a &amp;amp; (b | c); y = d + e + (f * j); x = (g * k) - h * i; end 3.3.3 procedural assignment wire형에만 할당 가능한 continuous assignment와 달리 procedural assignment은 reg형 객체에만 할당을 할 수 있습니다. 절차적 할당(procedural assignment)은 이벤트를 감지하지 않고 식에 도달하면 바로 실행을 하는 소프트웨어적인 특성이 있습니다. 절차적 할당(procedural assignment)은 blocking과 non-blocking으로 나누어집니다. blocking assignment blocking은 combinational logic을 표현 하기 위해 사용 표현식 : a = b non-blocking assignment non-blocking은 sequential logic을 표현하기 위해 사용 표현식 : a &amp;lt;= b module mux_2_to_1( input wire a, b, input wire s, output reg z ); always @(a, b, s) begin //sensitivity list //procedural assignment z = (a &amp;amp; ~s) | (a &amp;amp; s); //reg형이 와야함 end endmodule Example 3.4 always문 및 blocking assignment를 활용한 2 to 1 mux 2 to 1 mux의 input은 a, b, s가 있으므로 이를 sensitivity list에 넣어 주었습니다. sensitivity list의 값 a, b, s 에 변화가 발생하면 always 내부의 구문들을 실행합니다. 위의 예시에서는 blocking procedural assignment인 z = (a &amp;amp; ~s) | (a &amp;amp; s); 을 실행합니다. 3.3.4 blocking vs non-blocking assignment blocking assignment RHS(우변 방정식)를 평가하고 blocking assignment의 LHS(좌변 방정식)를 업데이트합니다. blocking assignment의 활용 : Combinational Logic의 표현에 적합 always @(a, b) begin //sensitivity list //non-blocking assignment a = 1; b = a + 1; c = b + 1; end non-blocking assignment time step의 시작 부분에서 non-blocking assignment의 RHS(우변 방정식를 평가합니다. time step의 끝에서 non-blocking assignment의 LHS(좌변 방정식)를 업데이트합니다. Non-blocking assignment의 활용 : sequential logic의 표현에 적합 always @(posedge clk) begin //sensitivity list //non-blocking assignment a &amp;lt;= 1; b &amp;lt;= a + 1; c &amp;lt;= b + 1; end 3.3.5 Initial문 전체 시뮬레이션에서 한번만 실행 testbench나 메모리의 데이터를 초기화 할 때 사용 initial begin //전체 시뮬레이션 동안 한번만 실행 //procedural assignment //procedural assignment //procedural assignment end `timescale 1ns/10ps // 단위/해상도 module testbench(); reg a_test; reg b_test; reg s_test; wire z_test; initial begin a_test = 1'b1; b_test = 1'b0; s_test = 1'b0; #5; //5ns delay a_test = 1'b1; b_test = 1'b1; s_test = 1'b0; #5; //5ns delay a_test = 1'b0; b_test = 1'b1; s_test = 1'b1; #5; //5ns delay a_test = 1'b1; b_test = 1'b1; s_test = 1'b0; #5; //5ns delay $finish; end mux_2_to_1 dut(.a(a_test), .b(b_test), .s(s_test), .z(z_test)); //instantization endmodule Example 3.5 intial문을 활용한 testbench 3.3.6 if문 c언어의 if문과 유사 mux로 합성됨 if(expression) begin statement; end else if (expression) begin statement; end else begin statement; end 3.3.6.1 2 to 1 mux module mux_2_to_1( input wire a, input wire b, input wire s, output wire z ); reg z_r; always @(*) begin if (s == 1'b0) begin z_r = a; end else begin //s == 1'b1 z_r = b; end end assign z = z_r; endmodule Example 3.6 if문을 활용한 2 to 1 mux 3.3.6.2 4 to 1 mux module mux_4_to_1( input wire a, input wire b, input wire c, input wire d, input wire [1:0] s, output wire z ); reg z_r; always @(*) begin if (s == 2'b00) begin z_r = a; end else if (s == 2'b01) begin z_r = b; end else if (s == 2'b10) begin z_r = c; end else begin z_r = d; end end assign z = z_r; endmodule Example 3.7 if문을 활용한 4 to 1 mux module mux_4_to_1( input wire a, input wire b, input wire c, input wire d, input wire [1:0] s, output wire z ); reg z_r; always @(*) begin if (s[1] == 1'b0) begin if (s[0] == 1'b0) begin z_r = a; end else begin z_r = b; end end else begin //s[1] == 1'b1 if (s[0] == 1'b0) begin z_r = c; end else begin z_r = d; end end end assign z = z_r; endmodule Example 3.8 if문을 활용한 4 to 1 mux 3.3.6.3 if문 사용시 주의사항 module mux_3_to_1( input wire a, b, c, input wire [1:0] s, output reg z ); always @(*) begin if (s == 2'b00) z = a; else if (s == 2'b01) z = b; else if (s == 2'b10) z = c; end endmodule Example 3.9 if문을 활용한 3 to 1 mux s가 2’b11일떄의 state가 규정되어 있지 않으므로 만약 s가 2’b11이라면 이전 timestep에서의 z값을 그대로 유지 할 것입니다. 이는 의도 하지 않은 latch의 합성을 의미합니다. module mux_3_to_1( input wire a, b, c, input wire [1:0] s, output reg z ); z = 1'b0; always @(*) begin if (s == 2'b00) z = a; else if (s == 2'b01) z = b; else if (s == 2'b10) z = c; end endmodule Example 3.10 if문을 활용한 3 to 1 mux 위의 예시의 경우는 if문을 초기화 하기전 출력을 초기화해주었습니다. 따라서 만약 s == 2’b11인 상황에서 z가 초기화한 값 0이 출력될 것입니다. module mux_3_to_1( input wire a, b, c, input wire [1:0] s, output reg z ); always @(*) begin if (s == 2'b00) z = a; else if (s == 2'b01) z = b; else z = c; end endmodule Example 3.11 if문을 활용한 3 to 1 mux 혹은 if문을 반드시 else로 닫아주는 방법도 존재합니다. s == 2’b11인 상황에서 z = c가 출력되겠죠. 3.3.5 case문 c 언어의 case문과 달리 break를 정의 하지 않는점에서 차이점이 존재 해당하는 condition의 statement를 끝까지 실행 일종의 truth up table로 표현할 수 있는 회로 설계에 적합 always @(*) begin case(expression) condition : statements; condition : statements; condition : statements; default : statements; endcase end always @(*) begin case(expression) condition : begin statements; statements; end condition : begin statements; statements; end condition : begin statements; statements; end default : begin statements; statements; end endcase end 구문이 두줄 이상일시 begin ~ end 로 묶어 표현 module mux_4_to_1( input wire a, input wire b, input wire c, input wire d, input wire [1:0] sel, output wire z ); reg z_r; always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; 2'b11 : z_r = d; default: z_r = 0; endcase end assign z = z_r; endmodule Example 3.12 case문을 활용한 4 to 1 mux 3.3.5.2 casex, casez casex : ‘x’, ‘z’, ‘?’를 don’t care로 처리 casez : ‘z’, ‘?’를 don’t care로 처리, ‘z’대신에 ?로 표시 가능 case(data_i) 4'b1000, 4'b1001, 4'b1010, 4'b1011, 4'b1100, 4'b1101, 4'b1110, 4'b1111: data_o_r = 3'b100; casez(data_i) 4'b1??? : data_o_r = 3'b100; module priority_encoder( input wire [IN_WIDTH-1:0] data_i, output wire [OUT_WIDTH-1:0] data_o ); localparam IN_WIDTH = 4; localparam OUT_WIDTH = 3; reg [OUT_WIDTH-1:0] data_o_r; always @(*) begin casez(data_i) 4'b1??? : data_o_r = 3'b100; 4'b01?? : data_o_r = 3'b011; 4'b001? : data_o_r = 3'b010; 4'b0001 : data_o_r = 3'b001; 4'b0000 : data_o_r = 3'b000; default: data_o_r = 0; endcase end assign data_o = data_o_r; endmodule Example 3.13 Priority Encoder 3.3.5.1 case문 사용시 주의사항 1 : 의도하지 않은 latch의 합성 - full case case문 또한 모든 입력의 condition에 대하여 출력의 값이 규정되지 않으면 잘못된 래치가 합성될 수 있습니다. module mux_4_to_1( input wire a, b, c, d, input wire s, output wire z ); always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; //2'b11 일때의 출력 z_r의 값이 정의 되지않음 //래치가 합성됨 endcase end assign z = z_r; endmodule Example 3.14 case문을 활용한 4 to 1 mux module mux_4_to_1( input wire a, b, c, d, input wire s, output wire z ); z_r = 0; //output 초기화 always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; endcase end assign z = z_r; endmodule Example 3.15 case문을 활용한 4 to 1 mux module mux_4_to_1( input wire a, b, c, d, input wire s, output wire z ); always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; default: z_r = 0; //default값을 정의하여 출력값을 초기화 endcase end assign z = z_r; endmodule Example 3.16 case문을 활용한 4 to 1 mux 3.3.5.2 case문 사용시 주의사항 2 : parallel case module intctl2b ( input wire [3:0] data_in, output reg [4:0] data_out ); always @(data_in) begin data_out = 0; casez (data_in) //data_in == 4'b11xx, 4'bx11x, 4'bxx11, 4'b1xx1, ... 4'b1??? : data_out = 1; 4'b?1?? : data_out = 6; 4'b??1? : data_out = 8; 4'b???1 : data_out= 10; endcase end endmodule 케이스 항목이 두번 이상 일치함(data_in == 4’b11xx, 4’bx11x, 4’bxx11, 4’b1xx1, …) 이를 non-parallel case라 합니다. priority 라우팅 네트워크를 추론 module intctl2b ( input wire [3:0] data_in, output reg [7:0] data_out ); always @(data_in) begin data_out = 0; casez (data_in) 4'b1??? : data_out = 3; 4'b01?? : data_out = 15; 4'b001? : data_out = 63; 4'b0001 : data_out = 255; endcase end endmodule 각 케이스 항목이 고유함 이를 parallel case라 합니다. 멀티플렉싱 라우팅 네트워크를 추론 module intctl2b ( input wire [3:0] data_in, output reg [4:0] data_out ); always @(data_in) begin data_out = 0; (* parallel_case *) //synthesis directives casez (data_in) 4'b1??? : data_out = 3; 4'b?1?? : data_out = 15; 4'b??1? : data_out = 63; 4'b???1 : data_out = 255; endcase end endmodule 만약 non-parallel case임에도 각각의 케이스 항목이 mutually exclusive하게 실행됨을 설계자가 보장할 수 있다면, 즉 위 예시에서 data_in이 4’b1000, 4’b0100, 4’b0010, 4’b0001만이 입력됨을 보장할 수 있다면 synthesis directives : (* parallel_case *)를 추가하여 강제로 prallel하게 동작하도록 합성 할 수 있습니다. 3.3.6 if문 vs case문 priority encoding이 필요 할때는 if else문으로 표현하는 것이 유리하며 priority encoding이 필요 없을 시 case문으로 표현하는 것이 유리합니다. 3.4 Case Study 3.4.1 8bit 4-to-1 Multiplexer module mux_4_to_1#( parameter WIDTH = 8 )( input wire [WIDTH-1:0] a, //nbit input data input wire [WIDTH-1:0] b, //nbit input data input wire [WIDTH-1:0] c, //nbit input data input wire [WIDTH-1:0] d, //nbit input data input wire [1:0] s, //2bit input select output wire [WIDTH-1:0] z //nbit output data ); reg [WIDTH-1:0] z_r; always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; 2'b11 : z_r = d; default: z_r = 0; endcase end assign z = z_r; endmodule 3.4.2 7segment Decoder module decoder( input wire [IN_WIDTH-1:0] data_i, output wire [OUT_WIDTH-1:0] data_o ); localparam IN_WIDTH = 4; localparam OUT_WIDTH = 7; reg [WIDTH-1:0] data_o_r; always @(*) begin casez(data_i) 4'b0000 : data_o_r = 8'b00000000; //0 4'b0001 : data_o_r = 8'b00000001; //1 4'b0010 : data_o_r = 8'b00000011; //2 4'b0011 : data_o_r = 8'b00000111; //3 4'b0100 : data_o_r = 8'b00001111; //4 4'b0101 : data_o_r = 8'b00011111; //5 4'b0110 : data_o_r = 8'b00111111; //6 4'b0111 : data_o_r = 8'b01111111; //7 4'b1000 : data_o_r = 8'b01111111; //8 4'b1001 : data_o_r = 8'b01111111; //9 default: data_o_r = 0; endcase end assign data_o = data_o_r; endmodule 3.4.3 Adder module adder( input wire [DATA_IN_WIDTH-1:0] data_a_i, input wire [DATA_IN_WIDTH-1:0] data_b_i, input wire carry_in_i, output wire [DATA_OUT_WIDTH-1:0] data_o ); assign data_o = data_a_i + data_b_i + carry_in_i; endmodule 3.4.4 Subtractor assign data_o = data_a_i - data_b_i; assign data_o = data_a_i + ((~data_b_i) + 1); module substractor( input wire [DATA_IN_WIDTH-1:0] data_a_i, input wire [DATA_IN_WIDTH-1:0] data_b_i, input wire carry_in_i, output wire [DATA_OUT_WIDTH-1:0] data_o ); assign data_o = data_a_i + ((~data_b_i) + 1); endmodule 3.4.5 Comparator assign data_o = data_a_i &amp;lt; data_b_i; assign data_o = (data_a_i - data_b_i) &amp;lt; 0; assign result = data_a_i - data_b_i; assign data_o = result[MSB]; //sign bit == MSB module comparator( input wire [DATA_IN_WIDTH-1:0] data_a_i, input wire [DATA_IN_WIDTH-1:0] data_b_i, input wire carry_in_i, output wire data_o ); wire [DATA_OUT_WIDTH-1:0] result; assign result = data_a_i + ((~data_b_i) + 1); assign data_o = result[DATA_OUT_WIDTH-1]; endmodule 3.4.6 ALU</summary></entry><entry><title type="html">Verilog HDL 2장</title><link href="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&_instantiation.html" rel="alternate" type="text/html" title="Verilog HDL 2장" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation</id><content type="html" xml:base="http://localhost:4000/2021/12/19/verilogHDL_chapter2_module_&amp;_instantiation.html">&lt;h1 id=&quot;module--instantiation&quot;&gt;Module &amp;amp; Instantiation&lt;/h1&gt;
-
-&lt;!--more--&gt;
-
-&lt;blockquote&gt;
-  &lt;h2 id=&quot;목차&quot;&gt;목차&lt;/h2&gt;
-
-  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;&quot;&gt;1부 - Verilog HDL&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 1 : &lt;a href=&quot;https://parkdongho.github.io/2021/12/16/verilogHDL_chapter1_introduction.html&quot;&gt;Introduction&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 2 : &lt;a href=&quot;https://parkdongho.github.io/2021/12/19/verilogHDL_chapter2_module_&amp;amp;_instantiation.html&quot;&gt;Module &amp;amp; Instantiation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 3 : &lt;a href=&quot;https://parkdongho.github.io/2021/12/21/verilogHDL_chapter3_combinational_logic.html&quot;&gt;Combinational Logic&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 4 : &lt;a href=&quot;https://parkdongho.github.io/2021/12/23/verilogHDL_chapter4_sequential_logic.html&quot;&gt;Sequential Logic&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 5 : &lt;a href=&quot;https://parkdongho.github.io/2021/12/25/verilogHDL_chapter5_FSM.html&quot;&gt;FSM&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;&quot;&gt;2부 - H/W Accelerator Design&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 1 : &lt;a href=&quot;&quot;&gt;Introduction&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 2  : &lt;a href=&quot;&quot;&gt;Memory Map&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 3  : &lt;a href=&quot;&quot;&gt;Bus Protocol&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 4 : &lt;a href=&quot;&quot;&gt;DMA&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 5 : &lt;a href=&quot;&quot;&gt;GPIO IP&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 6 : &lt;a href=&quot;&quot;&gt;VLSI Signal Processing&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 7 : &lt;a href=&quot;&quot;&gt;Image Processing IP&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;&quot;&gt;3부 - NPU Design&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 1 : &lt;a href=&quot;&quot;&gt;Introduction&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 2 : &lt;a href=&quot;&quot;&gt;Datapath&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;&quot;&gt;부록A - 툴 설치/사용 방법&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 1 : &lt;a href=&quot;&quot;&gt;Vivado 사용방법&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 2 : &lt;a href=&quot;&quot;&gt;Drawio 사용방법&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;Chapter 3 : &lt;a href=&quot;&quot;&gt;WaveDrom 사용방법&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;디지털 회로를 설계할때 하나의 블럭안에 모든회로를 표현하면 매우 복잡합니다. &lt;strong&gt;그림1&lt;/strong&gt; 의 경우 4bit addition을 하는 간단한 회로임에도 매우 복잡해 보입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_1.png&quot; alt=&quot;fig 1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;그림1&lt;/strong&gt; 4bit Adder 예제&lt;/p&gt;
-
-&lt;p&gt;그래서 회로를 여러 서브블럭들로 나누어 설계를 합니다. &lt;strong&gt;그림2&lt;/strong&gt; 는 full-adder 4개를 연결하여 4bit adder를 만든 예시 입니다. 이때 4bit_adder 및 full_adder와 같은 설계 블록들을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;모듈(module)&lt;/code&gt;이라고 합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png&quot; alt=&quot;fig 2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;figure 2&lt;/strong&gt; module instantiation의 예시&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;이제 full_adder라는 모듈의 구성을 살펴봅시다. 모듈은 외부와 데이터를 주고 받을 수 있는 입출력 인터페이스를 제공합니다. 이러한 인터페이스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;포트(port)&lt;/code&gt; 라고 합니다. &lt;strong&gt;그림3&lt;/strong&gt; 에서 확인할 수 있듯이 full_adder 모듈은 a, b, carry_in 이라는 입력 포트, out, carry_out 이라는 출력포트로 구성되어 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png&quot; alt=&quot;fig 3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;figure 3&lt;/strong&gt; full adder 모듈&lt;/p&gt;
-
-&lt;p&gt;이제 정의한 서브모듈이 어떻게 보다 큰 모듈로 합쳐질 수 있는지 알아봅시다. 이를 이해하기 위해서는&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instantiation&lt;/code&gt; 의 개념을 이해할 필요가 있습니다. 먼저 각각의 모듈은 객체를 만들기 위한 템플릿을 제공합니다. 이러한 템플릿을 통하여 상위 레벨의 모듈에서 객체를 불러들입니다. 이때 각각의 객체는 고유한 이름, 변수, 파라미터, 입출력 인터페이스를 가집니다. 이러한 객체를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instance&lt;/code&gt;라고 하고 모듈 템플릿으로 부터 객체를 생성하는 것을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instantization&lt;/code&gt; 이라고 합니다.&lt;/p&gt;
-
-&lt;p&gt;이에 대한 예시로 &lt;strong&gt;그림2&lt;/strong&gt; 의 4bit adder 를 다시 확인해 봅시다.  먼저 full_adder 라는 모듈에서 서브모듈에 대한 템플릿을 정의 합니다. 이때 full_adder 모듈은 5개의 입출력 포트, 내부 로직에 대한 정의 등을 포함합니다. 이제 정의한 full_adder 모듈을 템플릿으로 하여 4bit_adder라는 상위 모듈에서 full_adder_0, full_adder_1, full_adder_2, full_adder_3 라는 고유한 이름의 객체 4개를 불러들입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_2.png&quot; alt=&quot;fig 2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;figure 2&lt;/strong&gt; module instantiation의 예시&lt;/p&gt;
-
-&lt;h2 id=&quot;21-module&quot;&gt;2.1 Module&lt;/h2&gt;
-
-&lt;p&gt;위에서 모듈이 무었인지 알아보았습니다. 이제 이를 베릴로그에서 어떻게 기술하는지 알아봅시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//모듈 시작&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//port를 정의&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//내부로직을 정의&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//모듈 끝&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;verilog의 모듈은&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;module&lt;/code&gt;이라는 키워드로 시작하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;endmodule&lt;/code&gt;이라는 키워드로 모듈을 닫습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;module&lt;/code&gt;이라는 키워드 다음에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;모듈명&lt;/code&gt;을 정의합니다.&lt;/p&gt;
-
-&lt;p&gt;그리고 모듈명 다음에 나오는 괄호 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;( )&lt;/code&gt;에서는 포트를 정의 합니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png&quot; alt=&quot;fig 3&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//module 시작&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//port를 정의&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//내부로직을 정의&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//모듈 끝&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;다음은 full_adder에 대한 예시입니다. 본 예시에서 모듈이름이 full_adder로 정의 됨을 확인할 수 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;22-port&quot;&gt;2.2 Port&lt;/h2&gt;
-
-&lt;p&gt;모듈이 외부 및 다른 모듈과 신호를 주고 받으려면 입출력 단자가 필요합니다. 이러한 입출력 단자를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;포트&lt;/code&gt;라고 합니다. 이러한 입력단자에서 신호를 받아 처리를 한후 출력단자로 내보냅니다. verilog에서는 총 3가지의 port가 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;input : 모듈내로 데이터를 받는 포트&lt;/li&gt;
-  &lt;li&gt;output : 모듈밖으로 데이터를 내보내는 포트&lt;/li&gt;
-  &lt;li&gt;inout : 모듈 내로 데이터를 받을수도 있고 밖으로 데이터를 내보낼 수도 있는 양방향 포트&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이때 각 포트는 &lt;strong&gt;그림4&lt;/strong&gt; 와 같이&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;input 포트 : only net&lt;/li&gt;
-  &lt;li&gt;output 포트 : reg or net&lt;/li&gt;
-  &lt;li&gt;inout 포트 : only net&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;와 같은 타입으로 정의 될수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;또한 각 포트에 instantiation으로 외부에서 연결되는 신호는 &lt;strong&gt;그림4&lt;/strong&gt; 와 같이&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;input 포트 : reg or net&lt;/li&gt;
-  &lt;li&gt;output 포트 : only net&lt;/li&gt;
-  &lt;li&gt;inout 포트 : only net&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;와 같은 타입으로 정의 될 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_4.png&quot; alt=&quot;figure4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;figure 4&lt;/strong&gt; module의 포트 연결 규칙&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;왜 이런 규칙이 존재하는지 생각해 볼까요? 이 부분은 베릴로그가 처음이신 분은 넘어가도 괜찮습니다.&lt;/p&gt;
-
-&lt;p&gt;먼저 모듈의 입력은 반드시 continuous하게 신호를 받아야 된다는 규칙이 있습니다. 이렇게 continuous하게 들어온 신호에 의하여 내부로직이 continuous(assign문)하게 혹은 procedual(always문)하게 연산된후 출력을 내보내게되죠. 따라서 출력은 continuous 혹은 procedual할 수 있습니다. 이때 continuous한 신호는 wire에 procedual한 신호는 reg타입에 대응됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_5.png&quot; alt=&quot;figure5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;figure 5&lt;/strong&gt; module의 포트 연결 규칙 with instantiation&lt;/p&gt;
-
-&lt;p&gt;모듈A를 instantiation한 모듈B를 가정해 봅시다. 모듈 B의 입장에서 모듈 A의 출력포트에 연결된 신호는 모듈B의 input입니다. input은 반드시 continuous 하여야 하므로 net 타입만이 올 수 있습니다. 이와 동일하게 모듈 B의 입장에서 모듈 A의 입력 포트에 연결된 신호는 모듈B의 output입니다. 따라서 reg 혹은 net타입이 올 수 있죠.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;이제 포트를 어떻게 표현할 수 있는지 알아 봅시다.&lt;/p&gt;
-
-&lt;p&gt;포트는 아래와 같이&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;모듈명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;입력&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//여기에 내부 로직 기술&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;포트_타입&amp;gt; [변수_타입] 입력_포트_명&lt;/code&gt; 와 같은 형태로 표현 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;이때&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;포트_타입&amp;gt;&lt;/code&gt; 은  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inout&lt;/code&gt;이 올 수 있고 반드시 정의 해야 합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[변수_타입]&lt;/code&gt;은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wire&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reg&lt;/code&gt;가 올수 있으며 생략가능합니다. 만약 생략하였을시 기본적으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wire&lt;/code&gt;가 오게 됩니다. 만약 출력값을 유지시켜줄 필요가 있다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reg&lt;/code&gt;를 사용할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;입력_포트_명&lt;/code&gt;은 포트의 이름을 정의 해줍니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;full adder 예제를 확인 해봅시다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_3.png&quot; alt=&quot;fig 3&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//module 키워드로 모듈시작&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;//1bit reg output&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;//1bit wire output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//mux의 내부 로직&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//endmodule 키워드로 모듈 종료&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2.1&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;포트 a, b, carry_in은 입력 포트입니다. input 키워드를 통하여 입력으로 정의해 줍니다.&lt;/li&gt;
-  &lt;li&gt;포트 out, carry_out은 출력 포트 입니다. output 키워드를 통하여 출력으로 정의해 줍니다.&lt;/li&gt;
-  &lt;li&gt;포트 a는 변수 타입을 정의하지 않았습니다. 따라서 default값 wire형으로 정의 됩니다.&lt;/li&gt;
-  &lt;li&gt;포트 b, carry_in은 wire 타입으로 정의해 주었습니다.&lt;/li&gt;
-  &lt;li&gt;포트 out은 reg 타입으로 정의하였습니다.&lt;/li&gt;
-  &lt;li&gt;포트 carry_out은 변수타입을 정의하지 않았습니다. 따라서 wire형으로 정의됩니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;예제에서는 예시를 보여주기 위해 여러 종류의 포트 선언방식을 섞어 사용하였지만 실제로 설계할때는 아래와 같이 일정한 코딩 가이드라인에 따라주는 것이 좋습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//module 키워드로 모듈시작&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit wire input&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;//1bit wire output&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit wire output&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//mux의 내부 로직&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//endmodule 키워드로 모듈 종료&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;221-vector-form&quot;&gt;2.2.1 Vector Form&lt;/h3&gt;
-
-&lt;p&gt;이전까지는 1bit의 입출력까지만 다루었습니다. 하지만 numerical data를 표현하기 위해서는 n-bit의 binary data 형태로 표현할수 있으면 좋겠죠. 이를 위하여 verilog에서는 verctor 형태의 데이터 선언을 지원합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_6.png&quot; alt=&quot;fig 6&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;figure 6&lt;/strong&gt; 4bit adder의 vector 형태 표현&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Verilog에서의 vector 선언는 아래와 같이 표현합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//포트 선언&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MSB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LSB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//변수 선언&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이전 1bit의 변수 선언에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;변수_타입&amp;gt;&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;변수명&amp;gt;&lt;/code&gt; 사이에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[MSB : LSB]&lt;/code&gt; 가 추가된 형태입니다.&lt;/p&gt;
-
-&lt;p&gt;이때 MSB 최상위 비트, LSB는 최하위 비트를 의미합니다.&lt;/p&gt;
-
-&lt;p&gt;이를 4bit adder에 적용하면 아래와 같습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//4bit input port&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//4bit input port&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1bit input port&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//4bit output port&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//1bit output port&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//instantiation&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위 예시에서는 포트 a, b, out를 4bit로 구성하였습니다.&lt;/p&gt;
-
-&lt;p&gt;4bit bus의 최상위 비트(MSB)는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; 최하위 비트(LSB)는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;이므로&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//포트 선언&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;형태로 선언해주었습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;하지만 위와 같이 표현한다면 bus의 폭을 변화시키고 싶을시 모든 포트의 MSB를 수정해주어야 하는 문제가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;또한 직관적이지 못한 문제도 있지요.&lt;/p&gt;
-
-&lt;p&gt;따라서 아래와 같이 parameter를 선언하여&lt;/p&gt;
-
-&lt;p&gt;최상위 비트(MSB)는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATA_WIDTH-1&lt;/code&gt; 최하위 비트(LSB)는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;의 형태, 즉&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;포트&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;타입&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변수명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//포트 선언&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;형태로 많이들 선언합니다.&lt;/p&gt;
-
-&lt;p&gt;이를 4bit adder에 적용해보면 아래와 같습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;//instantiation&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;23-instantiation&quot;&gt;2.3 Instantiation&lt;/h2&gt;
-
-&lt;p&gt;이제 상위모듈에서 하위모듈의 인스턴스를 불러들이는 instantiation을 해봅시다.&lt;/p&gt;
-
-&lt;p&gt;nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들이는 형태이겠죠.&lt;/p&gt;
-
-&lt;p&gt;또한 불러들인 모듈에 wire를 연결해주는 작업이 필요합니다.&lt;/p&gt;
-
-&lt;p&gt;instantiation의 문법은 아래와 같습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;템플릿명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;인스턴스명&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;템플릿포트명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;연결한&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;신호&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;템플릿포트명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;연결한&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;신호&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;템플릿포트명&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;연결한&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;신호&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;템플릿명&gt;은 원본 모듈의 명칭입니다.
-&lt;/템플릿명&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;인스턴스명&gt;은 템플릿을 통하여 생성한 인스턴스들의 새로운 이름 입니다. (복사한 모듈의 이름)
-&lt;/인스턴스명&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;템플릿포트명&gt;은 원본 모듈의 포트 명칭입니다.
-&lt;/템플릿포트명&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;연결한_신호&gt;는 인스턴스 모듈의 포트에 연결한 신호명 입니다.
-
-&lt;/연결한_신호&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;먼저 nbit_adder라는 모듈에서 4개의 full_adder 인스턴스를 불러들여 봅시다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_7.png&quot; alt=&quot;fig 7&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위 예제에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full_adder&lt;/code&gt;는 템플릿인 full_adder 모듈명입니다.&lt;/p&gt;
-
-&lt;p&gt;이러한 템플릿을 통하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full_adder_0&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full_adder_1&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full_adder_2&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full_adder_3&lt;/code&gt; 이름의 4개의 인스턴스를 생성해주었습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;이제 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nbit_adder&lt;/code&gt; 모듈의 포트와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full_adder&lt;/code&gt; 인스턴스의 포트를 연결해줍시다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_8.png&quot; alt=&quot;fig 8&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;full_adder_0&lt;/code&gt; 인스턴스의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; 포트에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nbit_adder&lt;/code&gt; 모듈의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a[0]&lt;/code&gt; 포트를 연결시켜준 예시입니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;마지막으로 인스턴스들 사이의 신호를 연결해줍시다.&lt;/p&gt;
-
-&lt;p&gt;먼저 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nbit_adder&lt;/code&gt; 모듈내에 내부신호를 선언해줍니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_0_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_1_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_2_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그 다음 해당 신호들을 인스턴스에 연결해줍니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_0_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_0_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_1_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_1_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_2_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_2_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;최종 완성본은 아래와 같습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ParkDongho/ParkDongho.github.io/master/assets/images/2021-12-19-verilogHDL_chapter2_module_%26_instantiation/시스템_반도체_설계_2장-figure_9.png&quot; alt=&quot;fig 9&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nbit_adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;parameter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATA_WIDTH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  
-  &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_0_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_1_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry_2_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_0_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_0_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_1_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_1_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_2_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;full_adder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;full_adder_3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_2_w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry_out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-  
-&lt;span class=&quot;k&quot;&gt;endmodule&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><category term="Hardware" /><category term="Verilog" /><category term="VerilogHDL강좌" /><summary type="html">Module &amp;amp; Instantiation</summary></entry></feed>
+&lt;h3 id=&quot;346-alu&quot;&gt;3.4.6 ALU&lt;/h3&gt;</content><author><name>Park Dongho</name><email>parkdongho28@naver.com</email></author><summary type="html">Combinational Logic 목차 1부 - Verilog HDL를 활용한 디지털 회로 설계 Chapter 1 : Introduction Chapter 2 : Module &amp;amp; Instantiation Chapter 3 : Combinational Logic Chapter 4 : Sequential Logic Chapter 5 : FSM 3.1 Gate Level Modeling standard cell을 instantiation하는 방법 RTL을 합성한 결과임 3.2 Dataflow Modeling 3.2.1 Continuous Assignment 연속 할당문은 net형 변수 객체에 우항의 연산결과를 할당합니다. 이때 우항의 연산결과가 변화가 발생하면 바로 좌항에 값을 할당하는 특성을 가집니다. 이러한 특성은 combinational logic의 표현에 적합합니다. assign a = b; //b값에 변화가 발생시 a에 할당 assign a = b &amp;amp; c &amp;amp; d; //b &amp;amp; c &amp;amp; d의 연산결과에 변화가 발생시 a에 결과를 할당 module mux_2_to_1( input wire a, input wire b, input wire s, output wire z ); assign z = (a &amp;amp; ~s) | (a &amp;amp; s); endmodule Example 3.1 continuous assignment를 활용한 2 to 1 mux 3.2.2 데이터 형 3.2.2.1 4 state system 0 : 논리 0 1 : 논리 1 z : 하이 임피턴스 상태 x : unknown 3.2.2.1 데이터 타입 wire : 물리적인 연결선을 의미, 값을 저장 불가 module(input a, input b, input c, output out) assign out = a + b + c; endmodule reg : 다음 값이 할당되기까지 현재값을 유지, 절차적 할당(procedural assignment)의 출력에 사용 module(input a, input b, input c, output out); reg out always(*) begin out = a + b + c; end endmodule 3.2.2 연산자 3.2.2.1 산수 연산자 out = a * b; out = a / b; out = a + b; out = a - b; out = a % b; out = a ** b; 3.2.2.2 논리 연산자 out = !a; out = a &amp;amp;&amp;amp; b; out = a || b; 3.2.2.3 비교 연산자 out = a &amp;gt; b; out = a &amp;lt; b; out = a &amp;gt;= b; out = a &amp;lt;= b; 3.2.2.4 등가 연산자 out = a == b; out = a != b; out = a === b; out = a !== b; 3.2.2.5 비트단위 연산자 out = ~a; //not out = a &amp;amp; b; //and out = a | b; //or out = a ^ b; //xor out = a ^~ b; 또는 a ~^ b; //xnor 3.2.2.5 축소 연산자 out = &amp;amp;a; out = ~&amp;amp;a; out = |a; out = ~|a; out = ^a out = ^~a; 또는 ~^a; 3.2.2.6 시프트 연산자 out = a &amp;gt;&amp;gt; b; // a / 2^b out = a &amp;lt;&amp;lt; b; // a * 2^b out = a &amp;gt;&amp;gt;&amp;gt; b; // a / 2^b out = a &amp;lt;&amp;lt;&amp;lt; b; // a * 2^b 3.2.2.7 결합 연산자 a = 1'b1; b = 2'b10; c = 3'b011; out = {a, b, c[1:0]}; //1 10 11 3.2.2.8 반복 연산자 a = 1'b1; b = 2'b10; c = 3'b011; a_3 = {3{a}}; //111 out = , a_3, {2{c[1:0]}}} //111 111 1111 3.2.2.9 3항 연산자 out = sel ? a : b; //sel이 참일때 a를 out에 할당, 거짓일때 b를 out에 할당 out = sel ? a + b : a - b; //sel이 참일때 a + b를 out에 할당, 거짓일때 a - b를 out에 할당 2 to 1 mux의 표현에 적합함 module mux_2_to_1( input wire a, input wire b, input wire sel, output wire out ); assign out = (sel==1'b0) ? a : b; //sel==1'b0이 참일 때(sel이 0일때) a가 out에 할당됨 endmodule Example 3.2 3항 연산자를 활용한 2 to 1 mux module mux_4_to_1( input wire a, input wire b, input wire c, input wire d, input wire [1:0] sel, output wire out ); assign out = (sel[1]==1'b0) ? ((sel[0]==1'b0) ? a : b) : ((sel[0]==1'b0) ? c : d); endmodule Example 3.3 3항 연산자를 활용한 4 to 1 mux 3.3 Behaviaral Modeling 3.3.1 always문 time-step 마다 매번 실행됨 sensitivity list 내부의 값에 변화가 발생시 begin ~ end 내부의 구문이 실행됩니다. sensitivity list 값의 구분은 , 를 통하여 합니다. always문 내부에서는 procedural assignment만 가능합니다. 즉 assign 문을 통한 continous assignment는 불가능합니다. always @(&amp;lt;sensitivity_list&amp;gt;, &amp;lt;sensitivity_list&amp;gt;, ... , &amp;lt;sensitivity_list&amp;gt;) begin //procedural assignment end always @(a, b, s) begin //procedural assignment end 3.3.2 wildcard 아래 예시와 같이 매우 길고 복잡한 입력을 갖는 회로가 존재할수 있습니다. 이러한 회로의 sensitivity list를 기술시 실수를 하기 쉽습니다. always @(a, b, c, d, e, f, g, h, i, j, k, h, i, j, k) begin //procedural assignment z = a &amp;amp; (b | c); y = d + e + (f * j); x = (g * k) - h * i; end 이런 상황에서 wildcard * 를 이용하여 모든 입력신호를 자동적으로 sensittivity list에 추가 해줄 수 있습니다. always @(*) begin //wild card * //procedural assignment z = a &amp;amp; (b | c); y = d + e + (f * j); x = (g * k) - h * i; end 3.3.3 procedural assignment wire형에만 할당 가능한 continuous assignment와 달리 procedural assignment은 reg형 객체에만 할당을 할 수 있습니다. 절차적 할당(procedural assignment)은 이벤트를 감지하지 않고 식에 도달하면 바로 실행을 하는 소프트웨어적인 특성이 있습니다. 절차적 할당(procedural assignment)은 blocking과 non-blocking으로 나누어집니다. blocking assignment blocking은 combinational logic을 표현 하기 위해 사용 표현식 : a = b non-blocking assignment non-blocking은 sequential logic을 표현하기 위해 사용 표현식 : a &amp;lt;= b module mux_2_to_1( input wire a, b, input wire s, output reg z ); always @(a, b, s) begin //sensitivity list //procedural assignment z = (a &amp;amp; ~s) | (a &amp;amp; s); //reg형이 와야함 end endmodule Example 3.4 always문 및 blocking assignment를 활용한 2 to 1 mux 2 to 1 mux의 input은 a, b, s가 있으므로 이를 sensitivity list에 넣어 주었습니다. sensitivity list의 값 a, b, s 에 변화가 발생하면 always 내부의 구문들을 실행합니다. 위의 예시에서는 blocking procedural assignment인 z = (a &amp;amp; ~s) | (a &amp;amp; s); 을 실행합니다. 3.3.4 blocking vs non-blocking assignment blocking assignment RHS(우변 방정식)를 평가하고 blocking assignment의 LHS(좌변 방정식)를 업데이트합니다. blocking assignment의 활용 : Combinational Logic의 표현에 적합 always @(a, b) begin //sensitivity list //non-blocking assignment a = 1; b = a + 1; c = b + 1; end non-blocking assignment time step의 시작 부분에서 non-blocking assignment의 RHS(우변 방정식를 평가합니다. time step의 끝에서 non-blocking assignment의 LHS(좌변 방정식)를 업데이트합니다. Non-blocking assignment의 활용 : sequential logic의 표현에 적합 always @(posedge clk) begin //sensitivity list //non-blocking assignment a &amp;lt;= 1; b &amp;lt;= a + 1; c &amp;lt;= b + 1; end 3.3.5 Initial문 전체 시뮬레이션에서 한번만 실행 testbench나 메모리의 데이터를 초기화 할 때 사용 initial begin //전체 시뮬레이션 동안 한번만 실행 //procedural assignment //procedural assignment //procedural assignment end `timescale 1ns/10ps // 단위/해상도 module testbench(); reg a_test; reg b_test; reg s_test; wire z_test; initial begin a_test = 1'b1; b_test = 1'b0; s_test = 1'b0; #5; //5ns delay a_test = 1'b1; b_test = 1'b1; s_test = 1'b0; #5; //5ns delay a_test = 1'b0; b_test = 1'b1; s_test = 1'b1; #5; //5ns delay a_test = 1'b1; b_test = 1'b1; s_test = 1'b0; #5; //5ns delay $finish; end mux_2_to_1 dut(.a(a_test), .b(b_test), .s(s_test), .z(z_test)); //instantization endmodule Example 3.5 intial문을 활용한 testbench 3.3.6 if문 c언어의 if문과 유사 mux로 합성됨 if(expression) begin statement; end else if (expression) begin statement; end else begin statement; end 3.3.6.1 2 to 1 mux module mux_2_to_1( input wire a, input wire b, input wire s, output wire z ); reg z_r; always @(*) begin if (s == 1'b0) begin z_r = a; end else begin //s == 1'b1 z_r = b; end end assign z = z_r; endmodule Example 3.6 if문을 활용한 2 to 1 mux 3.3.6.2 4 to 1 mux module mux_4_to_1( input wire a, input wire b, input wire c, input wire d, input wire [1:0] s, output wire z ); reg z_r; always @(*) begin if (s == 2'b00) begin z_r = a; end else if (s == 2'b01) begin z_r = b; end else if (s == 2'b10) begin z_r = c; end else begin z_r = d; end end assign z = z_r; endmodule Example 3.7 if문을 활용한 4 to 1 mux module mux_4_to_1( input wire a, input wire b, input wire c, input wire d, input wire [1:0] s, output wire z ); reg z_r; always @(*) begin if (s[1] == 1'b0) begin if (s[0] == 1'b0) begin z_r = a; end else begin z_r = b; end end else begin //s[1] == 1'b1 if (s[0] == 1'b0) begin z_r = c; end else begin z_r = d; end end end assign z = z_r; endmodule Example 3.8 if문을 활용한 4 to 1 mux 3.3.6.3 if문 사용시 주의사항 module mux_3_to_1( input wire a, b, c, input wire [1:0] s, output reg z ); always @(*) begin if (s == 2'b00) z = a; else if (s == 2'b01) z = b; else if (s == 2'b10) z = c; end endmodule Example 3.9 if문을 활용한 3 to 1 mux s가 2’b11일떄의 state가 규정되어 있지 않으므로 만약 s가 2’b11이라면 이전 timestep에서의 z값을 그대로 유지 할 것입니다. 이는 의도 하지 않은 latch의 합성을 의미합니다. module mux_3_to_1( input wire a, b, c, input wire [1:0] s, output reg z ); z = 1'b0; always @(*) begin if (s == 2'b00) z = a; else if (s == 2'b01) z = b; else if (s == 2'b10) z = c; end endmodule Example 3.10 if문을 활용한 3 to 1 mux 위의 예시의 경우는 if문을 초기화 하기전 출력을 초기화해주었습니다. 따라서 만약 s == 2’b11인 상황에서 z가 초기화한 값 0이 출력될 것입니다. module mux_3_to_1( input wire a, b, c, input wire [1:0] s, output reg z ); always @(*) begin if (s == 2'b00) z = a; else if (s == 2'b01) z = b; else z = c; end endmodule Example 3.11 if문을 활용한 3 to 1 mux 혹은 if문을 반드시 else로 닫아주는 방법도 존재합니다. s == 2’b11인 상황에서 z = c가 출력되겠죠. 3.3.5 case문 c 언어의 case문과 달리 break를 정의 하지 않는점에서 차이점이 존재 해당하는 condition의 statement를 끝까지 실행 일종의 truth up table로 표현할 수 있는 회로 설계에 적합 always @(*) begin case(expression) condition : statements; condition : statements; condition : statements; default : statements; endcase end always @(*) begin case(expression) condition : begin statements; statements; end condition : begin statements; statements; end condition : begin statements; statements; end default : begin statements; statements; end endcase end 구문이 두줄 이상일시 begin ~ end 로 묶어 표현 module mux_4_to_1( input wire a, input wire b, input wire c, input wire d, input wire [1:0] sel, output wire z ); reg z_r; always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; 2'b11 : z_r = d; default: z_r = 0; endcase end assign z = z_r; endmodule Example 3.12 case문을 활용한 4 to 1 mux 3.3.5.2 casex, casez casex : ‘x’, ‘z’, ‘?’를 don’t care로 처리 casez : ‘z’, ‘?’를 don’t care로 처리, ‘z’대신에 ?로 표시 가능 case(data_i) 4'b1000, 4'b1001, 4'b1010, 4'b1011, 4'b1100, 4'b1101, 4'b1110, 4'b1111: data_o_r = 3'b100; casez(data_i) 4'b1??? : data_o_r = 3'b100; module priority_encoder( input wire [IN_WIDTH-1:0] data_i, output wire [OUT_WIDTH-1:0] data_o ); localparam IN_WIDTH = 4; localparam OUT_WIDTH = 3; reg [OUT_WIDTH-1:0] data_o_r; always @(*) begin casez(data_i) 4'b1??? : data_o_r = 3'b100; 4'b01?? : data_o_r = 3'b011; 4'b001? : data_o_r = 3'b010; 4'b0001 : data_o_r = 3'b001; 4'b0000 : data_o_r = 3'b000; default: data_o_r = 0; endcase end assign data_o = data_o_r; endmodule Example 3.13 Priority Encoder 3.3.5.1 case문 사용시 주의사항 1 : 의도하지 않은 latch의 합성 - full case case문 또한 모든 입력의 condition에 대하여 출력의 값이 규정되지 않으면 잘못된 래치가 합성될 수 있습니다. module mux_4_to_1( input wire a, b, c, d, input wire s, output wire z ); always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; //2'b11 일때의 출력 z_r의 값이 정의 되지않음 //래치가 합성됨 endcase end assign z = z_r; endmodule Example 3.14 case문을 활용한 4 to 1 mux module mux_4_to_1( input wire a, b, c, d, input wire s, output wire z ); z_r = 0; //output 초기화 always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; endcase end assign z = z_r; endmodule Example 3.15 case문을 활용한 4 to 1 mux module mux_4_to_1( input wire a, b, c, d, input wire s, output wire z ); always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; default: z_r = 0; //default값을 정의하여 출력값을 초기화 endcase end assign z = z_r; endmodule Example 3.16 case문을 활용한 4 to 1 mux 3.3.5.2 case문 사용시 주의사항 2 : parallel case module intctl2b ( input wire [3:0] data_in, output reg [4:0] data_out ); always @(data_in) begin data_out = 0; casez (data_in) //data_in == 4'b11xx, 4'bx11x, 4'bxx11, 4'b1xx1, ... 4'b1??? : data_out = 1; 4'b?1?? : data_out = 6; 4'b??1? : data_out = 8; 4'b???1 : data_out= 10; endcase end endmodule 케이스 항목이 두번 이상 일치함(data_in == 4’b11xx, 4’bx11x, 4’bxx11, 4’b1xx1, …) 이를 non-parallel case라 합니다. priority 라우팅 네트워크를 추론 module intctl2b ( input wire [3:0] data_in, output reg [7:0] data_out ); always @(data_in) begin data_out = 0; casez (data_in) 4'b1??? : data_out = 3; 4'b01?? : data_out = 15; 4'b001? : data_out = 63; 4'b0001 : data_out = 255; endcase end endmodule 각 케이스 항목이 고유함 이를 parallel case라 합니다. 멀티플렉싱 라우팅 네트워크를 추론 module intctl2b ( input wire [3:0] data_in, output reg [4:0] data_out ); always @(data_in) begin data_out = 0; (* parallel_case *) //synthesis directives casez (data_in) 4'b1??? : data_out = 3; 4'b?1?? : data_out = 15; 4'b??1? : data_out = 63; 4'b???1 : data_out = 255; endcase end endmodule 만약 non-parallel case임에도 각각의 케이스 항목이 mutually exclusive하게 실행됨을 설계자가 보장할 수 있다면, 즉 위 예시에서 data_in이 4’b1000, 4’b0100, 4’b0010, 4’b0001만이 입력됨을 보장할 수 있다면 synthesis directives : (* parallel_case *)를 추가하여 강제로 prallel하게 동작하도록 합성 할 수 있습니다. 3.3.6 if문 vs case문 priority encoding이 필요 할때는 if else문으로 표현하는 것이 유리하며 priority encoding이 필요 없을 시 case문으로 표현하는 것이 유리합니다. 3.4 Case Study 3.4.1 8bit 4-to-1 Multiplexer module mux_4_to_1#( parameter WIDTH = 8 )( input wire [WIDTH-1:0] a, //nbit input data input wire [WIDTH-1:0] b, //nbit input data input wire [WIDTH-1:0] c, //nbit input data input wire [WIDTH-1:0] d, //nbit input data input wire [1:0] s, //2bit input select output wire [WIDTH-1:0] z //nbit output data ); reg [WIDTH-1:0] z_r; always @(*) begin case(sel) 2'b00 : z_r = a; 2'b01 : z_r = b; 2'b10 : z_r = c; 2'b11 : z_r = d; default: z_r = 0; endcase end assign z = z_r; endmodule 3.4.2 7segment Decoder module decoder( input wire [IN_WIDTH-1:0] data_i, output wire [OUT_WIDTH-1:0] data_o ); localparam IN_WIDTH = 4; localparam OUT_WIDTH = 7; reg [WIDTH-1:0] data_o_r; always @(*) begin casez(data_i) 4'b0000 : data_o_r = 8'b00000000; //0 4'b0001 : data_o_r = 8'b00000001; //1 4'b0010 : data_o_r = 8'b00000011; //2 4'b0011 : data_o_r = 8'b00000111; //3 4'b0100 : data_o_r = 8'b00001111; //4 4'b0101 : data_o_r = 8'b00011111; //5 4'b0110 : data_o_r = 8'b00111111; //6 4'b0111 : data_o_r = 8'b01111111; //7 4'b1000 : data_o_r = 8'b01111111; //8 4'b1001 : data_o_r = 8'b01111111; //9 default: data_o_r = 0; endcase end assign data_o = data_o_r; endmodule 3.4.3 Adder module adder( input wire [DATA_IN_WIDTH-1:0] data_a_i, input wire [DATA_IN_WIDTH-1:0] data_b_i, input wire carry_in_i, output wire [DATA_OUT_WIDTH-1:0] data_o ); assign data_o = data_a_i + data_b_i + carry_in_i; endmodule 3.4.4 Subtractor assign data_o = data_a_i - data_b_i; assign data_o = data_a_i + ((~data_b_i) + 1); module substractor( input wire [DATA_IN_WIDTH-1:0] data_a_i, input wire [DATA_IN_WIDTH-1:0] data_b_i, input wire carry_in_i, output wire [DATA_OUT_WIDTH-1:0] data_o ); assign data_o = data_a_i + ((~data_b_i) + 1); endmodule 3.4.5 Comparator assign data_o = data_a_i &amp;lt; data_b_i; assign data_o = (data_a_i - data_b_i) &amp;lt; 0; assign result = data_a_i - data_b_i; assign data_o = result[MSB]; //sign bit == MSB module comparator( input wire [DATA_IN_WIDTH-1:0] data_a_i, input wire [DATA_IN_WIDTH-1:0] data_b_i, input wire carry_in_i, output wire data_o ); wire [DATA_OUT_WIDTH-1:0] result; assign result = data_a_i + ((~data_b_i) + 1); assign data_o = result[DATA_OUT_WIDTH-1]; endmodule 3.4.6 ALU</summary></entry></feed>
